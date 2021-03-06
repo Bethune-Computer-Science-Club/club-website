@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavbarContainer>
-          test
+          
         </NavbarContainer>
       </Nav>
     </>
