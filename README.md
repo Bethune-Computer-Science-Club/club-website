@@ -1,2 +1,2 @@
-# test-repo
-hello world
+# Bethune CS Club Website
+Developed by C++ Legends
