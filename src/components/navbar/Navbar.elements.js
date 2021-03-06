@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../globalStyles'
 
 export const Nav = styled.nav`
-    background: #101522;
+    background: grey;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -19,4 +19,8 @@ export const NavbarContainer = styled(Container) `
     height: 80px;
 
     ${Container}
+`
+
+export const NavLog = styled.img`
+background-image:'../images/bethuneLogo.gif';
 `
