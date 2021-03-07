@@ -22,5 +22,15 @@ export const NavbarContainer = styled(Container)`
 `
 
 export const NavLinkText = styled.div`
-    
+  display: block;
+  padding: 30px;
+  float: left;
+  cursor:pointer;
+`
+export const NavTabs = styled.div`
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 `
