@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../globalStyles'
 
 export const Nav = styled.nav`
-    background: #101522;
+    background: grey;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -13,10 +13,14 @@ export const Nav = styled.nav`
     z-index:999;
 `
 
-export const NavbarContainer = styled(Container) `
+export const NavbarContainer = styled(Container)`
     display: flex;
     justify-content:space-between;
     height: 80px;
 
     ${Container}
+`
+
+export const NavLinkText = styled.div`
+    
 `
