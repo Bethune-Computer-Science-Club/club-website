@@ -1,19 +1,18 @@
-import React from 'react'
-import {NavLink} from './NavLink'
-import { Nav, NavbarContainer, NavLog } from './Navbar.elements'
+import { Nav, NavbarContainer } from './Navbar.elements'
+import logo from '../images/bethuneLogo.gif'
+import NavLink from './NavLink'
+export const Navbar = () => {
 
-const Navbar = () => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLog />
+          <img src={logo}/>
           <NavLink name="Home"/>
-          <NavLink name="Announcements"/>
-          <NavLink name="Events"/>
-          <NavLink name="Lessons"/>
+          <NavLink name="Announcement"/>
           <NavLink name="Team"/>
-          <NavLink name="Contact Us "/>
+          <NavLink name="Event"/>
+          <NavLink name="Contact Us"/>
         </NavbarContainer>
       </Nav>
     </>

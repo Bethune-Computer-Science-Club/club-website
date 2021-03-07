@@ -1,9 +1,14 @@
 import React from 'react'
+import { NavLinkText } from './Navbar.elements'
 
 export const NavLink = ({name}) => {
   return (
-    <div>
-      {name}
-    </div>
+    <>
+     <NavLinkText>
+        {name}
+      </NavLinkText> 
+    </>
   )
 }
+
+export default NavLink
