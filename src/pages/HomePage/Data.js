@@ -6,8 +6,11 @@ export const homeObjOne = {
   lightTopLine: true, 
   lightTextDesc: true, 
   buttonLabel: 'Get Started', 
-  description: 'Hello world', 
+  description: 'Hello World', 
   headline: 'Lead Gemration Special', 
   lightText: true, 
-  topLine: 'CS Club' 
+  topLine: 'CS Club',
+  img: require('../../images/cccLogo.png'),
+  alt: 'Image',
+  start: ''
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Container } from '../../globalStyles';
 import { FaMagento } from 'react-icons/fa';
-import logo from '../images/bethuneLogo.gif';
+import logo from '../../images/bethuneLogo.gif';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
