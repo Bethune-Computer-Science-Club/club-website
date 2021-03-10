@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const InfoSec = styled.div`
   color: #fff;
-  padding: 160px 0;
+  padding: 30px 0;
   background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
 `
 
@@ -39,9 +39,9 @@ export const TextWrapper = styled.div`
     padding-bottom: 65px;
   }
 `
-export const TopLine = styled.div`
+export const TextHeading = styled.div`
   color: ${({lightTopLine}) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
-  font-size: 10px;
+  font-size: 20px;
   line-height: 16px;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
@@ -49,15 +49,22 @@ export const TopLine = styled.div`
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.1;
   color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237')};
+
+  @media screen and (max-width: 760px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `
 
-export const Subtitle = styled.p`
+export const MainText = styled.p`
   max-width: 440px;
-  margin-bottom: 36px;
-  font-size: 10px;
+  margin-bottom: px;
+  font-size: 15px;
   line-height: 34px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? 'a9b3c1' : '#1c2237')};
 `
@@ -69,10 +76,10 @@ export const ImgWrapper = styled.div`
 `
 
 export const Img = styled.img`
-  padding-right: 0;
+  padding-left: 0;
   border: 0;
-  max-width: 100%;
   vertical-align: middle;
-  display: inline-block;
-  max-height: 500px
+  /* display: inline-block; */
+  max-width: 700px;
+  max-height: 400px;
 `

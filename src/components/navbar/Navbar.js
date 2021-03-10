@@ -15,6 +15,8 @@ import {
   NavBtnLink
 } from './Navbar.elements'
 
+import bethuneLogo from '../../images/bethuneLogo.gif'
+
 export const Navbar = () => {
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
@@ -41,7 +43,8 @@ export const Navbar = () => {
         <Nav>
           <NavbarContainer>
             <NavLogo to='/'>
-              <NavIcon />
+              {/* <NavIcon /> */}
+              <img src={bethuneLogo}></img>
               Dr. Norman Bethune Collegiate Institute
             </NavLogo>
             <MobileIcon onClick={handleClick}> {/*Toggles between the X and the triple bar icon when clicked*/}

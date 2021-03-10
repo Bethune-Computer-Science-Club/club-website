@@ -5,7 +5,7 @@ import logo from '../../images/bethuneLogo.gif';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  background: grey;
+  background: #101522;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -32,14 +32,16 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
+  line-height: 100%;
 `
 
-export const NavIcon = styled.div`
-  background-image: url(${logo});
-  width: 4rem;
-  height: 4rem;
-  margin-right: 0.5 rem;
-`
+//Not used
+// export const NavIcon = styled.div`
+//   background-image: url(${logo});
+//   width: 4rem;
+//   height: 4rem;
+//   margin-right: 0.5 rem;
+// `
 
 export const MobileIcon = styled.div`
   display: none;
@@ -49,7 +51,7 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 50%);
     font-size: 1.8rem;
     cursor: pointer;
   }

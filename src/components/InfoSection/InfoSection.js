@@ -6,13 +6,12 @@ import {
   InfoRow,
   InfoColumn,
   TextWrapper,
-  TopLine,
+  TextHeading,
   Heading,
-  Subtitle,
+  MainText,
   ImgWrapper,
   Img
 } from './InfoSection.elements'
-
 
 
 const InfoSection = ({ primary, lightBg, imgStart, lightTopLine, lightTextDesc, buttonLabel, description, headline, lightText, topLine, img, alt, start }) => {
@@ -20,17 +19,17 @@ const InfoSection = ({ primary, lightBg, imgStart, lightTopLine, lightTextDesc, 
     <>
       <InfoSec lightBg={lightBg}>
         <Container>
+          <Heading lightText={lightText}>{headline}</Heading>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to='/sign-up'>
+                <TextHeading lightTopLine={lightTopLine}>{topLine}</TextHeading>
+                <MainText lightTextDesc={lightTextDesc}>{description}</MainText>
+                {/* <Link to='/sign-up'>
                   <Button big fontBig primary={primary}>
                     {buttonLabel}
                   </Button>
-                </Link>
+                </Link> */}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
