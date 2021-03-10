@@ -1,5 +1,7 @@
 //Images
 import cccLogo from '../../images/cccLogo.png'
+import cccLogoEdited from '../../images/cccLogoEdited.png'
+
 import calender from '../../images/sampleCalender.png'
 import schoolPicture from '../../images/schoolPicture.jpg'
 
@@ -15,7 +17,7 @@ export const homeObjOne = {
   headline: 'Announcements', 
   lightText: true, 
   topLine: 'CCC Prep Session 69',
-  img: cccLogo,
+  img: cccLogoEdited,
   alt: 'Image',
   start: true
 }
@@ -50,22 +52,6 @@ export const homeObjThree = {
   lightText: true, 
   topLine: 'CS Club',
   img: schoolPicture,
-  alt: 'Image',
-  start: ''
-}
-
-export const homeObjFour = {
-  lightBg: true,
-  primary: false, 
-  imgStart: '', 
-  lightTopLine: false, 
-  lightTextDesc: false, 
-  buttonLabel: 'Get Started', 
-  description: 'Hello World', 
-  headline: 'Lead Gemration Special', 
-  lightText: false, 
-  topLine: 'CS Club',
-  img: require('../../images/cccLogo.png'),
   alt: 'Image',
   start: ''
 }

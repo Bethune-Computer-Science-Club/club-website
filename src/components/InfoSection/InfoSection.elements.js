@@ -62,7 +62,7 @@ export const Heading = styled.h1`
 `
 
 export const MainText = styled.p`
-  max-width: 440px;
+  max-width: 500px;
   margin-bottom: px;
   font-size: 15px;
   line-height: 34px;
@@ -76,10 +76,11 @@ export const ImgWrapper = styled.div`
 `
 
 export const Img = styled.img`
+  left: 0;
   padding-left: 0;
   border: 0;
   vertical-align: middle;
   /* display: inline-block; */
-  max-width: 700px;
-  max-height: 400px;
+  max-width: 100%;
+  max-height: 100%;
 `
