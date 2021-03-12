@@ -19,20 +19,22 @@ export const FooterRow = styled.div`
 `
 
 export const FooterColumn = styled.div`
-  /* background-color: green; */
+  /* background-color: grey; */
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px;
+  margin: 10px;
   width: 160px;
   box-sizing: border-box;
   color: #fff;
   flex-basis: 33%;
   flex: 1;
 
-  @media screen and (max-width: 760px) {
-    max-width: 100%;
+  @media screen and (max-width: 960px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
@@ -40,6 +42,8 @@ export const FooterColumn = styled.div`
 `
 
 export const Logo = styled(Link)` //change ??? link??
+  /* background-color: green; */
+
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -48,18 +52,23 @@ export const Logo = styled(Link)` //change ??? link??
   display: flex;
   align-items: center;
   line-height: 100%;
+  width: 300px;
+  margin-left: 0;
+  margin-right: auto;
+`
+
+export const Img = styled.img` 
+  width: 100px;
 `
 
 export const AddressWrapper = styled.div` 
+  /* background-color: green; */
+
   justify-self: flex-start;
   width: 180px;
   margin-right: auto;
-  margin-left: 3%;
+  margin-left: 4%;
 
-  @media screen and (max-width: 760px) {
-    margin-right: auto;
-    margin-left: auto;
-  }
 `
 
 export const Address = styled.p` 
@@ -89,7 +98,7 @@ export const ConnectHeader = styled.h1`
   font-size: 1.5rem;
   padding: 0 0 0 40px;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     padding: 0 0 0 0;
   }
 `
@@ -99,7 +108,7 @@ export const SocialsWrapper = styled.div`
   align-items: center;
   padding: 0 0 0 20%;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     padding: 0 0 0 0;
   }
 `
@@ -118,15 +127,20 @@ export const LastLineLogo = styled(Link)` //change ??? link??
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   line-height: 100%;
 `
 
 export const DateLastUpdated = styled.p`
-  color: #fff;
+  color: grey;
   text-align: right;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 100%;
+  margin-right: 60px;
+
+  @media screen and (max-width: 1200px) {
+    margin-right: 0;
+  }
 `

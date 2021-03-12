@@ -6,6 +6,7 @@ import {
   Nav, 
   NavbarContainer, 
   NavLogo, 
+  Img,
   NavIcon, 
   MobileIcon, 
   NavMenu, 
@@ -15,7 +16,7 @@ import {
   NavBtnLink
 } from './Navbar.elements'
 
-import bethuneLogo from '../../images/bethuneLogo.gif'
+import BCSCLogo from '../../images/BCSCLogo.png'
 
 export const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -43,9 +44,8 @@ export const Navbar = () => {
         <Nav>
           <NavbarContainer>
             <NavLogo to='/'>
-              {/* <NavIcon /> */}
-              <img src={bethuneLogo}></img>
-              Dr. Norman Bethune Collegiate Institute
+              <Img src={BCSCLogo} ></Img>
+              Bethune Computer Science Club
             </NavLogo>
             <MobileIcon onClick={handleClick}> {/*Toggles between the X and the triple bar icon when clicked*/}
               {click ? <FaTimes /> : <FaBars />}
@@ -55,10 +55,10 @@ export const Navbar = () => {
                 <NavLinks to='/'>Home</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/services'>Services</NavLinks>
+                <NavLinks to='/projects'>Projects</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/products'>Products</NavLinks>
+                <NavLinks to='/team'>Team</NavLinks>
               </NavItem>
 
               <NavItemBtn>

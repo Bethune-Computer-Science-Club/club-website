@@ -2,11 +2,13 @@ import React from 'react'
 import { FaInstagram, FaYoutube } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import bethuneLogo from '../../images/bethuneLogo.gif'
+import BCSCLogo from '../../images/BCSCLogo.png'
+
 import { Container } from '../../globalStyles'
 import { IconContext } from 'react-icons/lib'
 
 
-import { FooterContainer, FooterRow, FooterColumn, Logo, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, LastLineLogo, DateLastUpdated} from './Footer.elements'
+import { FooterContainer, FooterRow, FooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, LastLineLogo, DateLastUpdated} from './Footer.elements'
 
 
 function Footer () {
@@ -16,7 +18,7 @@ function Footer () {
         <FooterRow>
           <FooterColumn>
             <Logo>
-              <img src={bethuneLogo}></img>
+              <Img src={BCSCLogo}></Img>
               Bethune Computer Science Club
             </Logo>
             <AddressWrapper>

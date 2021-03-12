@@ -10,10 +10,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size:1.2rem;
+  font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index:999;
+  z-index: 999;
 `
 
 export const NavbarContainer = styled(Container)`
@@ -33,6 +33,14 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   line-height: 100%;
+  width: 90%;
+  @media screen and (max-width: 650px) {
+    font-size: 1.8rem;
+  }
+`
+
+export const Img = styled.img` 
+  width: 80px;
 `
 
 //Not used
@@ -67,7 +75,7 @@ export const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: absolute;
     top: 80px;
     left: ${({click}) => (click ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
@@ -107,7 +115,8 @@ export const NavLinks = styled(Link)`
   padding: 2rem;
   width: 100%;
   display: table;
-
+  height: 100%;
+  
   &:hover {
     color: #4b59f7;
     transition: all 0.3s ease;
