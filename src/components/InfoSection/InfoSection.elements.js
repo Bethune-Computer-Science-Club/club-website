@@ -33,10 +33,10 @@ export const InfoColumn = styled.div`
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 
   @media screen and (max-width: 760px) {
-    padding-bottom: 65px;
+    padding-bottom: 10px;
   }
 `
 export const TextHeading = styled.div`
@@ -63,10 +63,11 @@ export const Heading = styled.h1`
 
 export const MainText = styled.p`
   max-width: 500px;
-  margin-bottom: px;
+  margin-bottom: 10px;
   font-size: 15px;
   line-height: 34px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? 'a9b3c1' : '#1c2237')};
+
 `
 
 export const ImgWrapper = styled.div`
@@ -83,4 +84,6 @@ export const Img = styled.img`
   /* display: inline-block; */
   max-width: 100%;
   max-height: 100%;
+
+
 `
