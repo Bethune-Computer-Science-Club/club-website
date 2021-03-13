@@ -71,7 +71,7 @@ export const MainText = styled.p`
 `
 
 export const ImgWrapper = styled.div`
-  max-width: 555px;
+  max-width: 200px;
   display: flex;
   justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
 `
@@ -82,8 +82,6 @@ export const Img = styled.img`
   border: 0;
   vertical-align: middle;
   /* display: inline-block; */
-  max-width: 100%;
-  max-height: 100%;
-
-
+  width:50px; 
+  height:50px;
 `
