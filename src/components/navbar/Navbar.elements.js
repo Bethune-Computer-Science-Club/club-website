@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { Container } from '../../globalStyles';
-import { FaMagento } from 'react-icons/fa';
-import logo from '../../images/bethuneLogo.gif';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
@@ -41,15 +39,9 @@ export const NavLogo = styled(Link)`
 
 export const Img = styled.img` 
   width: 80px;
+  margin-right: 10px;
 `
 
-//Not used
-// export const NavIcon = styled.div`
-//   background-image: url(${logo});
-//   width: 4rem;
-//   height: 4rem;
-//   margin-right: 0.5 rem;
-// `
 
 export const MobileIcon = styled.div`
   display: none;

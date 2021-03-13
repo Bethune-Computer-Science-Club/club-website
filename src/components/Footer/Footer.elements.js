@@ -11,16 +11,12 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterRow = styled.div`
-  /* background-color: grey; */
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 `
 
 export const FooterColumn = styled.div`
-  /* background-color: grey; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +37,7 @@ export const FooterColumn = styled.div`
   }
 `
 
-export const Logo = styled(Link)` //change ??? link??
-  /* background-color: green; */
-
+export const Logo = styled.div`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -62,8 +56,6 @@ export const Img = styled.img`
 `
 
 export const AddressWrapper = styled.div` 
-  /* background-color: green; */
-
   justify-self: flex-start;
   width: 180px;
   margin-right: auto;

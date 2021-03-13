@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Container, Button } from '../../globalStyles'
+import { Container } from '../../globalStyles'
 import {
   InfoSec,
   InfoRow,
@@ -14,7 +13,7 @@ import {
 } from './InfoSection.elements'
 
 
-const InfoSection = ({ primary, lightBg, imgStart, lightTopLine, lightTextDesc, buttonLabel, description, headline, lightText, topLine, img, alt, start }) => {
+const InfoSection = ({ lightBg, imgStart, lightTopLine, lightTextDesc, description, headline, lightText, topLine, img, alt, start }) => {
   return (
     <>
       <InfoSec lightBg={lightBg}>
@@ -25,11 +24,6 @@ const InfoSection = ({ primary, lightBg, imgStart, lightTopLine, lightTextDesc, 
               <TextWrapper>
                 <TextHeading lightTopLine={lightTopLine}>{topLine}</TextHeading>
                 <MainText lightTextDesc={lightTextDesc}>{description}</MainText>
-                {/* <Link to='/sign-up'>
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link> */}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
