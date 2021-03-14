@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { AiOutlineDoubleLeft } from 'react-icons/ai'
-import { AiOutlineDoubleRight } from 'react-icons/ai'
+import { AiOutlineDoubleLeft,AiOutlineDoubleRight } from 'react-icons/ai'
 
 // fix background and changing background color 
 export const InfoSec = styled.div`
@@ -61,10 +60,11 @@ export const MainText = styled.p`
 
 export const Carousel = styled.div`
   border: 3px green solid;
-  padding: 20px;
-  padding-bottom: 50px;
+  padding: 35px;
+  padding-bottom: 70px;
   margin: 0px 50px;
   float: left;
+  border-radius: 20%;
 `
 export const CarouselContainer = styled.div`
   max-width: 2000px;
@@ -119,4 +119,14 @@ export const NextCarouseIcon = styled(AiOutlineDoubleRight)`
 export const NextCarouseIconWrapper = styled.div`
   float: right;
   height: 14.5em;
+`
+
+export const InfoIcon = styled.div`
+  display: block;
+  position: relative;
+  top: -10px;
+  right: 0;
+  left:140px;
+  font-size: 1.3rem;
+  cursor: pointer;
 `

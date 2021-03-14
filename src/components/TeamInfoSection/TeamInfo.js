@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container } from '../../globalStyles'
 import pikachuImg from '../../images/Pikachu.jpg'
+import { BsArrowsAngleExpand } from 'react-icons/bs'
+import { BsArrowsAngleContract } from 'react-icons/bs'
 
 import {
   InfoSec,
+  InfoIcon,
   InfoContainer,
   Heading,
   Carousel,
@@ -20,9 +23,19 @@ import {
 
 const TeamInfo = ({lightText}) => {
 
-  function clicked() {
-    console.log("prev clicked");
-  }
+  const [infoClicked,setInfoClicked] = useState(0);
+
+  const [info,setinfo] = useState([
+    {
+      name:'Simon Yang',
+      role: 'exec',
+      year: [(2020,2021)],
+      pic: pikachuImg,
+      description:"hello world",
+    }
+  ]);
+
+  const handleInfoClick = () => setInfoClicked(!infoClicked);
 
   return (
     <>
@@ -38,6 +51,10 @@ const TeamInfo = ({lightText}) => {
               </PrevCarouseIconWrapper>
 
               <Carousel>
+                <InfoIcon onClick={handleInfoClick}>
+                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
+                </InfoIcon>
+
                 <CarouselImg src={pikachuImg} alt={"pikachu"} />
                 <CarouselNameWrapper>
                   <CarouselNameText>Simon Yang</CarouselNameText>
@@ -45,6 +62,10 @@ const TeamInfo = ({lightText}) => {
               </Carousel>
 
               <Carousel>
+                <InfoIcon onClick={handleInfoClick}>
+                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
+                </InfoIcon>
+
                 <CarouselImg src={pikachuImg} alt={"pikachu"} />
                 <CarouselNameWrapper>
                   <CarouselNameText>Simon Yang</CarouselNameText>
@@ -52,6 +73,10 @@ const TeamInfo = ({lightText}) => {
               </Carousel>
 
               <Carousel>
+                <InfoIcon onClick={handleInfoClick}>
+                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
+                </InfoIcon>
+
                 <CarouselImg src={pikachuImg} alt={"pikachu"} />
                 <CarouselNameWrapper>
                   <CarouselNameText>Simon Yang</CarouselNameText>
