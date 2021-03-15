@@ -1,91 +1,50 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Container } from '../../globalStyles'
-import pikachuImg from '../../images/Pikachu.jpg'
-import { BsArrowsAngleExpand } from 'react-icons/bs'
-import { BsArrowsAngleContract } from 'react-icons/bs'
+import CarouselItem from './CarouselItem'
 
 import {
   InfoSec,
-  InfoIcon,
   InfoContainer,
   Heading,
-  Carousel,
-  CarouselImg,
-  CarouselNameText,
   CarouselContainer,
-  CarouselNameWrapper,
-  PrevCarouseIcon,
-  PrevCarouseIconWrapper,
-  NextCarouseIcon,
-  NextCarouseIconWrapper,
+  PrevCarouselIcon,
+  PrevCarouselIconWrapper,
+  NextCarouselIconWrapper,
+  NextCarouselIcon,
 } from './TeamInfo.elements'
 
+const execs = require('../../pages/TeamPage/execs.json').execs;
 
-const TeamInfo = ({lightText}) => {
+const TeamInfo = ({ lightText, year }) => {
 
-  const [infoClicked,setInfoClicked] = useState(0);
+  const [infos, setinfo] = useState(execs);
 
-  const [info,setinfo] = useState([
-    {
-      name:'Simon Yang',
-      role: 'exec',
-      year: [(2020,2021)],
-      pic: pikachuImg,
-      description:"hello world",
-    }
-  ]);
-
-  const handleInfoClick = () => setInfoClicked(!infoClicked);
+  const handleInfoClick = (id) => {
+    setinfo(infos.map((person) =>
+      person.id === id ? { ...person, toggleInfo: !infos.toggleInfo } : infos
+    ));
+  }
 
   return (
     <>
       <InfoSec>
         <Container>
           <Heading lightText={lightText}>
-            2021
+            {year}
           </Heading>
           <InfoContainer>
             <CarouselContainer>
-              <PrevCarouseIconWrapper>
-                <PrevCarouseIcon />
-              </PrevCarouseIconWrapper>
+              <PrevCarouselIconWrapper>
+                <PrevCarouselIcon />
+              </PrevCarouselIconWrapper>
 
-              <Carousel>
-                <InfoIcon onClick={handleInfoClick}>
-                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
-                </InfoIcon>
+              {infos.map((person) => (
+                <CarouselItem key={person.id} person={person} handleInfoClick={handleInfoClick} />
+              ))}
 
-                <CarouselImg src={pikachuImg} alt={"pikachu"} />
-                <CarouselNameWrapper>
-                  <CarouselNameText>Simon Yang</CarouselNameText>
-                </CarouselNameWrapper>
-              </Carousel>
-
-              <Carousel>
-                <InfoIcon onClick={handleInfoClick}>
-                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
-                </InfoIcon>
-
-                <CarouselImg src={pikachuImg} alt={"pikachu"} />
-                <CarouselNameWrapper>
-                  <CarouselNameText>Simon Yang</CarouselNameText>
-                </CarouselNameWrapper>
-              </Carousel>
-
-              <Carousel>
-                <InfoIcon onClick={handleInfoClick}>
-                  {infoClicked ? <BsArrowsAngleContract /> : <BsArrowsAngleExpand />}
-                </InfoIcon>
-
-                <CarouselImg src={pikachuImg} alt={"pikachu"} />
-                <CarouselNameWrapper>
-                  <CarouselNameText>Simon Yang</CarouselNameText>
-                </CarouselNameWrapper>
-              </Carousel>
-              
-              <NextCarouseIconWrapper>
-                <NextCarouseIcon />
-              </NextCarouseIconWrapper>
+              <NextCarouselIconWrapper>
+                <NextCarouselIcon />
+              </NextCarouselIconWrapper>
             </CarouselContainer>
           </InfoContainer>
         </Container>

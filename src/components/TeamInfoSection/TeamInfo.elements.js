@@ -59,11 +59,13 @@ export const MainText = styled.p`
 `
 
 export const Carousel = styled.div`
-  border: 3px green solid;
+  border: 5px grey solid;
   padding: 35px;
   padding-bottom: 70px;
   margin: 0px 50px;
   float: left;
+  width: 225px;
+  height: 250px;
   border-radius: 20%;
 `
 export const CarouselContainer = styled.div`
@@ -73,11 +75,11 @@ export const CarouselContainer = styled.div`
 `
 
 export const CarouselImg = styled.img`
-  border: 0;
-  border-radius: 50%;
+  border: 2px red solid;
+  border-radius: 100%;
   width: 150px;
   max-width: 100%;
-  height: auto;
+  height: 150px;
   cursor: pointer;
 `
 
@@ -95,7 +97,7 @@ export const CarouselNameWrapper = styled.div`
   width: 10em;
 `
 
-export const PrevCarouseIcon = styled(AiOutlineDoubleLeft)`
+export const PrevCarouselIcon = styled(AiOutlineDoubleLeft)`
   font-size: 2.3em;
   margin: 0;
   position: absolute;
@@ -103,12 +105,12 @@ export const PrevCarouseIcon = styled(AiOutlineDoubleLeft)`
   transform: translate(0, -50%);
   cursor: pointer;
 `
-export const PrevCarouseIconWrapper = styled.div`
+export const PrevCarouselIconWrapper = styled.div`
   float: left;
   height: 14.5em;
 `
 
-export const NextCarouseIcon = styled(AiOutlineDoubleRight)`
+export const NextCarouselIcon = styled(AiOutlineDoubleRight)`
   font-size: 2.3em;
   margin: 0;
   position: absolute;
@@ -116,7 +118,7 @@ export const NextCarouseIcon = styled(AiOutlineDoubleRight)`
   transform: translate(-100%, -50%);
   cursor: pointer;
 `
-export const NextCarouseIconWrapper = styled.div`
+export const NextCarouselIconWrapper = styled.div`
   float: right;
   height: 14.5em;
 `

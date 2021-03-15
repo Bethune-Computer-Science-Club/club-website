@@ -1,11 +1,11 @@
 import React from 'react'
-import { teamObj } from './Data'
-import {TeamInfo } from '../../components'
+import { exec20_21 } from './Data'
+import { TeamInfo } from '../../components'
 
 const Team = () => {
   return (
     <>
-    <TeamInfo {...teamObj}/>
+    <TeamInfo {...exec20_21}/>
     </>
   )
 }

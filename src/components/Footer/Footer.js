@@ -30,7 +30,7 @@ function Footer () {
           </FooterColumn>
           <FooterColumn>
             <CenterText>
-              This website was the result of a lot of hard work from Bethune’s coding club. You can find the credits to the original creators of the website <TextLink to='/services'>here</TextLink>.
+              This website was the result of a lot of hard work from Bethune’s coding club. You can find the credits to the original creators of the website <TextLink to='/team'>here</TextLink>.
             </CenterText>
             <CenterText>
               The source code for the website can be found <a href="https://youtu.be/oHg5SJYRHA0" style={{color: "#fff"}}>here</a>.
