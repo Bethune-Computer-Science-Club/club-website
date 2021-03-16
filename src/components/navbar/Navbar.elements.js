@@ -31,9 +31,9 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   line-height: 100%;
-  width: 90%;
   @media screen and (max-width: 650px) {
     font-size: 1.8rem;
+    width: 90%;
   }
 `
 
@@ -83,6 +83,7 @@ export const NavItem = styled.li`
 
   &:hover {
     border-bottom: 2px solid #4b59f7;
+    transition: all 0.5s ease;
   }
 
   @media screen and (max-width: 960px) {
