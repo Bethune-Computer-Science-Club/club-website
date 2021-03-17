@@ -12,7 +12,7 @@ import {
   ImgWrapper,
   Img
 } from './SubmitAProject.elements'
-import cccLogo from '../../images/cccLogo.png'
+import submitPicture from '../../images/submitProject.jpg'
 
 const InfoSection = () => {
   return (
@@ -35,7 +35,7 @@ const InfoSection = () => {
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper>
-                <Img src={cccLogo}/>
+                <Img src={submitPicture}/>
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>

@@ -81,9 +81,7 @@ export const Img = styled.img`
   padding-left: 0;
   border: 0;
   vertical-align: middle;
-  /* display: inline-block; */
   max-width: 100%;
   max-height: 100%;
-
-
+  
 `

@@ -19,17 +19,17 @@ const InfoSection = () => {
         <Container>
           <Heading>Categories</Heading>
           <InfoRow>
-          <LinkImg style={{background: 'roboticsPicture'}}>
-              <LinkText to='/'>Robotics</LinkText>
+            <LinkImg to='/' style={{backgroundImage: `url(${roboticsPicture})`}}>
+              <LinkText>Robotics</LinkText>
             </LinkImg>
-            <LinkImg style={{background: 'roboticsPicture'}}>
-              <LinkText to='/'>Applications</LinkText>
+            <LinkImg to='/' style={{backgroundImage: `url(${applicationsPicture})`}}>
+            <LinkText>Applications</LinkText>
             </LinkImg>
-            <LinkImg style={{background: roboticsPicture}}>
-              <LinkText to='/'>Games</LinkText>
+            <LinkImg to='/' style={{backgroundImage: `url(${gamesPicture})`}}>
+            <LinkText style={{color: '#fff'}}>Games</LinkText>
             </LinkImg>
-            <LinkImg style={{background: roboticsPicture}}>
-              <LinkText to='/'>Miscellaneous</LinkText>
+            <LinkImg to='/' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
+            <LinkText style={{color: '#fff'}}>Miscellaneous</LinkText>
             </LinkImg>
 
           </InfoRow>

@@ -13,6 +13,7 @@ export const InfoRow = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 `
 
 export const InfoColumn = styled.div`
@@ -88,17 +89,30 @@ export const Img = styled.img`
   vertical-align: middle;
   max-width: 100%;
   max-height: 100%;
+  
 `
 
 
-export const LinkImg = styled.div`
-  /* background-color: green; */
-  background-image: roboticsPicture;
-  height: 300px;
+export const LinkImg = styled(Link)`
+  background-size: cover;
   width: 300px;
+  height: 175px;
+  margin: 5px;
+  text-decoration: none;
+  opacity: 0.75;
 
+  &:hover {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #a89e32;
+    transition: 200ms ease-in-out;
+    opacity: 1;
+  }
 `
+export const LinkText = styled.h1`
+  color: #000;
+  text-align: center;
+  font-size: 2.75rem;
+  line-height: 375%; 
 
-export const LinkText = styled(Link)`
-  color: #fff;
 `
