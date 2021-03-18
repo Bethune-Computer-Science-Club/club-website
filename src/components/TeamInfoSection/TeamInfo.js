@@ -15,13 +15,21 @@ import {
 
 const execs = require('../../pages/TeamPage/execs.json').execs;
 
+for (let exec of execs) {
+  // add toggleInfo for extra info for each carousel
+  exec.toggleInfo = false;
+
+  // adding id to each exec
+  exec.id = Math.floor(Math.random() * 10000000000) + 1
+}
+
 const TeamInfo = ({ lightText, year }) => {
 
   const [infos, setinfo] = useState(execs);
 
   const handleInfoClick = (id) => {
     setinfo(infos.map((person) =>
-      person.id === id ? { ...person, toggleInfo: !infos.toggleInfo } : infos
+      person.id === id ? { ...person, toggleInfo: !person.toggleInfo } : person
     ));
   }
 

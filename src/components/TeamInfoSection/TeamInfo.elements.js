@@ -67,6 +67,13 @@ export const Carousel = styled.div`
   width: 225px;
   height: 250px;
   border-radius: 20%;
+
+  transition: all 0.5s ease;
+
+	&:hover {
+		border: 5px green solid;
+	}
+
 `
 export const CarouselContainer = styled.div`
   max-width: 2000px;
@@ -123,12 +130,6 @@ export const NextCarouselIconWrapper = styled.div`
   height: 14.5em;
 `
 
-export const InfoIcon = styled.div`
-  display: block;
-  position: relative;
-  top: -10px;
-  right: 0;
-  left:140px;
-  font-size: 1.3rem;
-  cursor: pointer;
+export const InfoText = styled.p`
+  border: 3px red solid;
 `

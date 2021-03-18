@@ -1,7 +1,6 @@
 {
   "execs": [
     {
-      "id":1,
       "name":"Simon Yang",
       "role": "exec",
       "year": [2020,2021],
@@ -9,7 +8,6 @@
       "description":"hello world"
     },
     {
-      "id":2,
       "name":"Ri Hong",
       "role": "exec",
       "year": [2020,2021],

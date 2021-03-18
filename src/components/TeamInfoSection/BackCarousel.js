@@ -1,11 +1,15 @@
 import React from 'react'
 
+import {
+  InfoText
+} from './TeamInfo.elements'
+
 const BackCarousel = ({description}) => {
   return (
     <>
-      <p>
+      <InfoText>
         {description}
-      </p>
+      </InfoText>
     </>
   )
 }
