@@ -1,5 +1,4 @@
 //Images
-import cccLogo from '../../images/cccLogo.png'
 import cccLogoEdited from '../../images/cccLogoEdited.png'
 
 import calender from '../../images/sampleCalender.png'

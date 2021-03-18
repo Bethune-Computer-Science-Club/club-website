@@ -8,12 +8,11 @@ import {
   TextHeading,
   Heading,
   MainText,
-  ImgWrapper,
   Img
 } from './InfoSection.elements'
 
 
-const InfoSection = ({ lightBg, imgStart, lightTopLine, lightTextDesc, description, headline, lightText, topLine, img, alt, start, showIframe, showSchedule }) => {
+const InfoSection = ({ lightBg, imgStart, lightTopLine, lightTextDesc, description, headline, lightText, topLine, img, alt, showIframe, showSchedule }) => {
   return (
     <>
       <InfoSec lightBg={lightBg}>

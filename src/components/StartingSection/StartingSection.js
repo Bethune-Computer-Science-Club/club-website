@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from '../../globalStyles'
-import projectsPic from '../../images/projects.png'
 
 import {
   SectionContainer,
