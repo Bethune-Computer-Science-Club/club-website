@@ -1,5 +1,4 @@
 //Images
-import cccLogo from '../../images/cccLogo.png'
 import cccLogoEdited from '../../images/cccLogoEdited.png'
 
 import calender from '../../images/sampleCalender.png'
@@ -19,7 +18,8 @@ export const homeObjOne = {
   topLine: 'CCC Prep Session 69',
   img: cccLogoEdited,
   alt: 'Image',
-  start: true
+  showIframe: false,
+  showSchedule: false
 }
 
 //Schedule
@@ -36,7 +36,9 @@ export const homeObjTwo = {
   topLine: 'CS Club',
   img: calender,
   alt: 'Image',
-  start: ''
+  start: '',
+  showIframe: true,
+  showSchedule: true
 }
 
 //About Us
@@ -53,5 +55,7 @@ export const homeObjThree = {
   topLine: 'CS Club',
   img: schoolPicture,
   alt: 'Image',
-  start: ''
+  start: '',
+  showIframe: false,
+  showSchedule: false
 }

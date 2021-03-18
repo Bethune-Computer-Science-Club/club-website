@@ -1,9 +1,11 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+import roboticsPicture from '../../images/robotics.jpg'
 
 export const InfoSec = styled.div`
   color: #fff;
   padding: 30px 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+  background-color: #101522;
 `
 
 export const InfoRow = styled.div`
@@ -11,7 +13,7 @@ export const InfoRow = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
+  justify-content: space-around;
 `
 
 export const InfoColumn = styled.div`
@@ -33,25 +35,17 @@ export const InfoColumn = styled.div`
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
-  padding-bottom: 40px;
 
   @media screen and (max-width: 760px) {
     padding-bottom: 10px;
   }
-`
-export const TextHeading = styled.div`
-  color: ${({lightTopLine}) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
-  font-size: 20px;
-  line-height: 16px;
-  letter-spacing: 1.4px;
-  margin-bottom: 16px;
 `
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 1.1;
-  color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237')};
+  color: #fff;
 
   @media screen and (max-width: 760px) {
     max-width: 100%;
@@ -61,13 +55,25 @@ export const Heading = styled.h1`
   }
 `
 
-export const MainText = styled.p`
+export const Text = styled.p`
   max-width: 500px;
   margin-bottom: 10px;
   font-size: 15px;
-  line-height: 34px;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? 'a9b3c1' : '#1c2237')};
+  color: #fff;
+`
 
+export const BulletWrapper = styled.ul`
+  max-width: 500px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-size: 15px;
+  color: #fff;
+`
+
+export const Bullet = styled.li`
+  max-width: 500px;
+  font-size: 15px;
+  color: #fff;
 `
 
 export const ImgWrapper = styled.div`
@@ -84,4 +90,29 @@ export const Img = styled.img`
   max-width: 100%;
   max-height: 100%;
   
+`
+
+
+export const LinkImg = styled(Link)`
+  background-size: cover;
+  width: 300px;
+  height: 175px;
+  margin: 5px;
+  text-decoration: none;
+  opacity: 0.75;
+
+  &:hover {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #a89e32;
+    transition: 200ms ease-in-out;
+    opacity: 1;
+  }
+`
+export const LinkText = styled.h1`
+  color: #000;
+  text-align: center;
+  font-size: 2.75rem;
+  line-height: 375%; 
+
 `

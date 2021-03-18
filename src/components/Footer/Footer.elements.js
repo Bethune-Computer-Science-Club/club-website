@@ -4,23 +4,19 @@ import { Link } from 'react-router-dom';
 export const FooterContainer = styled.div`
   background-color: #111111;
   
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0 1rem 0;
   justify-content: center;
   align-items: center;
   display: flex;
 `
 
 export const FooterRow = styled.div`
-  /* background-color: grey; */
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 `
 
 export const FooterColumn = styled.div`
-  /* background-color: grey; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +37,7 @@ export const FooterColumn = styled.div`
   }
 `
 
-export const Logo = styled(Link)` //change ??? link??
-  /* background-color: green; */
-
+export const Logo = styled.div`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -55,6 +49,8 @@ export const Logo = styled(Link)` //change ??? link??
   width: 300px;
   margin-left: 0;
   margin-right: auto;
+  margin-bottom: 10px;
+
 `
 
 export const Img = styled.img` 
@@ -62,8 +58,6 @@ export const Img = styled.img`
 `
 
 export const AddressWrapper = styled.div` 
-  /* background-color: green; */
-
   justify-self: flex-start;
   width: 180px;
   margin-right: auto;
@@ -96,7 +90,7 @@ export const TextLink = styled(Link)`
 export const ConnectHeader = styled.h1` 
   color: #fff;
   font-size: 1.5rem;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 20%;
 
   @media screen and (max-width: 960px) {
     padding: 0 0 0 0;

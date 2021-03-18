@@ -7,7 +7,6 @@ import {
   NavbarContainer, 
   NavLogo, 
   Img,
-  NavIcon, 
   MobileIcon, 
   NavMenu, 
   NavItem, 
