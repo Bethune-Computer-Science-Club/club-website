@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.75f8b0b6.chunk.js",
-    "main.js.map": "/club-website/static/js/main.75f8b0b6.chunk.js.map",
-    "runtime-main.js": "/club-website/static/js/runtime-main.6b57a6f4.js",
-    "runtime-main.js.map": "/club-website/static/js/runtime-main.6b57a6f4.js.map",
-    "static/js/2.68b441e1.chunk.js": "/club-website/static/js/2.68b441e1.chunk.js",
-    "static/js/2.68b441e1.chunk.js.map": "/club-website/static/js/2.68b441e1.chunk.js.map",
-    "index.html": "/club-website/index.html",
-    "static/js/2.68b441e1.chunk.js.LICENSE.txt": "/club-website/static/js/2.68b441e1.chunk.js.LICENSE.txt",
-    "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
-    "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
-    "static/media/cccLogoEdited.b4d89319.png": "/club-website/static/media/cccLogoEdited.b4d89319.png",
-    "static/media/cppLogo.c0a0d2fd.png": "/club-website/static/media/cppLogo.c0a0d2fd.png",
-    "static/media/gaming.4af1c7d9.jpg": "/club-website/static/media/gaming.4af1c7d9.jpg",
-    "static/media/javaLogo.bcb16fe7.png": "/club-website/static/media/javaLogo.bcb16fe7.png",
-    "static/media/miscellaneous.8ff2fbcb.jpg": "/club-website/static/media/miscellaneous.8ff2fbcb.jpg",
-    "static/media/projects.1ef25eae.png": "/club-website/static/media/projects.1ef25eae.png",
-    "static/media/robotics.427faa96.jpg": "/club-website/static/media/robotics.427faa96.jpg",
-    "static/media/sampleCalender.4d85a761.png": "/club-website/static/media/sampleCalender.4d85a761.png",
-    "static/media/schoolPicture.49a9ffbf.jpg": "/club-website/static/media/schoolPicture.49a9ffbf.jpg",
-    "static/media/submitProject.a4d273b7.jpg": "/club-website/static/media/submitProject.a4d273b7.jpg"
+    "main.js": "/static/js/main.12fd5a38.chunk.js",
+    "main.js.map": "/static/js/main.12fd5a38.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fc03c7e6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fc03c7e6.js.map",
+    "static/js/2.1bf192f8.chunk.js": "/static/js/2.1bf192f8.chunk.js",
+    "static/js/2.1bf192f8.chunk.js.map": "/static/js/2.1bf192f8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.1bf192f8.chunk.js.LICENSE.txt": "/static/js/2.1bf192f8.chunk.js.LICENSE.txt",
+    "static/media/BCSCLogo.99d38df0.png": "/static/media/BCSCLogo.99d38df0.png",
+    "static/media/applications.56946e41.png": "/static/media/applications.56946e41.png",
+    "static/media/cccLogoEdited.b4d89319.png": "/static/media/cccLogoEdited.b4d89319.png",
+    "static/media/cppLogo.c0a0d2fd.png": "/static/media/cppLogo.c0a0d2fd.png",
+    "static/media/gaming.4af1c7d9.jpg": "/static/media/gaming.4af1c7d9.jpg",
+    "static/media/javaLogo.bcb16fe7.png": "/static/media/javaLogo.bcb16fe7.png",
+    "static/media/miscellaneous.8ff2fbcb.jpg": "/static/media/miscellaneous.8ff2fbcb.jpg",
+    "static/media/projects.1ef25eae.png": "/static/media/projects.1ef25eae.png",
+    "static/media/robotics.427faa96.jpg": "/static/media/robotics.427faa96.jpg",
+    "static/media/sampleCalender.4d85a761.png": "/static/media/sampleCalender.4d85a761.png",
+    "static/media/schoolPicture.49a9ffbf.jpg": "/static/media/schoolPicture.49a9ffbf.jpg",
+    "static/media/submitProject.a4d273b7.jpg": "/static/media/submitProject.a4d273b7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b57a6f4.js",
-    "static/js/2.68b441e1.chunk.js",
-    "static/js/main.75f8b0b6.chunk.js"
+    "static/js/runtime-main.fc03c7e6.js",
+    "static/js/2.1bf192f8.chunk.js",
+    "static/js/main.12fd5a38.chunk.js"
   ]
 }
