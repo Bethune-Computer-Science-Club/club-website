@@ -82,7 +82,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #4b59f7;
+    border-bottom: 3px solid #4b59f7;
     transition: all 0.5s ease;
   }
 
