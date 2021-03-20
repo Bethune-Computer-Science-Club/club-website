@@ -13,6 +13,27 @@
       "year": [2020,2021],
       "pfimg": "cccLogo.png",
       "description":"hello world"
+    },
+    {
+      "name":"Winston Ho",
+      "role": "exec",
+      "year": [2020,2021],
+      "pfimg": "cccLogo.png",
+      "description":"hello world"
+    },
+    {
+      "name":"Nick Xue",
+      "role": "exec",
+      "year": [2020,2021],
+      "pfimg": "cccLogo.png",
+      "description":"hello world"
+    },
+    {
+      "name":"Geoffrey Kong",
+      "role": "exec",
+      "year": [2020,2021],
+      "pfimg": "cccLogo.png",
+      "description":"hello world"
     }
   ]
 }

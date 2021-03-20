@@ -25,13 +25,50 @@ for (let exec of execs) {
 
 const TeamInfo = ({ lightText, year }) => {
 
+  // number of slides is set to 3
+
   const [infos, setinfo] = useState(execs);
+  const [currentSlide, setSlide] = useState(1);
 
   const handleInfoClick = (id) => {
     setinfo(infos.map((person) =>
       person.id === id ? { ...person, toggleInfo: !person.toggleInfo } : person
     ));
   }
+
+  const prevSlide = () => {
+    if (currentSlide - 1 < 1) {
+      setSlide(infos.length);
+    }else{
+      setSlide(currentSlide-1);
+    }
+  }
+
+  const nextSlide = () => {
+    if (currentSlide + 1 > infos.length) {
+      setSlide(1);
+    }else{
+      setSlide(currentSlide+1);
+    }
+  }
+  
+  const renderExecList = () => {
+    let execList = [];
+    let current = currentSlide-1;
+    for (let i=0;i<3;i++) {
+      if (current >= infos.length) {
+        current = 0;
+      }
+      console.log(current);
+      execList.push(infos[current]);
+      current ++;
+    }
+
+    return execList;
+  }
+
+  const execList = renderExecList();
+  console.log(currentSlide);
 
   return (
     <>
@@ -43,16 +80,18 @@ const TeamInfo = ({ lightText, year }) => {
           <InfoContainer>
             <CarouselContainer>
               <PrevCarouselIconWrapper>
-                <PrevCarouselIcon />
+                <PrevCarouselIcon onClick={prevSlide}/>
               </PrevCarouselIconWrapper>
 
-              {infos.map((person) => (
+              { 
+                execList.map((person) =>
                 <CarouselItem key={person.id} person={person} handleInfoClick={handleInfoClick} />
-              ))}
+              )}
 
               <NextCarouselIconWrapper>
-                <NextCarouselIcon />
+                <NextCarouselIcon onClick={nextSlide}/>
               </NextCarouselIconWrapper>
+
             </CarouselContainer>
           </InfoContainer>
         </Container>
