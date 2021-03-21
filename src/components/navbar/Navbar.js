@@ -1,6 +1,5 @@
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
 import React, { useState } from 'react';
-import { IconContext } from 'react-icons/lib'
 import { 
   Nav, 
   NavbarContainer, 
@@ -43,11 +42,9 @@ export const Navbar = ({ theme, setTheme }) => {
             <Img src={BCSCLogo} ></Img>
             Bethune Computer Science Club
           </NavLogo>
-          <IconContext.Provider value={{color:'#fff'}}> {/*Makes the icon white*/}
-            <MobileIcon onClick={handleClick}> {/*Toggles between the X and the triple bar icon when clicked*/}
-              {click ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
-          </IconContext.Provider>
+          <MobileIcon onClick={handleClick}> {/*Toggles between the X and the triple bar icon when clicked*/}
+            {click ? <FaTimes /> : <FaBars />}
+          </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <NavLinks to='/'>Home</NavLinks>

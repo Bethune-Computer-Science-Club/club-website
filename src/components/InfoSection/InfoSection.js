@@ -12,18 +12,18 @@ import {
 } from './InfoSection.elements'
 
 
-const InfoSection = ({ lightBg, imgStart, lightTopLine, lightTextDesc, description, headline, lightText, topLine, img, alt, showIframe, showSchedule }) => {
+const InfoSection = ({ imgStart, description, headline, topLine, img, alt, showIframe, showSchedule }) => {
   return (
     <>
-      <InfoSec lightBg={lightBg}>
+      <InfoSec>
         <Container>
-          <Heading lightText={lightText}>{headline}</Heading>
+          <Heading>{headline}</Heading>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
                 <TextWrapper>
-                  {topLine !== '' ? <TextHeading lightTopLine={lightTopLine}>{topLine}</TextHeading> : <></>}
-                  <MainText lightTextDesc={lightTextDesc}>{description}</MainText>
+                  {topLine !== '' ? <TextHeading>{topLine}</TextHeading> : <></>}
+                  <MainText>{description}</MainText>
                 </TextWrapper>
               }
             </InfoColumn>

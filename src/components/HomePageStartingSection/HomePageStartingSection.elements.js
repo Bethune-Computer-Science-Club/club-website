@@ -23,7 +23,7 @@ export const InfoColumn = styled.div`
   max-width: 50%;
   flex-basis: 50%;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     max-width: 100%;
     flex-basis: 100%;
     margin-bottom: 40px;
@@ -31,8 +31,8 @@ export const InfoColumn = styled.div`
 `
 
 export const TextWrapper = styled.div`
-  max-width: 360px;
-  @media screen and (max-width: 760px) {
+  max-width: 450px;
+  @media screen and (max-width: 960px) {
     margin-left: auto;
     margin-right: auto;
   }
