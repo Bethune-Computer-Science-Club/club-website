@@ -1,4 +1,4 @@
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
 import React, { useState } from 'react';
 import { IconContext } from 'react-icons/lib'
 import { 
@@ -17,8 +17,6 @@ import {
 
 import BCSCLogo from '../../images/BCSCLogo.png'
 
-import { FaMoon, FaSun } from 'react-icons/fa'
-import { BsSun } from 'react-icons/bs'
 
 export const Navbar = ({ theme, setTheme }) => {
   //theme changer

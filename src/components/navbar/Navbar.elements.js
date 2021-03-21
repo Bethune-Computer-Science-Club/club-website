@@ -165,7 +165,6 @@ export const Input = styled.input`
   } 
 `
 
-
 export const Slider = styled.span`
   display: flex;
   cursor: pointer;
