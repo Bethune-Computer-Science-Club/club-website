@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
+import { RiFacebookCircleLine } from 'react-icons/ri'
 import bethuneLogo from '../../images/bethuneLogo.gif'
 import BCSCLogo from '../../images/BCSCLogo.png'
 
@@ -18,7 +19,7 @@ function Footer () {
         <FooterRow>
           <FooterColumn>
             <Logo>
-              <Img src={BCSCLogo}></Img>
+              <Img src={BCSCLogo} alt={"BCSC Logo"}></Img>
               Bethune Computer Science Club
             </Logo>
             <AddressWrapper>
@@ -42,18 +43,22 @@ function Footer () {
             <IconContext.Provider value={{color:'#fff', size: '2rem', padding: '50px'}}>
               <SocialsWrapper>
                 <HiOutlineMail/>
-                <SocialsText>bcicodingclub@tdsb.on.ca</SocialsText>
+                <SocialsText>bcicompsciclub@gmail.com</SocialsText>
               </SocialsWrapper>
               <SocialsWrapper>
                 <FaInstagram/>
-                <SocialsText>@insertaccounthere</SocialsText>
+                <SocialsText>@bcicompsciclub</SocialsText>
+              </SocialsWrapper>
+              <SocialsWrapper>
+                <RiFacebookCircleLine/>
+                <SocialsText>Bethune Comp Sci Club</SocialsText>
               </SocialsWrapper>
             </IconContext.Provider>
           </FooterColumn>
         </FooterRow>
 
         <LastLineLogo>
-          <img src={bethuneLogo}></img>
+          <img src={bethuneLogo} alt={"BCSC Logo"}></img>
           Dr. Norman Bethune Collegiate Institute
         </LastLineLogo>
         <DateLastUpdated>

@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 
 export const SectionContainer = styled.div`
-  background: #101522;
+  background-color: ${({theme}) => theme.bkgColor};
+  color: ${({theme}) => theme.textColor};
   padding: 30px 0;
+  transition: all 0.5s ease;
 `
 
 export const InfoRow = styled.div`
@@ -39,7 +41,6 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.h1`
   font-size: 3.5rem;
-  color: #fff;
   max-width: 370px;
   align-items: center;
   display: flex;
@@ -57,5 +58,4 @@ export const Img = styled.img`
 export const PageDescription = styled.p`
   text-align: center;
   font-size: 1.2rem;
-  color: #fff;
 `

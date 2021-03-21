@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const InfoSec = styled.div`
-  color: #fff;
+  color: ${({theme}) => theme.textColor};
   padding: 20px 0 0 0;
-  background: #101522;
+  background-color: ${({theme}) => theme.bkgColor};
+  transition: all 0.5s ease;
 ` 
 
 export const InfoRow = styled.div`
@@ -40,13 +41,11 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 4rem;
-  color: #fff;
 `
 
 export const Subheading = styled.p`
   margin-bottom: 24px;
   font-size: 1.5rem;
-  color: #fff;
 `
 
 export const WelcomeCode = styled.p`
@@ -54,7 +53,6 @@ export const WelcomeCode = styled.p`
   align-items: center;
   margin-bottom: 24px;
   font-size: 1.5rem;
-  color: #fff;
 `
 
 export const Img = styled.img` 

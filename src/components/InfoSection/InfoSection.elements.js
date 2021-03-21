@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const InfoSec = styled.div`
-  color: #fff;
   padding: 30px 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+  background-color: ${({theme}) => theme.bkgColor};
+  transition: all 0.5s ease;
 `
 
 export const InfoRow = styled.div`
@@ -21,6 +21,7 @@ export const InfoColumn = styled.div`
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
+  align-items: center;
 
   @media screen and (max-width: 760px) {
     max-width: 100%;
@@ -32,26 +33,26 @@ export const InfoColumn = styled.div`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 40px;
-
   @media screen and (max-width: 760px) {
     padding-bottom: 10px;
   }
 `
 export const TextHeading = styled.div`
-  color: ${({lightTopLine}) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
+  color: ${({theme}) => theme.topLineColor};
   font-size: 20px;
   line-height: 16px;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
+  transition: all 0.5s ease;
 `
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 1.1;
-  color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237')};
+  color: ${({theme}) => theme.textColor};
+  transition: all 0.5s ease;
+
 
   @media screen and (max-width: 760px) {
     max-width: 100%;
@@ -66,22 +67,14 @@ export const MainText = styled.p`
   margin-bottom: 10px;
   font-size: 15px;
   line-height: 34px;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? 'a9b3c1' : '#1c2237')};
+  color: ${({theme}) => theme.textColor};
+  transition: all 0.5s ease;
 
 `
 
-export const ImgWrapper = styled.div`
-  max-width: 555px;
-  display: flex;
-  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
-`
 
 export const Img = styled.img`
-  left: 0;
-  padding-left: 0;
-  border: 0;
   vertical-align: middle;
+  max-height: 420px;
   max-width: 100%;
-  max-height: 100%;
-  
 `
