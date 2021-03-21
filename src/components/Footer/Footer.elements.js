@@ -116,7 +116,7 @@ export const SocialsText = styled.p`
   padding: 0 0 0 5px;
 
 `
-export const LastLineLogo = styled(Link)` //change ??? link??
+export const LastLineLogo = styled.div`
   color: #fff;
   justify-content: center;
   cursor: pointer;
