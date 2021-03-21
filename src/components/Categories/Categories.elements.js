@@ -1,43 +1,36 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
-import roboticsPicture from '../../images/robotics.jpg'
 
 export const InfoSec = styled.div`
-  color: #fff;
   padding: 30px 0;
-  background-color: #101522;
+  color: ${({theme}) => theme.textColor};
+  background-color: ${({theme}) => theme.bkgColor};
+  transition: all 0.5s ease;
 `
 
-export const InfoRow = styled.div`
+export const InfoRow1 = styled.div`
   display: flex;
-  margin: 0 -15px -15px -15px;
+  padding: 0 20% 10px 15%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-`
+  justify-content: space-between;
 
-export const InfoColumn = styled.div`
-  margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 1;
-  max-width: 50%;
-  flex-basis: 50%;
-
-  @media screen and (max-width: 760px) {
-    max-width: 100%;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
+  @media screen and (max-width: 850px) {
+    padding: 0 0 0 0;
+    justify-content: space-around;
   }
 `
 
-export const TextWrapper = styled.div`
-  max-width: 540px;
-  padding-top: 0;
+export const InfoRow2 = styled.div`
+  display: flex;
+  padding: 10px 15% 0 20%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
-  @media screen and (max-width: 760px) {
-    padding-bottom: 10px;
+  @media screen and (max-width: 850px) {
+    padding: 0 0 0 0;
+    justify-content: space-around;
   }
 `
 
@@ -45,7 +38,6 @@ export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 1.1;
-  color: #fff;
 
   @media screen and (max-width: 760px) {
     max-width: 100%;
@@ -54,44 +46,6 @@ export const Heading = styled.h1`
     justify-content: center;
   }
 `
-
-export const Text = styled.p`
-  max-width: 500px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #fff;
-`
-
-export const BulletWrapper = styled.ul`
-  max-width: 500px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  font-size: 15px;
-  color: #fff;
-`
-
-export const Bullet = styled.li`
-  max-width: 500px;
-  font-size: 15px;
-  color: #fff;
-`
-
-export const ImgWrapper = styled.div`
-  max-width: 555px;
-  display: flex;
-  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
-`
-
-export const Img = styled.img`
-  left: 0;
-  padding-left: 0;
-  border: 0;
-  vertical-align: middle;
-  max-width: 100%;
-  max-height: 100%;
-  
-`
-
 
 export const LinkImg = styled(Link)`
   background-size: cover;

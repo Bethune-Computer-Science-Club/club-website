@@ -1,7 +1,6 @@
-import { FaBars, FaTimes } from 'react-icons/fa'
-import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
+import React, { useState } from 'react';
 import { IconContext } from 'react-icons/lib'
-import { Button } from '../../globalStyles'
 import { 
   Nav, 
   NavbarContainer, 
@@ -11,73 +10,66 @@ import {
   NavMenu, 
   NavItem, 
   NavLinks,
-  NavItemBtn,
-  NavBtnLink
+  ThemeToggle,
+  Slider,
+  SliderIcon
 } from './Navbar.elements'
 
 import BCSCLogo from '../../images/BCSCLogo.png'
 
-export const Navbar = () => {
-  const [click, setClick] = useState(false)
-  const [button, setButton] = useState(true)
-  
-  const handleClick = () => setClick(!click)
 
-  const showButton = () => {
-    if(window.innerWidth <= 960) {
-      setButton(false)
-    } else {
-      setButton(true)
+export const Navbar = ({ theme, setTheme }) => {
+  //theme changer
+  function changeTheme() {
+    if (theme === 'light') {
+      setTheme('dark')
+    }
+    else {
+      setTheme('light')
     }
   }
 
-  useEffect(() => {
-    showButton()
-  }, []);
+  //button functionality???
+  const [click, setClick] = useState(false)
+  
+  const handleClick = () => setClick(!click)
 
-  window.addEventListener('resize', showButton)
 
   return (
     <>
-      <IconContext.Provider value={{color:'#fff'}}> {/*Makes the icon white*/}
-        <Nav>
-          <NavbarContainer>
-            <NavLogo to='/'>
-              <Img src={BCSCLogo} ></Img>
-              Bethune Computer Science Club
-            </NavLogo>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo to='/'>
+            <Img src={BCSCLogo} ></Img>
+            Bethune Computer Science Club
+          </NavLogo>
+          <IconContext.Provider value={{color:'#fff'}}> {/*Makes the icon white*/}
             <MobileIcon onClick={handleClick}> {/*Toggles between the X and the triple bar icon when clicked*/}
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <NavItem>
-                <NavLinks to='/'>Home</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/projects'>Projects</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/team'>Team</NavLinks>
-              </NavItem>
+          </IconContext.Provider>
+          <NavMenu onClick={handleClick} click={click}>
+            <NavItem>
+              <NavLinks to='/'>Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='/projects'>Projects</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='/team'>Team</NavLinks>
+            </NavItem>
+              {/* <ThemeToggle onClick={changeTheme}>{icon}</ThemeToggle> */}
+            <ThemeToggle>
+              <Slider onClick={changeTheme}>
+                <SliderIcon>
+                  {theme === 'light' ? <FaSun /> : <FaMoon />}
+                </SliderIcon>
+              </Slider>
+            </ThemeToggle>
 
-              <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to='/sign-up'>
-                    <Button primary>SIGN UP</Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to='/sign-up'>
-                    <Button fontBig primary>
-                      SIGN UP
-                    </Button>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn>
-
-            </NavMenu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+          </NavMenu>
+        </NavbarContainer>
+      </Nav>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  background: #101522;
+  background-color: ${({theme}) => theme.bkgColor};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: all 0.5s ease;
 `
 
 export const NavbarContainer = styled(Container)`
@@ -23,7 +24,7 @@ export const NavbarContainer = styled(Container)`
 `
 
 export const NavLogo = styled(Link)` 
-  color: #fff;
+  color: ${({theme}) => theme.textColor};
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -35,6 +36,8 @@ export const NavLogo = styled(Link)`
     font-size: 1.8rem;
     width: 90%;
   }
+  transition: all 2 ease;
+
 `
 
 export const Img = styled.img` 
@@ -73,7 +76,7 @@ export const NavMenu = styled.ul`
     left: ${({click}) => (click ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522; 
+    background-color: ${({theme}) => theme.bkgColor};
   }
 `
 
@@ -82,7 +85,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #4b59f7;
+    border-bottom: 3px solid #4b59f7;
     transition: all 0.5s ease;
   }
 
@@ -96,12 +99,13 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(Link)`
-  color: #fff;
+  color: ${({theme}) => theme.textColor};
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  transition: all 0.5 ease;
 
 @media screen and (max-width: 960px) {
   text-align: center;
@@ -137,4 +141,44 @@ export const NavBtnLink = styled(Link)`
   height: 100%;
   border: none;
   outline: none;
+`
+
+//Stuff below used for the dark/light theme toggle
+
+export const ThemeToggle = styled.label`
+  padding: 0 0 0 16px;
+  position: relative;
+`
+
+export const Input = styled.input`
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+
+  &:checked + span {
+    background-color: ${({theme}) => theme.textColor};
+
+    &:before {
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+    }
+  } 
+`
+
+export const Slider = styled.span`
+  display: flex;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  border-radius: 100px;
+  position: relative;
+  background-color: ${({theme}) => theme.textColor};
+  transition: all 0.5s;
+`
+
+export const SliderIcon = styled.div`
+  margin: 0 2px;
+  transform: translateX(${({theme}) => (theme.bkgColor === '#101522') ? 0 : '25px'});
+  color: ${({theme}) => theme.bkgColor};
+  transition: all 0.5s;
 `

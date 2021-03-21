@@ -20,15 +20,15 @@ const InfoSection = ({ lightBg, imgStart, lightTopLine, lightTextDesc, descripti
           <Heading lightText={lightText}>{headline}</Heading>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
-              {showSchedule ? <iframe src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
+              {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
                 <TextWrapper>
-                  <TextHeading lightTopLine={lightTopLine}>{topLine}</TextHeading>
+                  {topLine !== '' ? <TextHeading lightTopLine={lightTopLine}>{topLine}</TextHeading> : <></>}
                   <MainText lightTextDesc={lightTextDesc}>{description}</MainText>
                 </TextWrapper>
               }
             </InfoColumn>
             <InfoColumn>
-                {showIframe ? <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Y19jbGFzc3Jvb21lZmUzOWZkNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style={{border: 0}} width="100%" height="600" frameborder="0" scrolling="no"></iframe> : <Img src={img} alt={alt} />}
+                {showIframe ? <iframe title="Calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Y19jbGFzc3Jvb21lZmUzOWZkNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style={{border: 0}} width="100%" height="600" frameborder="0" scrolling="no"></iframe> : <Img src={img} alt={alt} />}
             </InfoColumn>
           </InfoRow>
         </Container>

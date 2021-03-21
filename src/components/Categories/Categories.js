@@ -2,7 +2,8 @@ import React from 'react'
 import { Container } from '../../globalStyles'
 import {
   InfoSec,
-  InfoRow,
+  InfoRow1,
+  InfoRow2,
   Heading,
   LinkImg,
   LinkText
@@ -18,21 +19,23 @@ const InfoSection = () => {
       <InfoSec>
         <Container>
           <Heading>Categories</Heading>
-          <InfoRow>
+          <InfoRow1>
             <LinkImg to='/' style={{backgroundImage: `url(${roboticsPicture})`}}>
               <LinkText>Robotics</LinkText>
             </LinkImg>
             <LinkImg to='/' style={{backgroundImage: `url(${applicationsPicture})`}}>
-            <LinkText>Applications</LinkText>
+              <LinkText>Applications</LinkText>
             </LinkImg>
+          </InfoRow1>
+
+          <InfoRow2>
             <LinkImg to='/' style={{backgroundImage: `url(${gamesPicture})`}}>
-            <LinkText style={{color: '#fff'}}>Games</LinkText>
+              <LinkText style={{color: '#fff'}}>Games</LinkText>
             </LinkImg>
             <LinkImg to='/' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
-            <LinkText style={{color: '#fff'}}>Miscellaneous</LinkText>
+              <LinkText style={{color: '#fff'}}>Miscellaneous</LinkText>
             </LinkImg>
-
-          </InfoRow>
+          </InfoRow2>
         </Container>
       </InfoSec>
     </>

@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const InfoSec = styled.div`
-  color: #fff;
   padding: 30px 0;
-  background-color: #101522;
+  background-color: ${({theme}) => theme.bkgColor};
+  color: ${({theme}) => theme.textColor};
+  transition: all 0.5s ease;
 `
 
 export const InfoRow = styled.div`
@@ -42,7 +43,6 @@ export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 1.1;
-  color: #fff;
 
   @media screen and (max-width: 760px) {
     max-width: 100%;
@@ -56,7 +56,6 @@ export const Text = styled.p`
   max-width: 500px;
   margin-bottom: 10px;
   font-size: 15px;
-  color: #fff;
 `
 
 export const BulletWrapper = styled.ul`
@@ -64,13 +63,11 @@ export const BulletWrapper = styled.ul`
   margin-bottom: 10px;
   margin-left: 30px;
   font-size: 15px;
-  color: #fff;
 `
 
 export const Bullet = styled.li`
   max-width: 500px;
   font-size: 15px;
-  color: #fff;
 `
 
 export const ImgWrapper = styled.div`
