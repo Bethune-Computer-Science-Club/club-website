@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.10e9dd12.chunk.js",
-    "main.js.map": "/club-website/static/js/main.10e9dd12.chunk.js.map",
+    "main.js": "/club-website/static/js/main.0a65b990.chunk.js",
+    "main.js.map": "/club-website/static/js/main.0a65b990.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.6b57a6f4.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.6b57a6f4.js.map",
-    "static/js/2.951a4a8f.chunk.js": "/club-website/static/js/2.951a4a8f.chunk.js",
-    "static/js/2.951a4a8f.chunk.js.map": "/club-website/static/js/2.951a4a8f.chunk.js.map",
+    "static/js/2.2cd66c74.chunk.js": "/club-website/static/js/2.2cd66c74.chunk.js",
+    "static/js/2.2cd66c74.chunk.js.map": "/club-website/static/js/2.2cd66c74.chunk.js.map",
     "index.html": "/club-website/index.html",
-    "static/js/2.951a4a8f.chunk.js.LICENSE.txt": "/club-website/static/js/2.951a4a8f.chunk.js.LICENSE.txt",
+    "static/js/2.2cd66c74.chunk.js.LICENSE.txt": "/club-website/static/js/2.2cd66c74.chunk.js.LICENSE.txt",
     "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
+    "static/media/ai.59a1e382.jpg": "/club-website/static/media/ai.59a1e382.jpg",
     "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
     "static/media/cccLogoEdited.b4d89319.png": "/club-website/static/media/cccLogoEdited.b4d89319.png",
     "static/media/cppLogo.c0a0d2fd.png": "/club-website/static/media/cppLogo.c0a0d2fd.png",
@@ -18,11 +19,12 @@
     "static/media/projects.1ef25eae.png": "/club-website/static/media/projects.1ef25eae.png",
     "static/media/robotics.427faa96.jpg": "/club-website/static/media/robotics.427faa96.jpg",
     "static/media/schoolPicture.49a9ffbf.jpg": "/club-website/static/media/schoolPicture.49a9ffbf.jpg",
-    "static/media/submitProject.a4d273b7.jpg": "/club-website/static/media/submitProject.a4d273b7.jpg"
+    "static/media/submitProject.a4d273b7.jpg": "/club-website/static/media/submitProject.a4d273b7.jpg",
+    "static/media/websites.55c828c2.jpg": "/club-website/static/media/websites.55c828c2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6b57a6f4.js",
-    "static/js/2.951a4a8f.chunk.js",
-    "static/js/main.10e9dd12.chunk.js"
+    "static/js/2.2cd66c74.chunk.js",
+    "static/js/main.0a65b990.chunk.js"
   ]
 }
