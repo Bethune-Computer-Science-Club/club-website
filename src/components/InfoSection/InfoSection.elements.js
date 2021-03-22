@@ -11,6 +11,7 @@ export const InfoRow = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
+
   flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `
 
@@ -75,6 +76,6 @@ export const MainText = styled.p`
 
 export const Img = styled.img`
   vertical-align: middle;
-  max-height: 420px;
+  max-height: 350px;
   max-width: 100%;
 `

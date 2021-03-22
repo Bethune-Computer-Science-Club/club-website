@@ -2,36 +2,17 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 export const InfoSec = styled.div`
-  padding: 30px 0;
+  padding: 30px 0 0;
   color: ${({theme}) => theme.textColor};
   background-color: ${({theme}) => theme.bkgColor};
   transition: all 0.5s ease;
 `
 
-export const InfoRow1 = styled.div`
+export const InfoRow = styled.div`
   display: flex;
-  padding: 0 20% 10px 15%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 850px) {
-    padding: 0 0 0 0;
-    justify-content: space-around;
-  }
-`
-
-export const InfoRow2 = styled.div`
-  display: flex;
-  padding: 10px 15% 0 20%;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 850px) {
-    padding: 0 0 0 0;
-    justify-content: space-around;
-  }
+  justify-content: space-evenly;
 `
 
 export const Heading = styled.h1`
@@ -49,17 +30,14 @@ export const Heading = styled.h1`
 
 export const LinkImg = styled(Link)`
   background-size: cover;
-  width: 300px;
-  height: 175px;
-  margin: 5px;
+  width: 350px;
+  height: 200px;
+  margin: 10px;
   text-decoration: none;
-  opacity: 0.75;
+  opacity: 0.8;
+  clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 15% 100%, 0% 75%);
 
   &:hover {
-    border-style: solid;
-    border-width: 5px;
-    border-color: #a89e32;
-    transition: 200ms ease-in-out;
     opacity: 1;
   }
 `
@@ -67,6 +45,6 @@ export const LinkText = styled.h1`
   color: #000;
   text-align: center;
   font-size: 2.75rem;
-  line-height: 375%; 
-
+  line-height: 200px;
+  margin: auto;
 `
