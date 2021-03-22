@@ -11,6 +11,7 @@ export const InfoRow = styled.div`
   margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
+
   flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `
 
@@ -23,7 +24,7 @@ export const InfoColumn = styled.div`
   flex-basis: 50%;
   align-items: center;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
@@ -33,7 +34,7 @@ export const InfoColumn = styled.div`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     padding-bottom: 10px;
   }
 `
@@ -54,7 +55,7 @@ export const Heading = styled.h1`
   transition: all 0.5s ease;
 
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
@@ -75,6 +76,6 @@ export const MainText = styled.p`
 
 export const Img = styled.img`
   vertical-align: middle;
-  max-height: 420px;
+  max-height: 350px;
   max-width: 100%;
 `

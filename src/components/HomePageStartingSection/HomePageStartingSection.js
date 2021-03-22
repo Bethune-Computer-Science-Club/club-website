@@ -25,7 +25,7 @@ const HomePageStartingSection = () => {
             <InfoColumn>
               <TextWrapper>
                 <Heading >Welcome!</Heading>
-                <Subheading>Meetings every Sunday @ 4:20 AM</Subheading>
+                <Subheading>Meetings every Thursday @1 PM & 3:30 PM</Subheading>
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

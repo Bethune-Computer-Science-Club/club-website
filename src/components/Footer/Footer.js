@@ -31,10 +31,10 @@ function Footer () {
           </FooterColumn>
           <FooterColumn>
             <CenterText>
-              This website was the result of a lot of hard work from Bethune’s coding club. You can find the credits to the original creators of the website <TextLink to='/services'>here</TextLink>.
+              This website was the result of a lot of hard work from Bethune’s coding club. You can find the credits to the original creators of the website <TextLink to='/team'>here</TextLink>.
             </CenterText>
             <CenterText>
-              The source code for the website can be found <a href="https://youtu.be/oHg5SJYRHA0" style={{color: "#fff"}}>here</a>.
+              The source code for the website can be found <a href="https://github.com/Bethune-Computer-Science-Club/club-website" target="_blank" rel="noreferrer" style={{color: "#fff"}}>here</a>.
             </CenterText>
           </FooterColumn>
 
@@ -62,7 +62,7 @@ function Footer () {
           Dr. Norman Bethune Collegiate Institute
         </LastLineLogo>
         <DateLastUpdated>
-          Last Updated: February 30, 2021
+          Last Updated: March 21, 2021
         </DateLastUpdated>
       </Container>
     </FooterContainer>

@@ -32,6 +32,8 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   line-height: 100%;
+  transition: all 0.5s ease;
+
   @media screen and (max-width: 650px) {
     font-size: 1.8rem;
     width: 90%;
@@ -50,6 +52,7 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
+    color: ${({theme}) => theme.textColor};
     display: block;
     position: absolute;
     top: 0;
@@ -100,12 +103,12 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(Link)`
   color: ${({theme}) => theme.textColor};
+  transition: all 0.5s ease;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
-  transition: all 0.5 ease;
 
 @media screen and (max-width: 960px) {
   text-align: center;
@@ -121,48 +124,11 @@ export const NavLinks = styled(Link)`
   }
 `
 
-export const NavItemBtn = styled.li`
-  @media screen and (max-width: 960px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-  }
-`
-
-export const NavBtnLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-`
-
 //Stuff below used for the dark/light theme toggle
 
 export const ThemeToggle = styled.label`
-  padding: 0 0 0 16px;
+  padding: 0.5rem 1rem;
   position: relative;
-`
-
-export const Input = styled.input`
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-
-  &:checked + span {
-    background-color: ${({theme}) => theme.textColor};
-
-    &:before {
-      left: calc(100% - 2px);
-      transform: translateX(-100%);
-    }
-  } 
 `
 
 export const Slider = styled.span`
