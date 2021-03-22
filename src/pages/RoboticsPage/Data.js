@@ -12,10 +12,10 @@ export const projectOne = {
     imgStart: true, //true if images is in the first column. False if image is in the second column
     lightTopLine: true, 
     lightTextDesc: true, 
-    description: "Created by: The Bethune CS Club \n\n This is where you will put a short description of your project. Don’t write too much, and try to aim for three sentences. Just include the most important parts.",
+    description: "This is where you will put a short description of your project. Don’t write too much, and try to aim for three sentences. Just include the most important parts.",
     headline: 'Bethune CS Club Website',
     lightText: true, 
-    topLine: 'React Website',
+    topLine: 'Created by: The Bethune CS Club',
     img: BCSCLogo,
     alt: 'Image',
     showIframe: false,
