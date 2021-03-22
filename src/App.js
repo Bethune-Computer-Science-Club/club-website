@@ -9,7 +9,7 @@ import Home from './pages/HomePage/Home'
 import Projects from './pages/ProjectsPage/Projects'
 import ScrollToTop from './components/ScrollToTop'
 import { themes } from './themes'
-
+import Robotics from './pages/RoboticsPage/Robotics'
 
 
 
@@ -25,6 +25,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/projects' exact component={Projects} />
+          <Route path='/projects/robotics' exact component={Robotics}/>
         </Switch>
         <Footer />
       </Router>

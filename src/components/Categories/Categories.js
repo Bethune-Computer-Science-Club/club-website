@@ -20,7 +20,7 @@ const InfoSection = () => {
         <Container>
           <Heading>Categories</Heading>
           <InfoRow1>
-            <LinkImg to='/' style={{backgroundImage: `url(${roboticsPicture})`}}>
+            <LinkImg to='/projects/robotics' style={{backgroundImage: `url(${roboticsPicture})`}}>
               <LinkText>Robotics</LinkText>
             </LinkImg>
             <LinkImg to='/' style={{backgroundImage: `url(${applicationsPicture})`}}>
