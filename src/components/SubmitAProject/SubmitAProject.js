@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 
 import {
@@ -16,14 +16,20 @@ import {
 } from './SubmitAProject.elements'
 import submitPicture from '../../images/submitProject.jpg'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
+
 const InfoSection = () => {
+  useEffect(() => {
+    Aos.init({ offset: 50, duration: 1000 });
+  }, []);
   return (
     <>
       <InfoSec>
         <Container>
           <Heading>Submit A Project</Heading>
           <InfoRow>
-            <InfoColumn>
+            <InfoColumn data-aos='fade-right'>
               <TextWrapper>
                 <Text>Completed a project and want it featured on the website? Great! Here’s what you’ll need to do:</Text>
                 <BulletWrapper>
@@ -35,7 +41,7 @@ const InfoSection = () => {
                 <Text>Happy coding everyone! We hope to see this page expand with all the amazing projects you complete!</Text>
               </TextWrapper>
             </InfoColumn>
-            <InfoColumn>
+            <InfoColumn data-aos='fade-left'>
               <ImgWrapper>
                 <Img src={submitPicture}/>
               </ImgWrapper>

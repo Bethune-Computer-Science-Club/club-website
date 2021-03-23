@@ -9,7 +9,7 @@ import { Container } from '../../globalStyles'
 import { IconContext } from 'react-icons/lib'
 
 
-import { FooterContainer, FooterRow, FooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, LastLineLogo, DateLastUpdated} from './Footer.elements'
+import { FooterContainer, FooterRow, FooterColumn, CenterFooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, LastLineLogo, DateLastUpdated, ConnectColumnContainer} from './Footer.elements'
 
 
 function Footer () {
@@ -29,31 +29,36 @@ function Footer () {
               <Address>M1W 3G1</Address>
             </AddressWrapper>
           </FooterColumn>
-          <FooterColumn>
+          <CenterFooterColumn>
             <CenterText>
               This website was the result of a lot of hard work from Bethune’s coding club. You can find the credits to the original creators of the website <TextLink to='/team'>here</TextLink>.
             </CenterText>
             <CenterText>
               The source code for the website can be found <a href="https://github.com/Bethune-Computer-Science-Club/club-website" target="_blank" rel="noreferrer" style={{color: "#fff"}}>here</a>.
             </CenterText>
-          </FooterColumn>
+            <CenterText>
+              The citations to all copyrighted images used on the site can be found <a href="https://docs.google.com/document/d/146j1ScfZwgqHibn3VtmJlUwq7lrIYs1yOFeAPzg_7lU/edit?usp=sharing" target="_blank" rel="noreferrer" style={{color: "#fff"}}>here</a>.
+            </CenterText>
+          </CenterFooterColumn>
 
-          <FooterColumn>
-            <ConnectHeader>Connect With Us</ConnectHeader>
-            <IconContext.Provider value={{color:'#fff', size: '2rem', padding: '50px'}}>
-              <SocialsWrapper>
-                <HiOutlineMail/>
-                <SocialsText>bcicompsciclub@gmail.com</SocialsText>
-              </SocialsWrapper>
-              <SocialsWrapper>
-                <FaInstagram/>
-                <SocialsText>@bcicompsciclub</SocialsText>
-              </SocialsWrapper>
-              <SocialsWrapper>
-                <RiFacebookCircleLine/>
-                <SocialsText>Bethune Comp Sci Club</SocialsText>
-              </SocialsWrapper>
-            </IconContext.Provider>
+          <FooterColumn style={{width: '300px'}}>
+            <ConnectColumnContainer>
+              <ConnectHeader>Connect With Us</ConnectHeader>
+              <IconContext.Provider value={{color:'#fff', size: '2rem', padding: '50px'}}>
+                <SocialsWrapper>
+                  <HiOutlineMail/>
+                  <SocialsText>bcicompsciclub@gmail.com</SocialsText>
+                </SocialsWrapper>
+                <SocialsWrapper>
+                  <FaInstagram/>
+                  <SocialsText>@bcicompsciclub</SocialsText>
+                </SocialsWrapper>
+                <SocialsWrapper>
+                  <RiFacebookCircleLine/>
+                  <SocialsText>Bethune Comp Sci Club</SocialsText>
+                </SocialsWrapper>
+              </IconContext.Provider>
+            </ConnectColumnContainer>
           </FooterColumn>
         </FooterRow>
 
