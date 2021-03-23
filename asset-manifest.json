@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.0a65b990.chunk.js",
-    "main.js.map": "/club-website/static/js/main.0a65b990.chunk.js.map",
+    "main.js": "/club-website/static/js/main.eaa21e83.chunk.js",
+    "main.js.map": "/club-website/static/js/main.eaa21e83.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.6b57a6f4.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.6b57a6f4.js.map",
     "static/js/2.2cd66c74.chunk.js": "/club-website/static/js/2.2cd66c74.chunk.js",
@@ -25,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.6b57a6f4.js",
     "static/js/2.2cd66c74.chunk.js",
-    "static/js/main.0a65b990.chunk.js"
+    "static/js/main.eaa21e83.chunk.js"
   ]
 }
