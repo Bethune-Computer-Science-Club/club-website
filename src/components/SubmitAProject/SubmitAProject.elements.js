@@ -87,4 +87,5 @@ export const Img = styled.img`
 
 export const LinkText = styled.a`
   color: ${({theme}) => theme.textColor};
+  transition: all 0.5s ease;
 `
