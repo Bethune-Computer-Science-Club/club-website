@@ -17,20 +17,40 @@ export const FooterRow = styled.div`
 `
 
 export const FooterColumn = styled.div`
+  /* background-color: green; */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  width: 160px;
   box-sizing: border-box;
   color: #fff;
-  flex-basis: 33%;
+  flex-basis: 20%;
   flex: 1;
 
   @media screen and (max-width: 960px) {
     margin-left: auto;
     margin-right: auto;
     max-width: 300px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`
+
+export const CenterFooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  flex-basis: 20%;
+  flex: 1;
+
+  @media screen and (max-width: 960px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 490px;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
@@ -90,21 +110,13 @@ export const TextLink = styled(Link)`
 export const ConnectHeader = styled.h1` 
   color: #fff;
   font-size: 1.5rem;
-  padding: 0 0 0 20%;
+  text-align: center;
   width: 255px;
-  @media screen and (max-width: 960px) {
-    padding: 0 0 0 0;
-  }
 `
 
 export const SocialsWrapper = styled.div`
   display: flex;
-  align-items: center;
-  padding: 0 0 0 20%;
-
-  @media screen and (max-width: 960px) {
-    padding: 0 0 0 0;
-  }
+  justify-content: center;
 `
 
 export const SocialsText = styled.p`
@@ -136,5 +148,11 @@ export const DateLastUpdated = styled.p`
 
   @media screen and (max-width: 1200px) {
     margin-right: 0;
+  }
+`
+export const ConnectColumnContainer = styled.div`
+  padding: 0 0 0 25%;
+  @media screen and (max-width: 960px) {
+    padding: 0;
   }
 `

@@ -8,11 +8,20 @@ export const InfoSec = styled.div`
   transition: all 0.5s ease;
 `
 
-export const InfoRow = styled.div`
+export const InfoRow1 = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0 0 15px 0;
+`
+
+export const InfoRow2 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 0 0;
 `
 
 export const Heading = styled.h1`
@@ -29,6 +38,8 @@ export const Heading = styled.h1`
 `
 
 export const LinkImg = styled(Link)`
+  z-index: 1;
+
   background-size: cover;
   width: 350px;
   height: 200px;
@@ -47,4 +58,6 @@ export const LinkText = styled.h1`
   font-size: 2.75rem;
   line-height: 200px;
   margin: auto;
+  z-index: 2;
+
 `
