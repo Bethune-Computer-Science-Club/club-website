@@ -8,6 +8,8 @@ export const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
+  margin: 0;
+
 `
 
 export const FooterRow = styled.div`
@@ -17,7 +19,6 @@ export const FooterRow = styled.div`
 `
 
 export const FooterColumn = styled.div`
-  /* background-color: green; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +51,7 @@ export const CenterFooterColumn = styled.div`
   @media screen and (max-width: 960px) {
     margin-left: auto;
     margin-right: auto;
-    max-width: 490px;
+    max-width: 80%;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
