@@ -38,26 +38,27 @@ export const Heading = styled.h1`
 `
 
 export const LinkImg = styled(Link)`
-  z-index: 1;
-
   background-size: cover;
   width: 350px;
   height: 200px;
   margin: 10px;
   text-decoration: none;
-  opacity: 0.8;
   clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 15% 100%, 0% 75%);
 
-  &:hover {
-    opacity: 1;
-  }
+
 `
 export const LinkText = styled.h1`
   color: #000;
   text-align: center;
   font-size: 2.75rem;
-  line-height: 200px;
-  margin: auto;
-  z-index: 2;
+  line-height: 500px;
+
+  &:hover {
+    line-height: 200px;
+    color: #0099ff;
+    background: rgba(0, 0, 0); //fallback for browsers with no rgba support
+    background: rgba(0, 0, 0, 0.8);
+  }
+  transition: all 0.5s ease;
 
 `

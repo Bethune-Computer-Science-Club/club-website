@@ -40,13 +40,13 @@ const InfoSection = () => {
           </InfoRow1>
           <InfoRow2>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${gamesPicture})`}}>
-              <LinkText style={{color: '#fff'}}>Games</LinkText>
+              <LinkText>Games</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${aiPicture})`}}>
-              <LinkText style={{color: '#fff'}}>AI</LinkText>
+              <LinkText>AI</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
-              <LinkText style={{color: '#fff'}}>Miscellaneous</LinkText>
+              <LinkText>Miscellaneous</LinkText>
             </LinkImg>
           </InfoRow2>
         </Container>
