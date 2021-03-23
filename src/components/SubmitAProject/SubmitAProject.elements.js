@@ -84,3 +84,7 @@ export const Img = styled.img`
   max-width: 100%;
   max-height: 100%;
 `
+
+export const LinkText = styled.a`
+  color: ${({theme}) => theme.textColor};
+`
