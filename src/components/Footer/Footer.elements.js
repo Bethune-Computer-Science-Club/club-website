@@ -91,7 +91,7 @@ export const ConnectHeader = styled.h1`
   color: #fff;
   font-size: 1.5rem;
   padding: 0 0 0 20%;
-
+  width: 255px;
   @media screen and (max-width: 960px) {
     padding: 0 0 0 0;
   }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 import pythonLogo from '../../images/pythonLogo.png'
 import cppLogo from '../../images/cppLogo.png'
@@ -14,21 +14,26 @@ import {
   WelcomeCode,
   Img
 } from './HomePageStartingSection.elements'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
 
 const HomePageStartingSection = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <InfoSec>
         <Container>
           <InfoRow>
-            <InfoColumn>
+            <InfoColumn data-aos='fade-right'>
               <TextWrapper>
                 <Heading >Welcome!</Heading>
                 <Subheading>Meetings every Thursday @1 PM & 3:30 PM</Subheading>
               </TextWrapper>
             </InfoColumn>
-            <InfoColumn>
+            <InfoColumn data-aos='fade-left'>
               <TextWrapper>
                 <WelcomeCode>
                   print(“Welcome!”)
