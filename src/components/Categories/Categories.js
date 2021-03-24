@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 import {
   InfoSec,
-  InfoRow1,
-  InfoRow2,
+  InfoRow,
   Heading,
   LinkImg,
   LinkText,
@@ -27,18 +26,17 @@ const InfoSection = () => {
       <InfoSec>
         <Container>
           <Heading>Categories</Heading>
-          <InfoRow1>
+          <InfoRow>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${roboticsPicture})`}}>
               <LinkText>Robotics</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${applicationsPicture})`}}>
-              <LinkText>Applications</LinkText>
+              <LinkText>Apps</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${websitesPicture})`}}>
               <LinkText>Websites</LinkText>
             </LinkImg>
-          </InfoRow1>
-          <InfoRow2>
+
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${gamesPicture})`}}>
               <LinkText>Games</LinkText>
             </LinkImg>
@@ -46,9 +44,9 @@ const InfoSection = () => {
               <LinkText>AI</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
-              <LinkText>Miscellaneous</LinkText>
+              <LinkText>Misc</LinkText>
             </LinkImg>
-          </InfoRow2>
+          </InfoRow>
         </Container>
       </InfoSec>
     </>
