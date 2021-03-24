@@ -51,7 +51,7 @@ export const Subheading = styled.p`
 export const WelcomeCode = styled.p`
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   font-size: 1.5rem;
 `
 
