@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.0a50fe24.chunk.js",
-    "main.js.map": "/club-website/static/js/main.0a50fe24.chunk.js.map",
+    "main.js": "/club-website/static/js/main.f551e486.chunk.js",
+    "main.js.map": "/club-website/static/js/main.f551e486.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.6b57a6f4.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.6b57a6f4.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/club-website/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.83dcf9f1.chunk.js": "/club-website/static/js/2.83dcf9f1.chunk.js",
-    "static/js/2.83dcf9f1.chunk.js.map": "/club-website/static/js/2.83dcf9f1.chunk.js.map",
+    "static/js/2.16136d4d.chunk.js": "/club-website/static/js/2.16136d4d.chunk.js",
+    "static/js/2.16136d4d.chunk.js.map": "/club-website/static/js/2.16136d4d.chunk.js.map",
     "index.html": "/club-website/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/club-website/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/js/2.83dcf9f1.chunk.js.LICENSE.txt": "/club-website/static/js/2.83dcf9f1.chunk.js.LICENSE.txt",
+    "static/js/2.16136d4d.chunk.js.LICENSE.txt": "/club-website/static/js/2.16136d4d.chunk.js.LICENSE.txt",
     "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
     "static/media/ai.59a1e382.jpg": "/club-website/static/media/ai.59a1e382.jpg",
     "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.6b57a6f4.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.83dcf9f1.chunk.js",
-    "static/js/main.0a50fe24.chunk.js"
+    "static/js/2.16136d4d.chunk.js",
+    "static/js/main.f551e486.chunk.js"
   ]
 }
