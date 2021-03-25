@@ -7,6 +7,7 @@ import GlobalStyle from './globalStyles'
 import  { Navbar, Footer } from './components'
 import Home from './pages/HomePage/Home'
 import Projects from './pages/ProjectsPage/Projects'
+import Placeholder from './pages/PlaceholderPage/Placeholder'
 import ScrollToTop from './components/ScrollToTop'
 import { themes } from './themes'
 
@@ -25,6 +26,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/projects' exact component={Projects} />
+          <Route path='/team' exact component={Placeholder} />
         </Switch>
         <Footer />
       </Router>

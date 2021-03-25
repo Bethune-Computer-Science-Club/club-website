@@ -30,7 +30,7 @@ export const Heading = styled.h1`
 export const LinkText = styled.h1`
   width: 20px;
   height: 100%;
-  background: #000;
+  background-color: rgb(0, 0, 0, 1);
 
   font-size: 0.8rem;
   writing-mode: vertical-rl;
@@ -38,6 +38,7 @@ export const LinkText = styled.h1`
   color: #0099ff;
 
   transition: all 0.2s ease;
+
 `
 
 export const LinkImg = styled(Link)`
@@ -55,7 +56,7 @@ export const LinkImg = styled(Link)`
     font-size: 2.75rem;
     text-align: center;
     line-height: 200px;
-    background: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.8);    
   }
 `
 
