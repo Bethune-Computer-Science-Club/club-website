@@ -24,7 +24,7 @@ export const homeObjTwo = {
 
 //About Us
 export const homeObjThree = {
-  imgStart: true, 
+  imgStart: false, 
   buttonLabel: 'Get Started', 
   description: 'Lorem ipsum dolor sit amet, ludus suscipiantur signiferumque sit in, an amet definitiones per. Ad bonorum praesent quo, in cum postea disputando. Vix ea solet animal vidisse, cu utroque splendide has. Eam an nominati voluptatibus, sed in magna exerci aperiam, ex has erant elaboraret. At wisi ferri his. Nam bonorum feugait an, vix at nostrum definitiones, sit utamur suscipit necessitatibus in. Sed duis malis alienum in. Etiam reprimique et vim, alterum fabulas placerat ea nec, luptatum forensibus voluptatibus ad vix. Et altera civibus reformidans sea, nam cu clita phaedrum rationibus, facer hendrerit vix ei. Has ad noster scaevola ponderum. Placeholder text.', 
   headline: 'About Us', 

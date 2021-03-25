@@ -61,7 +61,6 @@ export const CenterFooterColumn = styled.div`
 export const Logo = styled.div`
   color: #fff;
   justify-self: flex-start;
-  cursor: pointer;
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
@@ -132,7 +131,6 @@ export const SocialsText = styled.p`
 export const LastLineLogo = styled.div`
   color: #fff;
   justify-content: center;
-  cursor: pointer;
   text-decoration: none;
   font-size: 1.15rem;
   display: flex;

@@ -21,6 +21,7 @@ const InfoSection = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <>
       <InfoSec>
@@ -44,7 +45,7 @@ const InfoSection = () => {
               <LinkText>AI</LinkText>
             </LinkImg>
             <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
-              <LinkText>Misc</LinkText>
+              <LinkText>Other</LinkText>
             </LinkImg>
           </InfoRow>
         </Container>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 export const InfoSec = styled.div`
   padding: 30px 0;
@@ -85,7 +86,7 @@ export const Img = styled.img`
   max-height: 100%;
 `
 
-export const LinkText = styled.a`
+export const LinkText = styled(Link)`
   color: ${({theme}) => theme.textColor};
   transition: all 0.5s ease;
 `
