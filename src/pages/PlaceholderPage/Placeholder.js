@@ -18,7 +18,7 @@ const StartingSection = () => {
       <SectionContainer>
         <Container>
           <InfoRow>
-            <Heading>This page is not ready yet as website is still in development. Sorry for the Inconvience. </Heading>
+            <Heading>This page is not ready yet as the website is still in development. Sorry for the inconvenience. </Heading>
           </InfoRow>
         </Container>
       </SectionContainer>
