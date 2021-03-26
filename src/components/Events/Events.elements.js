@@ -2,7 +2,7 @@ import styled from 'styled-components'
 // import { Link } from 'react-router-dom';
 
 export const InfoSec = styled.div`
-  padding: 30px 0;
+  padding: 30px 0 50px 0;
   background-color: ${({theme}) => theme.bkgColor};
   color: ${({theme}) => theme.textColor};
   transition: all 0.5s ease;
@@ -11,10 +11,11 @@ export const InfoSec = styled.div`
 export const InfoRow = styled.div`
   display: flex;
   margin: 0 -15px -15px -15px;
+  flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `
 
 export const InfoColumn = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding-right: 15px;
   padding-left: 15px;
   width: 50%;
@@ -58,4 +59,10 @@ export const Img = styled.img`
   margin: auto;
   max-width: 300px;
   max-height: 180px;
+`
+
+export const MoreInfoLink = styled.a`
+  float: right;
+  color: ${({theme}) => theme.textColor};
+  text-decoration: none;
 `

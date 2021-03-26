@@ -9,12 +9,13 @@ import {
   Heading,
   ImgWrapper,
   Img,
+  MoreInfoLink
 } from './Events.elements'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const EventsSection = ({header, img1, img2, textDescription}) => {
+const EventsSection = ({imgStart, header, img1, img2, textDescription, moreInfoLink}) => {
   useEffect(() => {
     Aos.init({ offset: 50, duration: 1000, once: true});
   }, []);
@@ -26,7 +27,7 @@ const EventsSection = ({header, img1, img2, textDescription}) => {
       <InfoSec>
         <Container>
           <Heading>{header}</Heading>
-          <InfoRow>
+          <InfoRow imgStart={imgStart}>
             <InfoColumn data-aos='fade-right'>
               <TextWrapper>{newStr}</TextWrapper>
             </InfoColumn>
@@ -39,6 +40,7 @@ const EventsSection = ({header, img1, img2, textDescription}) => {
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>
+          <MoreInfoLink href={moreInfoLink} target="_blank" rel="noreferrer">More Info &gt;</MoreInfoLink>
         </Container>
       </InfoSec>
     </>
