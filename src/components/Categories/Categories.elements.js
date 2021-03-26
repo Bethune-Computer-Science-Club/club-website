@@ -35,7 +35,7 @@ export const LinkText = styled.h1`
   font-size: 0.8rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  color: #0099ff;
+  color: ${({theme}) => theme.textColor2};
 
   transition: all 0.2s ease;
 
@@ -47,7 +47,7 @@ export const LinkImg = styled(Link)`
   height: 200px;
   margin: 25px 10px;
   text-decoration: none;
-  clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 15% 100%, 0% 75%);
+  clip-path: polygon(0 0, 85% 0, 100% 20%, 100% 100%, 15% 100%, 0% 80%);
 
   &:hover ${LinkText} {
     width: 100%;

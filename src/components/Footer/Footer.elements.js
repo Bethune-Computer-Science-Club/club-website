@@ -117,6 +117,7 @@ export const ConnectHeader = styled.h1`
 export const SocialsWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin: 5px 0;
 `
 
 export const SocialsText = styled.p`
@@ -126,8 +127,18 @@ export const SocialsText = styled.p`
   align-items: center;
   line-height: 100%;
   padding: 0 0 0 5px;
-
 `
+
+export const SocialsLink = styled.a`
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  padding: 0 0 0 5px;
+  text-decoration: none;
+`
+
 export const LastLineLogo = styled.div`
   color: #fff;
   justify-content: center;
