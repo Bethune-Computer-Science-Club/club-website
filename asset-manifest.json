@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.ce3d9ab0.chunk.js",
-    "main.js.map": "/club-website/static/js/main.ce3d9ab0.chunk.js.map",
+    "main.js": "/club-website/static/js/main.8add82ca.chunk.js",
+    "main.js.map": "/club-website/static/js/main.8add82ca.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.6b57a6f4.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.6b57a6f4.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/club-website/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.16136d4d.chunk.js": "/club-website/static/js/2.16136d4d.chunk.js",
-    "static/js/2.16136d4d.chunk.js.map": "/club-website/static/js/2.16136d4d.chunk.js.map",
+    "static/js/2.cc0983d0.chunk.js": "/club-website/static/js/2.cc0983d0.chunk.js",
+    "static/js/2.cc0983d0.chunk.js.map": "/club-website/static/js/2.cc0983d0.chunk.js.map",
     "index.html": "/club-website/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/club-website/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/js/2.16136d4d.chunk.js.LICENSE.txt": "/club-website/static/js/2.16136d4d.chunk.js.LICENSE.txt",
+    "static/js/2.cc0983d0.chunk.js.LICENSE.txt": "/club-website/static/js/2.cc0983d0.chunk.js.LICENSE.txt",
     "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
     "static/media/ai.59a1e382.jpg": "/club-website/static/media/ai.59a1e382.jpg",
     "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
     "static/media/cccLogoEdited.b4d89319.png": "/club-website/static/media/cccLogoEdited.b4d89319.png",
+    "static/media/codeJamImg1.5f19741f.jpg": "/club-website/static/media/codeJamImg1.5f19741f.jpg",
     "static/media/cppLogo.c0a0d2fd.png": "/club-website/static/media/cppLogo.c0a0d2fd.png",
+    "static/media/events.1ee23467.png": "/club-website/static/media/events.1ee23467.png",
     "static/media/gaming.4af1c7d9.jpg": "/club-website/static/media/gaming.4af1c7d9.jpg",
+    "static/media/hackTheNorthImg.69a03c43.jpg": "/club-website/static/media/hackTheNorthImg.69a03c43.jpg",
     "static/media/javaLogo.bcb16fe7.png": "/club-website/static/media/javaLogo.bcb16fe7.png",
     "static/media/miscellaneous.8ff2fbcb.jpg": "/club-website/static/media/miscellaneous.8ff2fbcb.jpg",
     "static/media/projects.1ef25eae.png": "/club-website/static/media/projects.1ef25eae.png",
@@ -27,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.6b57a6f4.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.16136d4d.chunk.js",
-    "static/js/main.ce3d9ab0.chunk.js"
+    "static/js/2.cc0983d0.chunk.js",
+    "static/js/main.8add82ca.chunk.js"
   ]
 }
