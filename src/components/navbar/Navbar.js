@@ -47,7 +47,7 @@ export const Navbar = ({ theme, setTheme }) => {
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='/'>Home</NavLinks>
+              <NavLinks to='/club-website'>Home</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/events'>Events</NavLinks>

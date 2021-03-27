@@ -26,7 +26,7 @@ function App() {
         <ScrollToTop />
         <Navbar theme={theme} setTheme={setTheme}/>
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/club-website' exact component={Home} />
           <Route path='/events' exact component={Events} />
           <Route path='/projects' exact component={Projects} />
           <Route path='/team' exact component={Placeholder} />
