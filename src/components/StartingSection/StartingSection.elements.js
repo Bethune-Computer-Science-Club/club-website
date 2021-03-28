@@ -52,7 +52,8 @@ export const Heading = styled.h1`
 `
 
 export const Img = styled.img` 
-  width: 150px;
+  max-width: 150px;
+  max-height: 80px;
   margin: 20px;
 `
 export const PageDescription = styled.p`

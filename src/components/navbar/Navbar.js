@@ -29,14 +29,25 @@ export const Navbar = ({ theme, setTheme }) => {
   }
 
   //button functionality???
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
   
-  const handleClick = () => setClick(!click)
+  const handleClick = () => setClick(!click);
 
+  //background transparent when scrolled
+  const [navbar, setNavbar] = useState(false);
 
+  const changeBackground = () => {
+    if(window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
   return (
     <>
-      <Nav>
+      <Nav navbarSolid={navbar}>
         <NavbarContainer>
           <NavLogo to='/'>
             <Img src={BCSCLogo} ></Img>
@@ -47,7 +58,10 @@ export const Navbar = ({ theme, setTheme }) => {
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLinks to='/'>Home</NavLinks>
+              <NavLinks to='/club-website'>Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='/events'>Events</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/projects'>Projects</NavLinks>

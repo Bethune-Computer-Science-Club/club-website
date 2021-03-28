@@ -3,6 +3,7 @@ import { Container } from '../../globalStyles'
 import pythonLogo from '../../images/pythonLogo.png'
 import cppLogo from '../../images/cppLogo.png'
 import javaLogo from '../../images/javaLogo.png'
+import titleBar from '../../images/titleBar.png'
 
 import {
   InfoSec,
@@ -17,14 +18,14 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const HomePageStartingSection = () => {
+const HomePageStartingSection = (backgroundImg) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
     <>
-      <InfoSec>
+      <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>
         <Container>
           <InfoRow>
             <InfoColumn data-aos='fade-right'>

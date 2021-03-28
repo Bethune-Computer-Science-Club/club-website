@@ -5,3 +5,4 @@ export { default as HomePageStartingSection } from './HomePageStartingSection/Ho
 export { default as StartingSection } from './StartingSection/StartingSection'
 export { default as SubmitAProject } from './SubmitAProject/SubmitAProject'
 export { default as Categories } from './Categories/Categories'
+export { default as EventsSection } from './Events/Events'

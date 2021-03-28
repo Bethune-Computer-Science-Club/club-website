@@ -9,7 +9,7 @@ import { Container } from '../../globalStyles'
 import { IconContext } from 'react-icons/lib'
 
 
-import { FooterContainer, FooterRow, FooterColumn, CenterFooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, LastLineLogo, DateLastUpdated, ConnectColumnContainer} from './Footer.elements'
+import { FooterContainer, FooterRow, FooterColumn, CenterFooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, SocialsLink, LastLineLogo, DateLastUpdated, ConnectColumnContainer} from './Footer.elements'
 
 
 function Footer () {
@@ -51,11 +51,11 @@ function Footer () {
                 </SocialsWrapper>
                 <SocialsWrapper>
                   <FaInstagram/>
-                  <SocialsText>@bcicompsciclub</SocialsText>
+                  <SocialsLink href="https://www.instagram.com/bcicompsciclub/?hl=en" target="_blank" rel="noreferrer">@bcicompsciclub</SocialsLink>
                 </SocialsWrapper>
                 <SocialsWrapper>
                   <RiFacebookCircleLine/>
-                  <SocialsText>Bethune Comp Sci Club</SocialsText>
+                  <SocialsLink href="https://www.facebook.com/bcicompsciclub/" target="_blank" rel="noreferrer">Bethune Comp Sci Club</SocialsLink>
                 </SocialsWrapper>
               </IconContext.Provider>
             </ConnectColumnContainer>
@@ -67,7 +67,7 @@ function Footer () {
           Dr. Norman Bethune Collegiate Institute
         </LastLineLogo>
         <DateLastUpdated>
-          Last Updated: March 21, 2021 - Prototype Phase
+          Last Updated: March 21, 2021 - Prototype Phase - V 0.0
         </DateLastUpdated>
       </Container>
     </FooterContainer>

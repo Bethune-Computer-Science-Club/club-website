@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const InfoSec = styled.div`
   color: ${({theme}) => theme.textColor};
   padding: 20px 0 0 0;
-  background-color: ${({theme}) => theme.bkgColor};
   transition: all 0.5s ease;
 ` 
 
