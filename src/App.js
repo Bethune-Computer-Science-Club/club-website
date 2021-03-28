@@ -7,12 +7,12 @@ import GlobalStyle from './globalStyles'
 import  { Navbar, Footer } from './components'
 import Home from './pages/HomePage/Home'
 import Events from './pages/EventsPage/Events'
+import Team from './pages/TeamPage/Team'
 
 import Projects from './pages/ProjectsPage/Projects'
 import Placeholder from './pages/PlaceholderPage/Placeholder'
 import ScrollToTop from './components/ScrollToTop'
 import { themes } from './themes'
-
 
 
 
@@ -27,9 +27,9 @@ function App() {
         <Navbar theme={theme} setTheme={setTheme}/>
         <Switch>
           <Route path='/club-website' exact component={Home} />
-          <Route path='/events' exact component={Events} />
-          <Route path='/projects' exact component={Projects} />
-          <Route path='/team' exact component={Placeholder} />
+          <Route path='/events' component={Events} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/team' component={Team} />
         </Switch>
         <Footer />
       </Router>

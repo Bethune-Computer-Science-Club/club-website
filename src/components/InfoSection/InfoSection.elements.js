@@ -73,7 +73,6 @@ export const MainText = styled.p`
 
 `
 
-
 export const Img = styled.img`
   vertical-align: middle;
   max-height: 350px;
