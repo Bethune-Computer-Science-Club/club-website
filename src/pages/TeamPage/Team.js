@@ -1,12 +1,14 @@
 import React from 'react'
 import { exec20_21,exec19_20 } from './Data'
-import { TeamInfo } from '../../components'
+import { StartingSection, TeamInfo } from '../../components'
+import { StartingSectionParameters } from './Data'
 
 const Team = () => {
   return (
     <>
-    <TeamInfo {...exec20_21}/>
-    <TeamInfo {...exec19_20}/>
+      <StartingSection {...StartingSectionParameters} />
+      <TeamInfo {...exec20_21}/>
+      <TeamInfo {...exec19_20}/>
     </>
   )
 }

@@ -10,7 +10,7 @@ import Events from './pages/EventsPage/Events'
 import Team from './pages/TeamPage/Team'
 
 import Projects from './pages/ProjectsPage/Projects'
-import Placeholder from './pages/PlaceholderPage/Placeholder'
+// import Placeholder from './pages/PlaceholderPage/Placeholder'
 import ScrollToTop from './components/ScrollToTop'
 import { themes } from './themes'
 

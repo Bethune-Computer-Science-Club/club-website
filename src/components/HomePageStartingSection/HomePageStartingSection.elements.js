@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import titleBar from '../../images/titleBar.png'
 
 export const InfoSec = styled.div`
+  background-image: url(${titleBar});
   color: ${({theme}) => theme.textColor};
-  padding: 20px 0 0 0;
+  padding: 90px 0 10px 0; //take into account space at the top for the navbar
   transition: all 0.5s ease;
 ` 
 

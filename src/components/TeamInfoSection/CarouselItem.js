@@ -1,6 +1,6 @@
 import FrontCarousel from './FrontCarousel'
 import BackCarousel from './BackCarousel'
-import pikachu from '../../pages/TeamPage/execImgs/Pikachu.jpg'
+// import pikachu from '../../pages/TeamPage/execImgs/Pikachu.jpg'
 import {
   Carousel,
 } from './TeamInfo.elements'

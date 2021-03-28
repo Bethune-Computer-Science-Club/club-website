@@ -4,18 +4,17 @@ import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
   background-color: ${({theme}) => theme.bkgColor};
-  background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgb(0, 0, 0, 0%)')};
+  background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgba(0, 0, 0, 0%)')};
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   transition: all 0.5s ease;
-
-
+  width: 100%;
 `
 export const NavbarContainer = styled(Container)`
   display: flex;
@@ -91,7 +90,6 @@ export const NavItem = styled.li`
 
   &:hover {
     border-bottom: 3px solid #4b59f7;
-    transition: all 0.5s ease;
   }
 
   @media screen and (max-width: 960px) {
