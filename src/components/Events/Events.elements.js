@@ -64,5 +64,4 @@ export const Img = styled.img`
 export const MoreInfoLink = styled.a`
   float: right;
   color: ${({theme}) => theme.textColor};
-  text-decoration: none;
 `

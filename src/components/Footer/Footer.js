@@ -67,7 +67,7 @@ function Footer () {
           Dr. Norman Bethune Collegiate Institute
         </LastLineLogo>
         <DateLastUpdated>
-          Last Updated: March 21, 2021 - Prototype Phase
+          Last Updated: March 21, 2021 - Prototype Phase - V 0.0
         </DateLastUpdated>
       </Container>
     </FooterContainer>

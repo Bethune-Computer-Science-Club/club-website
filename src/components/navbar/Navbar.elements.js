@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
   background-color: ${({theme}) => theme.bkgColor};
+  background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgb(0, 0, 0, 0%)')};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -13,8 +14,9 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 999;
   transition: all 0.5s ease;
-`
 
+
+`
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;

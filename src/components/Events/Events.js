@@ -40,7 +40,7 @@ const EventsSection = ({imgStart, header, img1, img2, textDescription, moreInfoL
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>
-          <MoreInfoLink href={moreInfoLink} target="_blank" rel="noreferrer">More Info &gt;</MoreInfoLink>
+          <MoreInfoLink href={moreInfoLink} target="_blank" rel="noreferrer">More info &gt;</MoreInfoLink>
         </Container>
       </InfoSec>
     </>
