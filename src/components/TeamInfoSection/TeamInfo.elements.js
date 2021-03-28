@@ -68,8 +68,6 @@ export const Carousel = styled.div`
   height: 250px;
   border-radius: 20%;
 
-  transition: all 0.5s ease;
-
 	&:hover {
 		border: 5px green solid;
 	}

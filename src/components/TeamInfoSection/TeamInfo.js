@@ -13,20 +13,31 @@ import {
   NextCarouselIcon,
 } from './TeamInfo.elements'
 
-const execs = require('../../pages/TeamPage/execs.json').execs;
+const execsData = require('../../pages/TeamPage/execs.json').execs;
 
-for (let exec of execs) {
-  // add toggleInfo for extra info for each carousel
-  exec.toggleInfo = false;
+const EXECS = Object.values(execsData);
+const years = Object.values(EXECS);
 
-  // adding id to each exec
-  exec.id = Math.floor(Math.random() * 10000000000) + 1
+for (let year of years) {
+  for (let exec of year) {
+    // add toggleInfo for extra info for each carousel
+    exec.toggleInfo = false;
+
+    // adding id to each exec
+    exec.id = Math.floor(Math.random() * 10000000000) + 1;
+  }
 }
 
-const TeamInfo = ({ lightText, year }) => {
+const TeamInfo = ({ lightText, YEAR }) => {
+  let execs;
+  for (let year of Object.entries(execsData)){
+    console.log(year[0],YEAR);
+    if (year[0] === YEAR) {
+      execs = year[1];
+    }
+  }
 
   // number of slides is set to 3
-
   const [infos, setinfo] = useState(execs);
   const [currentSlide, setSlide] = useState(1);
 
@@ -59,7 +70,6 @@ const TeamInfo = ({ lightText, year }) => {
       if (current >= infos.length) {
         current = 0;
       }
-      console.log(current);
       execList.push(infos[current]);
       current ++;
     }
@@ -75,7 +85,7 @@ const TeamInfo = ({ lightText, year }) => {
       <InfoSec>
         <Container>
           <Heading lightText={lightText}>
-            {year}
+            {YEAR}
           </Heading>
           <InfoContainer>
             <CarouselContainer>

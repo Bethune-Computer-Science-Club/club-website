@@ -1,39 +1,68 @@
 {
-  "execs": [
-    {
-      "name":"Simon Yang",
-      "role": "exec",
-      "year": [2020,2021],
-      "pfimg": "Pikachu.jpg",
-      "description":"hello world"
-    },
-    {
-      "name":"Ri Hong",
-      "role": "exec",
-      "year": [2020,2021],
-      "pfimg": "cccLogo.png",
-      "description":"hello world"
-    },
-    {
-      "name":"Winston Ho",
-      "role": "exec",
-      "year": [2020,2021],
-      "pfimg": "cccLogo.png",
-      "description":"hello world"
-    },
-    {
-      "name":"Nick Xue",
-      "role": "exec",
-      "year": [2020,2021],
-      "pfimg": "cccLogo.png",
-      "description":"hello world"
-    },
-    {
-      "name":"Geoffrey Kong",
-      "role": "exec",
-      "year": [2020,2021],
-      "pfimg": "cccLogo.png",
-      "description":"hello world"
-    }
-  ]
+  "execs": {
+    "2020_2021":   [
+      {
+        "name":"Simon Yang",
+        "role": "exec",
+        "pfimg": "Pikachu.jpg",
+        "description":"hello world"
+      },
+      {
+        "name":"Ri Hong",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Winston Ho",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Nick Xue",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Geoffrey Kong",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      }
+    ],
+    "2019_2020":   [
+      {
+        "name":"Simon1 Yang",
+        "role": "exec",
+        "pfimg": "Pikachu.jpg",
+        "description":"hello world"
+      },
+      {
+        "name":"Ri1 Hong",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Winston1 Ho",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Nick1 Xue",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      },
+      {
+        "name":"Geoffrey1 Kong",
+        "role": "exec",
+        "pfimg": "cccLogo.png",
+        "description":"hello world"
+      }
+    ]
+  }
 }
