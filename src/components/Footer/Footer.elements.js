@@ -139,7 +139,7 @@ export const SocialsLink = styled.a`
   text-decoration: none;
 `
 
-export const LastLineLogo = styled.div`
+export const LastLineLogo = styled.h1`
   color: #fff;
   justify-content: center;
   text-decoration: none;

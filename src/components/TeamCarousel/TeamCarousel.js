@@ -10,7 +10,9 @@ import {
   Card,
   Photo,
   Name,
+  Role,
   Description,
+  DescriptionWrapper,
   RightArrow,
   LeftArrow,
 } from './TeamCarousel.elements'
@@ -21,7 +23,7 @@ import ReactCardFlip from 'react-card-flip'; // For the flip animation for each 
 // CardElement function gets called by the TeamCarousel function below
 const CardElement = ({ data }) => {
   const [Flipped, setFlipped] = useState(false); // Initialize the card to be unflipped initially
-  const image = require('../../pages/TeamPage/execImgs/' + data.imageName).default // Obtain the image
+  const image = require('../../pages/TeamPage/ExecImages/' + data.imageName).default // Obtain the image
   return (
     <CardContainer>
       <CardWrapper onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}> {/* Set Flipped to true when mouse is hovered over the card and false when mouse is not over the card  */}
@@ -32,13 +34,15 @@ const CardElement = ({ data }) => {
           <ContentContainer>
             <Photo src={image} alt=""></Photo>
             <Name>{data.name}</Name>
-            <Description>{data.role}</Description>
+            <Role>{data.role}</Role>
           </ContentContainer>
         </Card>
 
         <Card> {/* Content for the back of the card */}
           <ContentContainer>
-            <Description>{data.description}</Description>
+            <DescriptionWrapper>
+              <Description>{data.description}</Description>
+            </DescriptionWrapper>
           </ContentContainer>
         </Card>
       </ReactCardFlip>

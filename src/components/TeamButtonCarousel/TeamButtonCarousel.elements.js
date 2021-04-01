@@ -74,11 +74,25 @@ export const Name = styled.h1`
   transition: all 0.5s ease;
 `
 
+export const Role = styled.p`
+  text-align: center;
+  font-size: 1.5rem;
+  color: ${({theme}) => theme.bkgColor};
+  transition: all 0.5s ease;
+`
+
+export const DescriptionWrapper = styled.div`
+  display: flex;
+  height: 280px;
+  width: 280px;
+`
+
 export const Description = styled.p`
   text-align: center;
   font-size: 1.5rem;
   color: ${({theme}) => theme.bkgColor};
   transition: all 0.5s ease;
+  margin: auto;
 `
 
 export const RightArrow = styled.div`

@@ -1,14 +1,20 @@
 import React from 'react'
-import { exec20_21,exec19_20 } from './Data'
-import { StartingSection, TeamInfo } from '../../components'
-import { StartingSectionParameters } from './Data'
+import { StartingSection, TeamCarousel, TeamButtonCarousel } from '../../components'
+import { 
+  StartingSectionParameters, 
+  CurrentExecParameters, 
+  PastExecParameters,
+  TeachersParameters, 
+  WebsiteCreatorParameters } from './Data'
 
 const Team = () => {
   return (
     <>
       <StartingSection {...StartingSectionParameters} />
-      <TeamInfo {...exec20_21}/>
-      <TeamInfo {...exec19_20}/>
+      <TeamCarousel {...CurrentExecParameters}/>
+      <TeamButtonCarousel {...PastExecParameters}/>
+      <TeamCarousel {...TeachersParameters}/>
+      <TeamCarousel {...WebsiteCreatorParameters}/>
     </>
   )
 }
