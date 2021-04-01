@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.9ff7241a.chunk.js",
-    "main.js.map": "/club-website/static/js/main.9ff7241a.chunk.js.map",
+    "main.js": "/club-website/static/js/main.3ae6ec8e.chunk.js",
+    "main.js.map": "/club-website/static/js/main.3ae6ec8e.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.ac933a7b.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.ac933a7b.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/club-website/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.05b59397.chunk.js": "/club-website/static/js/2.05b59397.chunk.js",
-    "static/js/2.05b59397.chunk.js.map": "/club-website/static/js/2.05b59397.chunk.js.map",
+    "static/js/2.4fb8aac3.chunk.js": "/club-website/static/js/2.4fb8aac3.chunk.js",
+    "static/js/2.4fb8aac3.chunk.js.map": "/club-website/static/js/2.4fb8aac3.chunk.js.map",
     "index.html": "/club-website/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/club-website/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/js/2.05b59397.chunk.js.LICENSE.txt": "/club-website/static/js/2.05b59397.chunk.js.LICENSE.txt",
+    "static/js/2.4fb8aac3.chunk.js.LICENSE.txt": "/club-website/static/js/2.4fb8aac3.chunk.js.LICENSE.txt",
     "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
-    "static/media/Pikachu.jpg": "/club-website/static/media/Pikachu.206c0e22.jpg",
     "static/media/ai.59a1e382.jpg": "/club-website/static/media/ai.59a1e382.jpg",
     "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
     "static/media/cccLogoEdited.b4d89319.png": "/club-website/static/media/cccLogoEdited.b4d89319.png",
@@ -33,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.ac933a7b.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.05b59397.chunk.js",
-    "static/js/main.9ff7241a.chunk.js"
+    "static/js/2.4fb8aac3.chunk.js",
+    "static/js/main.3ae6ec8e.chunk.js"
   ]
 }
