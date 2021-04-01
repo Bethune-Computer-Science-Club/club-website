@@ -7,7 +7,7 @@ import GlobalStyle from './globalStyles'
 import  { Navbar, Footer } from './components'
 import Home from './pages/HomePage/Home'
 import Events from './pages/EventsPage/Events'
-import Team from './pages/TeamPage/Team'
+import Team from './pages/NewTeamPage/Team'
 
 import Projects from './pages/ProjectsPage/Projects'
 // import Placeholder from './pages/PlaceholderPage/Placeholder'

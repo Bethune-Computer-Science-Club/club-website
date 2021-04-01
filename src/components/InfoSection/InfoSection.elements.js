@@ -70,7 +70,6 @@ export const MainText = styled.p`
   line-height: 34px;
   color: ${({theme}) => theme.textColor};
   transition: all 0.5s ease;
-
 `
 
 export const Img = styled.img`

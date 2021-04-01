@@ -1,0 +1,16 @@
+{
+  "TeacherData": [
+    {
+      "name": "Mr. Loo",
+      "imageName": "cccLogo.png",
+      "role": "Teacher Supervisor",
+      "description": "Lorem Ipsum"
+    },
+    {
+      "name": "Mr. Lu",
+      "imageName": "cccLogo.png",
+      "role": "Teacher Supervisor",
+      "description": "Lorem Ipsum"
+    }
+  ]
+}

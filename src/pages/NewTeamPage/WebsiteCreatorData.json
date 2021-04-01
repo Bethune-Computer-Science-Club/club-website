@@ -1,0 +1,28 @@
+{
+  "WebsiteCreatorData": [
+    {
+      "name": "Ri Hong",
+      "imageName": "cccLogo.png",
+      "role": "Lead React Developer",
+      "description": "Watched tens of hours of react tutorials and looked at tons of stack overflow pages. 😃"
+    },
+    {
+      "name": "Geoffrey Kong",
+      "imageName": "Pikachu.jpg",
+      "role": "Lead Web Designer",
+      "description": "Lorem ipsum"
+    },
+    {
+      "name": "Simon Yang",
+      "imageName": "cccLogo.png",
+      "role": "React Developer",
+      "description": "Lorem ipsum"
+    },
+    {
+      "name": "Winston Ho",
+      "imageName": "cccLogo.png",
+      "role": "React Developer",
+      "description": "Lorem ipsum"
+    }
+  ]
+}

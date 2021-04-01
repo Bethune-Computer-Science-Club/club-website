@@ -1,0 +1,28 @@
+{
+  "CurrentExecData": [
+    {
+      "name": "Ri",
+      "imageName": "cccLogo.png",
+      "role": "Slacker",
+      "description": "Slacks"
+    },
+    {
+      "name": "Carry",
+      "imageName": "Pikachu.jpg",
+      "role": "Carrier",
+      "description": "I <3 carrying everyone. :DDDDDDDDDDD"
+    },
+    {
+      "name": "Sleeper",
+      "imageName": "cccLogo.png",
+      "role": "Sleep",
+      "description": "I sleep :))))))"
+    },
+    {
+      "name": "Tire",
+      "imageName": "cccLogo.png",
+      "role": "Tired",
+      "description": "I'm Tired"
+    }
+  ]
+}
