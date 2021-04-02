@@ -13,19 +13,23 @@ export const StartingSectionParameters = {
 export const CurrentExecParameters = {
   heading: 'Current Executive Team',
   sliderData: CurrentExecData,
+  slidesShown: 3
 }
 
 export const PastExecParameters = {
   heading: 'Graduated Executives',
   sliderData: PastExecData,
+  slidesShown: 3
 }
 
 export const TeachersParameters = {
   heading: 'Teacher Supervisors',
   sliderData: TeacherData,
+  slidesShown: 3
 }
 
 export const WebsiteCreatorParameters = {
   heading: 'Website Creators',
   sliderData: WebsiteCreatorData,
+  slidesShown: 4
 }

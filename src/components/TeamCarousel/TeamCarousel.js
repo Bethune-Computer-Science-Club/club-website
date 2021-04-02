@@ -70,7 +70,7 @@ const PrevArrow = ({onClick}) => {
 }
 
 
-const TeamCarousel = ({heading, sliderData}) =>  {
+const TeamCarousel = ({heading, sliderData, slidesShown}) =>  {
   sliderData = Object.values(sliderData) //Convert the json data into a format react recognizes
   
   const jsonDataLength = Object.keys(sliderData).length; // Stores the number of execs/cards needed to be rendered for the current year
@@ -83,7 +83,7 @@ const TeamCarousel = ({heading, sliderData}) =>  {
     // speed: 1000,
     // autoplaySpeed: 2000,
     // cssEase: "linear",
-    slidesToShow: jsonDataLength >= 3 ? 3 : jsonDataLength,
+    slidesToShow: jsonDataLength >= slidesShown ? slidesShown : jsonDataLength,
     slidesToScroll: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,

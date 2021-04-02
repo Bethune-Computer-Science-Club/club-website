@@ -7,6 +7,7 @@ export const SectionContainer = styled.div`
   color: ${({theme}) => theme.textColor};
   padding: 90px 0 10px 0; //take into account space at the top for the navbar
   transition: all 0.5s ease;
+  width: 100%;
 `
 
 export const InfoRow = styled.div`
