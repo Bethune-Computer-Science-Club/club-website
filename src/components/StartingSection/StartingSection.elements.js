@@ -5,14 +5,14 @@ import titleBar from '../../images/titleBar.png'
 export const SectionContainer = styled.div`
   background-image: url(${titleBar});
   color: ${({theme}) => theme.textColor};
-  padding: 90px 0 10px 0; //take into account space at the top for the navbar
+  padding: 120px 0 10px 0; //take into account space at the top for the navbar
   transition: all 0.5s;
   width: 100%;
+  height: 300px;
 `
 
 export const InfoRow = styled.div`
   display: flex;
-  margin: 0 -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;

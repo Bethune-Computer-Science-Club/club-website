@@ -1,15 +1,32 @@
 import React from 'react'
+import { Container } from '../../globalStyles'
+import { IconContext } from 'react-icons/lib'
+//Icons
 import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { RiFacebookCircleLine } from 'react-icons/ri'
+//Images
 import bethuneLogo from '../../images/bethuneLogo.gif'
 import BCSCLogo from '../../images/BCSCLogo.png'
-
-import { Container } from '../../globalStyles'
-import { IconContext } from 'react-icons/lib'
-
-
-import { FooterContainer, FooterRow, FooterColumn, CenterFooterColumn, Logo, Img, AddressWrapper, Address, CenterText, TextLink, ConnectHeader, SocialsWrapper, SocialsText, SocialsLink, LastLineLogo, DateLastUpdated, ConnectColumnContainer} from './Footer.elements'
+//Styled Components
+import { 
+  FooterContainer, 
+  FooterRow, 
+  FooterColumn, 
+  CenterFooterColumn, 
+  Logo, 
+  Img, 
+  AddressWrapper, 
+  Address, 
+  CenterText, 
+  TextLink, 
+  ConnectHeader, 
+  SocialsWrapper, 
+  SocialsText, 
+  SocialsLink, 
+  LastLineLogo, 
+  DateLastUpdated, 
+  ConnectColumnContainer} from './Footer.elements'
 
 
 function Footer () {

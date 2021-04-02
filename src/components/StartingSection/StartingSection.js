@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 
+//Styled Components
 import {
   SectionContainer,
   InfoRow,
@@ -10,10 +11,12 @@ import {
   Img,
   PageDescription
 } from './StartingSection.elements'
+//Animate on Scroll
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
 const StartingSection = ({headingText, image, descriptionText}) => {
+  //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

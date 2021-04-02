@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
+//Styled Components
 import {
   InfoSec,
   InfoRow,
@@ -7,17 +8,19 @@ import {
   LinkImg,
   LinkText,
 } from './Categories.elements'
+//Images
 import roboticsPicture from '../../images/robotics.jpg'
 import applicationsPicture from '../../images/applications.png'
 import websitesPicture from '../../images/websites.jpg'
 import gamesPicture from '../../images/gaming.jpg'
 import aiPicture from '../../images/ai.jpg'
 import miscellaneousPicture from '../../images/miscellaneous.jpg'
-
+//Animate on Scroll
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
 const InfoSection = () => {
+  //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

@@ -15,13 +15,13 @@ import {
   DescriptionWrapper,
   RightArrow,
   LeftArrow,
-} from './TeamButtonCarousel.elements'
+} from './TeamDropdownCarousel.elements'
 
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai' // For the left and right arrows on the carousel
 import ReactCardFlip from 'react-card-flip'; // For the flip animation for each carousel card
 import Select from 'react-select'; // For the dropdown menu
 
-// CardElement function gets called by the TeamButtonCarousel function below
+// CardElement function gets called by the TeamDropdownCarousel function below
 const CardElement = ({ data }) => {
   const [Flipped, setFlipped] = useState(false); // Initialize the card to be unflipped initially
   const image = require('../../pages/TeamPage/ExecImages/' + data.imageName).default // Obtain the image
@@ -37,7 +37,7 @@ const CardElement = ({ data }) => {
             <Role>{data.role}</Role>
           </ContentContainer>
         </Card>
-
+        
         <Card> {/* Content for the back of the card */}
         <ContentContainer>
             <DescriptionWrapper>
@@ -69,7 +69,7 @@ const PrevArrow = ({onClick}) => {
 }
 
 
-const TeamButtonCarousel = ({heading, sliderData}) =>  {
+const TeamDropdownCarousel = ({heading, sliderData}) =>  {
   // Carousel Data
   const years = Object.keys(sliderData)
 
@@ -96,8 +96,8 @@ const TeamButtonCarousel = ({heading, sliderData}) =>  {
   const [selectedOption, setSelectedOption] = useState({value: 0, label: years[0]}); // Stores the current selected option of the dropdown menu. Initialized to the first year
   let selectedIndex = selectedOption.value  // Stores the value/index of the current selected option
 
-  let jsonDataLength = masterArray[selectedIndex].length; // Stores the number of execs/cards needed to be rendered for the current year
-  console.log("jdl:", jsonDataLength)
+  let numCards = masterArray[selectedIndex].length; // Stores the number of execs/cards needed to be rendered for the current year
+
   // Settings for the carousel
   const settings = {
     dots: true,
@@ -106,7 +106,7 @@ const TeamButtonCarousel = ({heading, sliderData}) =>  {
     // speed: 1000,
     // autoplaySpeed: 2000,
     // cssEase: "linear",
-    slidesToShow: jsonDataLength >= 3 ? 3 : jsonDataLength, // Make the slides to show the # of people if the # of people is less than 3
+    slidesToShow: numCards >= 3 ? 3 : numCards, // Make the slides to show the # of people if the # of people is less than 3
     slidesToScroll: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -161,4 +161,4 @@ const TeamButtonCarousel = ({heading, sliderData}) =>  {
   );
 }
 
-export default TeamButtonCarousel
+export default TeamDropdownCarousel

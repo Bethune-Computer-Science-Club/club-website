@@ -1,5 +1,5 @@
 import React from 'react'
-import { StartingSection, TeamCarousel, TeamButtonCarousel } from '../../components'
+import { StartingSection, TeamCarousel, TeamDropdownCarousel } from '../../components'
 import { 
   StartingSectionParameters, 
   CurrentExecParameters, 
@@ -12,7 +12,7 @@ const Team = () => {
     <>
       <StartingSection {...StartingSectionParameters} />
       <TeamCarousel {...CurrentExecParameters}/>
-      <TeamButtonCarousel {...PastExecParameters}/>
+      <TeamDropdownCarousel {...PastExecParameters}/>
       <TeamCarousel {...TeachersParameters}/>
       <TeamCarousel {...WebsiteCreatorParameters}/>
     </>

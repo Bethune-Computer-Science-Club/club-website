@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 
+//Styled Components
 import {
   InfoSec,
   InfoRow,
@@ -14,12 +15,14 @@ import {
   Img,
   LinkText
 } from './SubmitAProject.elements'
+//Images
 import submitPicture from '../../images/submitProject.jpg'
-
+//Animate on Scroll
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
 const InfoSection = () => {
+  //Animate on Scroll
   useEffect(() => {
     Aos.init({ offset: 50, duration: 1000 });
   }, []);
