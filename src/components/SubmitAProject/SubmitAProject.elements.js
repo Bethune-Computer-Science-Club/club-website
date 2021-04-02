@@ -5,7 +5,7 @@ export const InfoSec = styled.div`
   padding: 30px 0;
   background-color: ${({theme}) => theme.bkgColor};
   color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
+  transition: background-color 0.5s, color 0.5s;
 `
 
 export const InfoRow = styled.div`
@@ -88,5 +88,5 @@ export const Img = styled.img`
 
 export const LinkText = styled(Link)`
   color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
+  transition: color 0.5s;
 `

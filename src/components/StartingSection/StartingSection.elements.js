@@ -6,7 +6,7 @@ export const SectionContainer = styled.div`
   background-image: url(${titleBar});
   color: ${({theme}) => theme.textColor};
   padding: 90px 0 10px 0; //take into account space at the top for the navbar
-  transition: all 0.5s ease;
+  transition: all 0.5s;
   width: 100%;
 `
 
@@ -43,13 +43,14 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.h1`
   font-size: 3.5rem;
-  max-width: 370px;
   align-items: center;
   display: flex;
+`
 
+export const HeadingText = styled.h1`
+  font-size: 3.5rem;
   @media screen and (max-width: 960px) {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 10px 0 auto;
   }
 `
 
@@ -57,6 +58,9 @@ export const Img = styled.img`
   max-width: 150px;
   max-height: 80px;
   margin: 20px;
+  @media screen and (max-width: 960px) {
+    margin: 0 auto 0 10px;
+  }
 `
 export const PageDescription = styled.p`
   text-align: center;

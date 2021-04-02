@@ -6,6 +6,7 @@ import {
   InfoRow,
   InfoColumn,
   Heading,
+  HeadingText,
   Img,
   PageDescription
 } from './StartingSection.elements'
@@ -23,7 +24,7 @@ const StartingSection = ({headingText, image, descriptionText}) => {
           <InfoRow>
             <InfoColumn data-aos='fade-right'>
               <Heading>
-                {headingText}
+                <HeadingText>{headingText}</HeadingText>
                 <Img src={image}></Img>
               </Heading>
             </InfoColumn>

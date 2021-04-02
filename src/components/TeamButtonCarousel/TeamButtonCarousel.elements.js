@@ -6,8 +6,7 @@ export const Heading = styled.h1`
   font-size: 30px;
   line-height: 1.1;
   color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
-
+  transition: color 0.5s;
 
   @media screen and (max-width: 960px) {
     max-width: 100%;
@@ -20,7 +19,7 @@ export const Heading = styled.h1`
 export const SelectWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-
+  color: #000;
   @media screen and (max-width: 1150px) {
     width: 90%;
   }
@@ -32,18 +31,13 @@ export const SelectWrapper = styled.div`
 export const CarouselContainer = styled.div`
   padding: 30px 0;
   background-color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
-`
-
-export const CardContainer = styled.div`
-  height: 345px;
-  margin: 0 auto;
+  transition: background-color 0.5s;
 `
 
 export const CardWrapper = styled.div`
   height: 300px;
   width: 300px;
-  margin: 18px auto;
+  margin: 18px auto; //Space on the top and bottom is needed for the card animation to not be cut off
   border-radius: 40px;
 `
 
@@ -52,6 +46,8 @@ export const Card = styled.div`
   height: 300px;
   width: 300px;
   border-radius: 40px;
+  color: ${({theme}) => theme.bkgColor};
+  transition: color 0.5s;
 `
 
 export const ContentContainer = styled.div`
@@ -70,15 +66,11 @@ export const Photo = styled.img`
 export const Name = styled.h1`
   text-align: center;
   font-size: 2rem;
-  color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
 `
 
 export const Role = styled.p`
   text-align: center;
   font-size: 1.5rem;
-  color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
 `
 
 export const DescriptionWrapper = styled.div`
@@ -90,8 +82,6 @@ export const DescriptionWrapper = styled.div`
 export const Description = styled.p`
   text-align: center;
   font-size: 1.5rem;
-  color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
   margin: auto;
 `
 

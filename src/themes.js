@@ -10,7 +10,6 @@ export const DarkTheme = {
   textColor: '#fff',
   topLineColor: '#a9b3c1',
   textColor2: '#0099ff'
-
 }
 
 export const themes = {

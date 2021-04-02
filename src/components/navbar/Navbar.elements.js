@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Container } from '../../globalStyles';
 import { Link } from 'react-router-dom';
+import { DarkTheme } from '../../themes';
 
 export const Nav = styled.nav`
   background-color: ${({theme}) => theme.bkgColor};
   background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgba(0, 0, 0, 0%)')};
+  color: ${({theme}) => theme.textColor};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -13,8 +15,8 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 999;
-  transition: all 0.5s ease;
   width: 100%;
+  transition: background-color 0.5s, color 0.5s;
 `
 export const NavbarContainer = styled(Container)`
   display: flex;
@@ -33,14 +35,12 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   line-height: 100%;
-  transition: all 0.5s ease;
+  transition: color 0.5s;
 
   @media screen and (max-width: 650px) {
     font-size: 1.8rem;
     width: 90%;
   }
-  transition: all 2 ease;
-
 `
 
 export const Img = styled.img` 
@@ -103,7 +103,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(Link)`
   color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
+  transition: color 0.5s;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -119,7 +119,7 @@ export const NavLinks = styled(Link)`
   
   &:hover {
     color: #4b59f7;
-    transition: all 0.3s ease;
+    transition: color 0.5s;
     }
   }
 `
@@ -139,12 +139,12 @@ export const Slider = styled.span`
   border-radius: 100px;
   position: relative;
   background-color: ${({theme}) => theme.textColor};
-  transition: all 0.5s;
+  transition: background-color 0.5s;
 `
 
 export const SliderIcon = styled.div`
   margin: 0 2px;
-  transform: translateX(${({theme}) => (theme.bkgColor === '#101522') ? 0 : '25px'});
+  transform: translateX(${({theme}) => (theme === DarkTheme) ? 0 : '25px'});
   color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s;
+  transition: transform 0.5s, color 0.5s;
 `

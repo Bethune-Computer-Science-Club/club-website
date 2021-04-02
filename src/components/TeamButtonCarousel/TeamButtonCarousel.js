@@ -5,7 +5,6 @@ import {
   SelectWrapper,
   CarouselContainer,
   Carousel,
-  CardContainer,
   ContentContainer,
   CardWrapper,
   Card,
@@ -27,8 +26,7 @@ const CardElement = ({ data }) => {
   const [Flipped, setFlipped] = useState(false); // Initialize the card to be unflipped initially
   const image = require('../../pages/TeamPage/ExecImages/' + data.imageName).default // Obtain the image
   return (
-    <CardContainer>
-      <CardWrapper onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}> {/* Set Flipped to true when mouse is hovered over the card and false when mouse is not over the card  */}
+    <CardWrapper onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}> {/* Set Flipped to true when mouse is hovered over the card and false when mouse is not over the card  */}
 
       {/* This element will respond to the value of Flipped */}
       <ReactCardFlip isFlipped={Flipped} flipDirection="horizontal"> 
@@ -49,8 +47,7 @@ const CardElement = ({ data }) => {
         </Card>
       </ReactCardFlip>
 
-      </CardWrapper>
-    </CardContainer>
+    </CardWrapper>
   );
 }
 

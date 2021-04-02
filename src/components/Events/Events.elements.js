@@ -5,7 +5,7 @@ export const InfoSec = styled.div`
   padding: 30px 0 50px 0;
   background-color: ${({theme}) => theme.bkgColor};
   color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
+  transition: background-color 0.5s, color 0.5s;
 `
 
 export const InfoRow = styled.div`

@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const InfoSec = styled.div`
   padding: 30px 0;
   background-color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
+  color: ${({theme}) => theme.textColor};
+  transition: color 0.5s, background-color 0.5s;
 `
 
 export const InfoRow = styled.div`
@@ -44,16 +45,13 @@ export const TextHeading = styled.div`
   line-height: 16px;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
-  transition: all 0.5s ease;
+  transition: color 0.5s;
 `
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 30px;
   line-height: 1.1;
-  color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
-
 
   @media screen and (max-width: 960px) {
     max-width: 100%;
@@ -68,8 +66,6 @@ export const MainText = styled.p`
   margin-bottom: 10px;
   font-size: 15px;
   line-height: 34px;
-  color: ${({theme}) => theme.textColor};
-  transition: all 0.5s ease;
 `
 
 export const Img = styled.img`

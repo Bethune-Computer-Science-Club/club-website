@@ -5,7 +5,7 @@ export const InfoSec = styled.div`
   padding: 30px 0 0;
   color: ${({theme}) => theme.textColor};
   background-color: ${({theme}) => theme.bkgColor};
-  transition: all 0.5s ease;
+  transition: color 0.5s, background-color 0.5s;
 `
 
 export const InfoRow = styled.div`
@@ -37,8 +37,7 @@ export const LinkText = styled.h1`
   text-orientation: upright;
   color: ${({theme}) => theme.textColor2};
 
-  transition: all 0.2s ease;
-
+  transition: width 0.2s, height 0.2s, writing-mode 0.2s, font-size 0.2s, background-color 0.2s, color 0.5s;
 `
 
 export const LinkImg = styled(Link)`
