@@ -19,24 +19,10 @@ export const ActualImage = styled.img`
     margin: 40px;
 `
 
-export const TestImage = styled.div`
-    height: 400px;
-    width: 70%;
-
-    background: radial-gradient(circle, red 30%, green 40%, blue);
-    border: 20px solid yellowgreen;
-    padding: 20px;
-`
-
-export const Grid = styled.div`
-    justify-content: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    background: lightblue;
-`
-
-export const Row = styled.div`
+export const InfoArea = styled.div`
     display: flex;
+    justify-content: space-between;
+    background: lightblue;
 `
 
 export const Column = styled.div`
@@ -44,4 +30,16 @@ export const Column = styled.div`
     padding: 5%;
     background: green;
     text-align: center;
+`
+
+export const LargeText = styled.p`
+    font-size: 2.5rem;
+    color: white;
+`
+
+export const Img = styled.img`
+`
+
+export const HorizontalWrapper = styled.div`
+    display: flex;
 `
