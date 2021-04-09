@@ -31,31 +31,31 @@ export const Column = styled.div`
 
 export const LargeText = styled.p`
     font-size: 2.5rem;
-    color: white;
+    color: ${({theme}) => theme.textColor};
 `
 
 export const CenteredLargeText = styled.p`
     font-size: 2.5rem;
-    color: white;
+    color: ${({theme}) => theme.textColor};
     text-align: center;
 `
 
 export const CenteredText = styled.p`
     font-size: 1.2rem;
-    color: white;
+    color: ${({theme}) => theme.textColor};
     text-align: center;
 `
 
 export const BoldText = styled.p`
     font-size: 1.2rem;
-    color: white;
+    color: ${({theme}) => theme.textColor};
     text-align: left;
     font-weight: bold;
 `
 
 export const Text = styled.p`
     font-size: 1.2rem;
-    color: white;
+    color: ${({theme}) => theme.textColor};
     text-align: left;
 `
 

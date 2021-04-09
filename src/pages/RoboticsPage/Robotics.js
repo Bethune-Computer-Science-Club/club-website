@@ -34,7 +34,7 @@ function Robotics() {
                         <Column>
 
                             <Img src={BCSCLogo}></Img>
-                            <LargeText> Test </LargeText>
+                            <LargeText> Bethune CS Club </LargeText>
 
                         </Column>
 
