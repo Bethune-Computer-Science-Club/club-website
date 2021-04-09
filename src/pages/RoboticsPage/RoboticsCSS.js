@@ -7,8 +7,7 @@ export const Background = styled.div`
 export const HelloWorld = styled.h1`
     background: red;
     text-transform: capitalize;
-    text-align: center
-    
+    text-align: center;
 `
 
 export const ActualImage = styled.img`
@@ -22,13 +21,11 @@ export const ActualImage = styled.img`
 export const InfoArea = styled.div`
     display: flex;
     justify-content: space-between;
-    background: lightblue;
 `
 
 export const Column = styled.div`
     margin: 2%;
     padding: 5%;
-    background: green;
     text-align: center;
 `
 
@@ -37,9 +34,40 @@ export const LargeText = styled.p`
     color: white;
 `
 
+export const CenteredLargeText = styled.p`
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+`
+
+export const CenteredText = styled.p`
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+`
+
+export const BoldText = styled.p`
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+`
+
+export const Text = styled.p`
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+`
+
+
 export const Img = styled.img`
 `
 
 export const HorizontalWrapper = styled.div`
     display: flex;
+`
+
+export const BoxArea = styled.div`
+    display: flex;
+    justify-content: center;
 `
