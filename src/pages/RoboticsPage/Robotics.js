@@ -45,7 +45,7 @@ function Robotics() {
                             <BoldText> Authors: </BoldText>
                             <Text> Traversy Media, Brian Design, Stackoverflow </Text>
                             <br></br>
-                            <Text> Lorem .............. i need some lorem text iojaofdsnafoadfnoa apsij foajds aefiujidojdo aosdoijao isjdao jaodisjasoidjoasj oiajdio asd jioasjd as iasodias joasj doasjdoias jsd </Text>
+                            <Text> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </Text>
 
                         </Column>
 
