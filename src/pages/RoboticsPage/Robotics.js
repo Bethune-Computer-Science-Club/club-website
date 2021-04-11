@@ -1,10 +1,8 @@
 import React from 'react'
-import RoboticsPic from './../../images/Robotics.png'
-import BCSCLogo from './../../images/BCSCLogo.png'
-import {Column, HorizontalWrapper, InfoArea, LargeText, Img, BoxArea, CenteredLargeText, Text, BoldText, ProjectItem} from './RoboticsCSS' 
+import {Column, HorizontalWrapper, InfoArea, LargeText, Img, BoxArea, CenteredLargeText, Text, BoldText, ProjectItem, PageBanner} from './RoboticsCSS' 
 import {InfoSec} from '../../components/InfoSection/InfoSection.elements'
 import {Container} from '../../globalStyles'
-import {ProjectOne} from './Data'
+import {ProjectOne, BannerInfo} from './Data'
 
 function Robotics() {
 
@@ -15,21 +13,7 @@ function Robotics() {
             <InfoSec>  
                 <Container>
 
-                    <InfoArea>
-
-                        <Column>
-                            <HorizontalWrapper>
-                                <LargeText> Robotics </LargeText>
-                                <Img src={RoboticsPic}></Img>
-                            </HorizontalWrapper>
-                        </Column>
-
-                        <Column>
-                            <LargeText> Beep Boop, Beep Boop. </LargeText>
-                        </Column>
-
-                    </InfoArea>
-
+                    <PageBanner {... BannerInfo}></PageBanner>
                     <ProjectItem {... ProjectOne}> </ProjectItem>
 
                 </Container>

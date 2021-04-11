@@ -1,4 +1,13 @@
 import BCSCLogo from '../../images/BCSCLogo.png'
+import RoboticsPic from './../../images/Robotics.png'
+
+export const BannerInfo = {
+
+    pageTitle: "Robotics",
+    img: RoboticsPic,
+    description: "Beep Boop, Beep Boop.",
+
+}
 
 export const ProjectOne = {
     img: BCSCLogo,

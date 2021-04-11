@@ -24,16 +24,23 @@ export const InfoArea = styled.div`
 `
 
 export const Column = styled.div`
-    margin: 2%;
     padding: 5%;
     text-align: center;
     background-color: ${props => props.bgColor};
 `
 
-export const RedColumn = styled.div`
+export const RoundLeftColumn =  styled.div`
+    padding: 5%;
+    text-align: center;
+    background-color: ${props => props.bgColor};
+    border-radius: ${props => props.topLeftCorner}px 0px 0px ${props => props.botLeftCorner}px;
 `
 
-export const GreenColumn = styled.div`
+export const RoundRightColumn =  styled.div`
+    padding: 5%;
+    text-align: center;
+    background-color: ${props => props.bgColor};
+    border-radius: 0px ${props => props.topRightCorner}px ${props => props.botRightCorner}px 0px;
 `
 
 export const LargeText = styled.p`
@@ -79,20 +86,45 @@ export const BoxArea = styled.div`
     justify-content: center;
 `
 
+export const PageBanner = ({pageTitle, img, description}) => {
+
+    return (
+
+        <InfoArea>
+
+            <Column>
+                <HorizontalWrapper>
+                    <LargeText> {pageTitle} </LargeText>
+                    <Img src={img}></Img>
+                </HorizontalWrapper>
+            </Column>
+
+            <Column>
+                <LargeText> {description} </LargeText>
+            </Column>
+
+        </InfoArea>
+
+    )
+
+}
+
 export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, projectName, authors, description}) => {
+
+    const borderRounding = 100;
 
     return (
 
         <BoxArea>
 
-            <Column bgColor={leftBgColor}>
+            <RoundLeftColumn bgColor={leftBgColor} topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
 
                 <Img src={img}></Img>
                 <LargeText> {lowerSubtitle} </LargeText>
 
-            </Column>
+            </RoundLeftColumn>
 
-            <Column bgColor={rightBgColor}>
+            <RoundRightColumn bgColor={rightBgColor} topRightCorner={borderRounding} botRightCorner={borderRounding}>
 
                 <CenteredLargeText> {projectName} </CenteredLargeText>
                 <br></br>
@@ -101,7 +133,7 @@ export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, proj
                 <br></br>
                 <Text> {description} </Text>
 
-            </Column>
+            </RoundRightColumn>
 
         </BoxArea>
 
