@@ -27,6 +27,13 @@ export const Column = styled.div`
     margin: 2%;
     padding: 5%;
     text-align: center;
+    background-color: ${props => props.bgColor};
+`
+
+export const RedColumn = styled.div`
+`
+
+export const GreenColumn = styled.div`
 `
 
 export const LargeText = styled.p`
@@ -71,3 +78,33 @@ export const BoxArea = styled.div`
     display: flex;
     justify-content: center;
 `
+
+export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, projectName, authors, description}) => {
+
+    return (
+
+        <BoxArea>
+
+            <Column bgColor={leftBgColor}>
+
+                <Img src={img}></Img>
+                <LargeText> {lowerSubtitle} </LargeText>
+
+            </Column>
+
+            <Column bgColor={rightBgColor}>
+
+                <CenteredLargeText> {projectName} </CenteredLargeText>
+                <br></br>
+                <BoldText> Authors: </BoldText>
+                <Text> {authors} </Text>
+                <br></br>
+                <Text> {description} </Text>
+
+            </Column>
+
+        </BoxArea>
+
+    )
+
+}
