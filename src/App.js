@@ -13,7 +13,7 @@ import Projects from './pages/ProjectsPage/Projects'
 // import Placeholder from './pages/PlaceholderPage/Placeholder'
 import ScrollToTop from './components/ScrollToTop'
 import { themes } from './themes'
-
+import Robotics from './pages/RoboticsPage/Robotics'
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           <Route path='/events' component={Events} />
           <Route path='/projects' component={Projects} />
           <Route path='/team' component={Team} />
+          <Route path='/robotics' component={Robotics}/>
         </Switch>
         <Footer />
       </Router>
