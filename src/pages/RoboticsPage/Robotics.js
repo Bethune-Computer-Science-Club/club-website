@@ -1,12 +1,19 @@
 import React from 'react'
-import {Column, HorizontalWrapper, InfoArea, LargeText, Img, BoxArea, CenteredLargeText, Text, BoldText, ProjectItem, PageBanner} from './RoboticsCSS' 
+import {ProjectItem, PageBanner} from './RoboticsCSS' 
 import {InfoSec} from '../../components/InfoSection/InfoSection.elements'
 import {Container} from '../../globalStyles'
-import {ProjectOne, BannerInfo} from './Data'
+import {Projects, BannerInfo} from './Data'
+
+function BuildProjects (){
+
+    return (
+        Projects.map(project => <ProjectItem {... project}> </ProjectItem>)
+    )
+
+}
 
 function Robotics() {
 
-    // functions for modifying state inside components
     return (
         <>
 
@@ -14,7 +21,8 @@ function Robotics() {
                 <Container>
 
                     <PageBanner {... BannerInfo}></PageBanner>
-                    <ProjectItem {... ProjectOne}> </ProjectItem>
+                    
+                    {BuildProjects()}
 
                 </Container>
             </InfoSec>

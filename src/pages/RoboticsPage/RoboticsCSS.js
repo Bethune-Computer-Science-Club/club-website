@@ -114,29 +114,30 @@ export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, proj
     const borderRounding = 100;
 
     return (
+        <>
+            <BoxArea>
 
-        <BoxArea>
+                <RoundLeftColumn bgColor={leftBgColor} topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
 
-            <RoundLeftColumn bgColor={leftBgColor} topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
+                    <Img src={img}></Img>
+                    <LargeText> {lowerSubtitle} </LargeText>
 
-                <Img src={img}></Img>
-                <LargeText> {lowerSubtitle} </LargeText>
+                </RoundLeftColumn>
 
-            </RoundLeftColumn>
+                <RoundRightColumn bgColor={rightBgColor} topRightCorner={borderRounding} botRightCorner={borderRounding}>
 
-            <RoundRightColumn bgColor={rightBgColor} topRightCorner={borderRounding} botRightCorner={borderRounding}>
+                    <CenteredLargeText> {projectName} </CenteredLargeText>
+                    <br></br>
+                    <BoldText> Authors: </BoldText>
+                    <Text> {authors} </Text>
+                    <br></br>
+                    <Text> {description} </Text>
 
-                <CenteredLargeText> {projectName} </CenteredLargeText>
-                <br></br>
-                <BoldText> Authors: </BoldText>
-                <Text> {authors} </Text>
-                <br></br>
-                <Text> {description} </Text>
+                </RoundRightColumn>
 
-            </RoundRightColumn>
-
-        </BoxArea>
-
+            </BoxArea>
+            <br></br>
+        </>
     )
 
 }
