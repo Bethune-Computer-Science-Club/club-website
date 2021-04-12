@@ -1,23 +1,5 @@
 import styled from 'styled-components'
 
-export const Background = styled.div`
-    background: black;
-`
-
-export const HelloWorld = styled.h1`
-    background: red;
-    text-transform: capitalize;
-    text-align: center;
-`
-
-export const ActualImage = styled.img`
-    width:  50%;
-    height: 50%;
-    padding: 40px;
-    border: 20px solid yellowgreen;
-    margin: 40px;
-`
-
 export const InfoArea = styled.div`
     display: flex;
     justify-content: space-between;
