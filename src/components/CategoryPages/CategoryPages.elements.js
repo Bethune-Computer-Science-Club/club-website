@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 export const InfoArea = styled.div`
@@ -56,6 +57,9 @@ export const Text = styled.p`
 `
 
 export const Img = styled.img`
+`
+
+export const SpacedImg = styled.img`
     margin-left: 10%;
 `
 
@@ -78,7 +82,7 @@ export const PageBanner = ({pageTitle, img, description}) => {
             <Column>
                 <HorizontalWrapper>
                     <LargeText> {pageTitle} </LargeText>
-                    <Img src={img}></Img>
+                    <SpacedImg src={img}></SpacedImg>
                 </HorizontalWrapper>
             </Column>
 
@@ -126,8 +130,6 @@ export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, proj
 }
 
 export const BuildProjects = ({ProjectsInfo}) => {
-
-    console.log(ProjectsInfo)
 
     return (
         ProjectsInfo.map(project => <ProjectItem {... project}> </ProjectItem>)

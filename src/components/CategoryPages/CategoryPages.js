@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
 import {
@@ -7,8 +9,6 @@ import {
 } from './CategoryPages.elements'
 
 const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
-
-    console.log("ProjectsInfo.size: ", (Object.keys(ProjectsInfo)).length)
 
     return (
         <>
