@@ -34,20 +34,20 @@ const InfoSection = () => {
             <LinkImg to='/robotics' style={{backgroundImage: `url(${roboticsPicture})`}}>
               <LinkText>Robotics</LinkText>
             </LinkImg>
-            <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${applicationsPicture})`}}>
+            <LinkImg to='/apps' data-aos='flip-left' style={{backgroundImage: `url(${applicationsPicture})`}}>
               <LinkText>Apps</LinkText>
             </LinkImg>
-            <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${websitesPicture})`}}>
+            <LinkImg to='/websites' data-aos='flip-left' style={{backgroundImage: `url(${websitesPicture})`}}>
               <LinkText>Websites</LinkText>
             </LinkImg>
 
-            <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${gamesPicture})`}}>
+            <LinkImg to='/games' data-aos='flip-left' style={{backgroundImage: `url(${gamesPicture})`}}>
               <LinkText>Games</LinkText>
             </LinkImg>
-            <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${aiPicture})`}}>
+            <LinkImg to='/ai' data-aos='flip-left' style={{backgroundImage: `url(${aiPicture})`}}>
               <LinkText>AI</LinkText>
             </LinkImg>
-            <LinkImg to='/' data-aos='flip-left' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
+            <LinkImg to='/other' data-aos='flip-left' style={{backgroundImage: `url(${miscellaneousPicture})`}}>
               <LinkText>Other</LinkText>
             </LinkImg>
           </InfoRow>

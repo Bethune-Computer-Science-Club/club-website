@@ -55,8 +55,8 @@ export const Text = styled.p`
     text-align: left;
 `
 
-
 export const Img = styled.img`
+    margin-left: 10%;
 `
 
 export const HorizontalWrapper = styled.div`
@@ -67,6 +67,7 @@ export const BoxArea = styled.div`
     display: flex;
     justify-content: center;
 `
+
 
 export const PageBanner = ({pageTitle, img, description}) => {
 
@@ -120,6 +121,16 @@ export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, proj
             </BoxArea>
             <br></br>
         </>
+    )
+
+}
+
+export const BuildProjects = ({ProjectsInfo}) => {
+
+    console.log(ProjectsInfo)
+
+    return (
+        ProjectsInfo.map(project => <ProjectItem {... project}> </ProjectItem>)
     )
 
 }

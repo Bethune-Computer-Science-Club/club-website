@@ -1,33 +1,12 @@
 import React from 'react'
-import {ProjectItem, PageBanner} from './RoboticsCSS' 
-import {InfoSec} from '../../components/InfoSection/InfoSection.elements'
-import {Container} from '../../globalStyles'
-import {Projects, BannerInfo} from './Data'
 
-function BuildProjects (){
-
-    return (
-        Projects.map(project => <ProjectItem {... project}> </ProjectItem>)
-    )
-
-}
+import {CategoryPages} from '../../components'
+import {ProjectsInfo, BannerInfo} from './Data'
 
 function Robotics() {
 
     return (
-        <>
-
-            <InfoSec>  
-                <Container>
-
-                    <PageBanner {... BannerInfo}></PageBanner>
-                    
-                    {BuildProjects()}
-
-                </Container>
-            </InfoSec>
-
-        </>
+        <CategoryPages BannerInfo={BannerInfo} ProjectsInfo={ProjectsInfo}></CategoryPages>
     )
 }
 
