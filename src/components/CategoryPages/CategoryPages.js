@@ -1,4 +1,5 @@
 import React from 'react'
+import titleBar from '../../images/titleBar.png'
 
 import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
@@ -12,11 +13,18 @@ const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
 
     return (
         <>
+            
+            <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>  
+                <Container>
+
+                    <PageBanner {...BannerInfo}></PageBanner>
+
+                </Container>
+            </InfoSec>
 
             <InfoSec>  
                 <Container>
 
-                    <PageBanner {...BannerInfo}></PageBanner>
                     {
                         ((Object.keys(ProjectsInfo)).length === 0) ? 
                         
