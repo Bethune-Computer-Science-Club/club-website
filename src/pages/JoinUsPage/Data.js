@@ -44,7 +44,7 @@ export const InfoSectionData = [
             
             <ul>
                 <li><MainText>Email us at bcicodingclub@tdsb.on.ca</MainText></li>
-                <li><MainText>Fill out this Google Form.</MainText></li>
+                <li><MainText>Fill out this <a href="">Google Form.</a></MainText></li>
                 <li><MainText>Come to Room B216 on Thursdays after school.</MainText></li>
             </ul>
             
