@@ -4,7 +4,7 @@ import BCSCLogo from '../../images/BCSCLogo.png'
 
 export const BannerData = {
 
-    pageTitle: "Join",
+    pageTitle: "Join Us",
     img: JoinUs,
     description: "This page contains information about how to become a member.",
 

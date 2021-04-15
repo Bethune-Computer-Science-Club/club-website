@@ -31,6 +31,12 @@ export const LargeText = styled.p`
     color: ${({theme}) => theme.textColor};
 `
 
+export const LargeNoWrapText = styled.p`
+    font-size: 2.5rem;
+    color: ${({theme}) => theme.textColor};
+    white-space: nowrap;
+`
+
 export const CenteredLargeText = styled.p`
     font-size: 2.5rem;
     color: ${({theme}) => theme.textColor};
@@ -81,7 +87,7 @@ export const PageBanner = ({pageTitle, img, description}) => {
 
             <Column>
                 <HorizontalWrapper>
-                    <LargeText> {pageTitle} </LargeText>
+                    <LargeNoWrapText> {pageTitle} </LargeNoWrapText>
                     <SpacedImg src={img}></SpacedImg>
                 </HorizontalWrapper>
             </Column>
