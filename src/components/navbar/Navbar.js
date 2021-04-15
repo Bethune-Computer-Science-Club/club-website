@@ -70,6 +70,9 @@ export const Navbar = ({ theme, setTheme }) => {
           <NavItem>
             <NavLinks to='/team'>Team</NavLinks>
           </NavItem>
+          <NavItem>
+            <NavLinks to='/join_us'>Join Us</NavLinks>
+          </NavItem>
           {/* Theme Toggler */}
           <ThemeToggle>
             <Slider onClick={changeTheme}>

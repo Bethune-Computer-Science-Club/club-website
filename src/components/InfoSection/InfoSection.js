@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
+
+// filler image
+import CCCLogo from '../../images/cccLogo.png'
+
 //Styled Components
 import {
   InfoSec,
@@ -15,7 +19,7 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const InfoSection = ({ imgStart, description, headline, topLine, img, alt, showIframe, showSchedule }) => {
+const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be filler image.", showIframe = false, showSchedule = false}) => {
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000, once: true});
@@ -24,13 +28,15 @@ const InfoSection = ({ imgStart, description, headline, topLine, img, alt, showI
   return (
     <InfoSec>
       <Container>
-        <Heading>{headline}</Heading>
+
+        {(headline !== "") ? <Heading>{headline}</Heading> : <></>}
+ 
         <InfoRow imgStart={imgStart}>
           <InfoColumn data-aos='fade-left'>
             {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
               <TextWrapper>
-                {topLine !== '' ? <TextHeading>{topLine}</TextHeading> : <></>}
-                <MainText>{description}</MainText>
+                {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
+                {(description !== "") ? <MainText>{description}</MainText> : <></>}
               </TextWrapper>
             }
           </InfoColumn>
