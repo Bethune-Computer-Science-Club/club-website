@@ -2,6 +2,8 @@ import JoinUs from '../../images/JoinUs.png'
 import BecomeAMember from '../../images/BecomeAMember.png'
 import BCSCLogo from '../../images/BCSCLogo.png'
 
+import {MainText} from '../../components/InfoSection/InfoSection.elements'
+
 export const BannerData = {
 
     pageTitle: "Join Us",
@@ -30,7 +32,24 @@ export const InfoSectionData = [
 
     // become a member
     {
-        description: "Want to become a member? Great! There’s only one requirement you must satisfy: \nYou must currently be a student at Dr. Norman Bethune Collegiate Institute. \nIf you meet the requirements to become a member, you can either: \n   - Email us at bcicodingclub@tdsb.on.ca \n   - Fill out this Google Form. \n   - Come to Room B216 on Thursdays after school. \nWe will contact you with further instructions and provide you with a code to join our Google Classroom.",
+        description: 
+        <>
+            <MainText>Want to become a member? Great! There’s only one requirement you must satisfy:</MainText>
+            
+            <ul>
+                <li><MainText>You must currently be a student at Dr. Norman Bethune Collegiate Institute.</MainText></li>
+            </ul>
+            
+            <MainText>If you meet the requirements to become a member, you can either:</MainText>
+            
+            <ul>
+                <li><MainText>Email us at bcicodingclub@tdsb.on.ca</MainText></li>
+                <li><MainText>Fill out this Google Form.</MainText></li>
+                <li><MainText>Come to Room B216 on Thursdays after school.</MainText></li>
+            </ul>
+            
+            <MainText>We will contact you with further instructions and provide you with a code to join our Google Classroom.</MainText>            
+        </>,
         headline: "Become a Member",
         img: BecomeAMember,
         alt: "Become a Member",

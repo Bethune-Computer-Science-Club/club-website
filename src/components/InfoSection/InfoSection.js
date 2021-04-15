@@ -19,6 +19,9 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
+// Features:
+//  - Can ignore certain parameters (i.e. ignoring image allows a placeholder image, ignoring description removes it)
+//  - Can render a React component in the description
 const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false}) => {
   //Animate on Scroll
   useEffect(() => {
@@ -36,7 +39,15 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
             {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
               <TextWrapper>
                 {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
-                {(description !== "") ? <MainText>{description}</MainText> : <></>}
+                {
+                  // check if description will be ignored
+                  (description !== "") ? 
+                    // check if description is a react component or a string
+                    (typeof(description) === "string") ?
+                      <MainText>{description}</MainText> 
+                    : <>{description}</>
+                  : <></>
+                }
               </TextWrapper>
             }
           </InfoColumn>
