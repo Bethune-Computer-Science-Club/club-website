@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 
-// filler image
+// placeholder image
 import CCCLogo from '../../images/cccLogo.png'
 
 //Styled Components
@@ -19,7 +19,7 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be filler image.", showIframe = false, showSchedule = false}) => {
+const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false}) => {
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000, once: true});
