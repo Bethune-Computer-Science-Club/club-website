@@ -28,6 +28,7 @@ export const InfoSectionData = [
         headline: "Meetings",
         //img: , {unspecified}
         alt: "Meetings",
+        imgStart: false,
     },
 
     // become a member
@@ -36,13 +37,13 @@ export const InfoSectionData = [
         <>
             <MainText>Want to become a member? Great! There’s only one requirement you must satisfy:</MainText>
             
-            <ul>
+            <ul style={{paddingLeft:"50px"}}>
                 <li><MainText>You must currently be a student at Dr. Norman Bethune Collegiate Institute.</MainText></li>
             </ul>
             
             <MainText>If you meet the requirements to become a member, you can either:</MainText>
             
-            <ul>
+            <ul style={{paddingLeft:"50px"}}>
                 <li><MainText>Email us at bcicodingclub@tdsb.on.ca</MainText></li>
                 <li><MainText>Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmkGemAow6CfAI9s8zKjeCAFuxrHPVL0kpe9Hk9LPfRfraCw/viewform">Google Form.</a></MainText></li>
                 <li><MainText>Come to Room B216 on Thursdays after school.</MainText></li>

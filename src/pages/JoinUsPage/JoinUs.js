@@ -15,13 +15,7 @@ const JoinUs = () => {
     return (
         <>
 
-            <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>
-                <Container>
-
-                    <StartingSection {...BannerData}></StartingSection>
-
-                </Container>
-            </InfoSec>
+            <StartingSection {...BannerData}></StartingSection>
 
             <InfoSec>
                 <Container>
