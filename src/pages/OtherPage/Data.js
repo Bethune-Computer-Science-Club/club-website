@@ -2,9 +2,9 @@ import OtherPagePic from './../../images/OtherPagePic.png'
 
 export const BannerInfo = {
 
-    pageTitle: "Miscellaneous",
-    img: OtherPagePic,
-    description: "Other cool projects!",
+    headingText: "Miscellaneous",
+    image: OtherPagePic,
+    descriptionText: "Other cool projects!",
 
 }
 

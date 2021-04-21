@@ -2,9 +2,9 @@ import GamingPagePic from './../../images/GamingPagePic.png'
 
 export const BannerInfo = {
 
-    pageTitle: "Games",
-    img: GamingPagePic,
-    description: "Get your game on with these awesome creations!",
+    headingText: "Games",
+    image: GamingPagePic,
+    descriptionText: "Get your game on with these awesome creations!",
 
 }
 

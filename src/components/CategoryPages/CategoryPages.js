@@ -1,5 +1,4 @@
 import React from 'react'
-import titleBar from '../../images/titleBar.png'
 
 import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
@@ -14,15 +13,8 @@ const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
 
     return (
         <>
+            <StartingSection {...BannerInfo}></StartingSection>
             
-            <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>  
-                <Container>
-
-                    <StartingSection {...BannerInfo}></StartingSection>
-
-                </Container>
-            </InfoSec>
-
             <InfoSec>  
                 <Container>
 

@@ -3,9 +3,9 @@ import WebsitesPagePic from './../../images/WebsitesPagePic.jpg'
 
 export const BannerInfo = {
 
-    pageTitle: "Websites",
-    img: WebsitesPagePic,
-    description: "Cool sites on the web!",
+    headingText: "Websites",
+    image: WebsitesPagePic,
+    descriptionText: "Cool sites on the web!",
 
 }
 

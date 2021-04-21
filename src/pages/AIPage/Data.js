@@ -2,9 +2,9 @@ import AIPagePic from './../../images/AIPagePic.jpg'
 
 export const BannerInfo = {
 
-    pageTitle: "AI",
-    img: AIPagePic,
-    description: "Smart programs for smart tasks!",
+    headingText: "AI",
+    image: AIPagePic,
+    descriptionText: "Smart programs for smart tasks!",
 
 }
 
