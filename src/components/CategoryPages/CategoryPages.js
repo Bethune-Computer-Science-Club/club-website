@@ -5,9 +5,10 @@ import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
 import {
     CenteredLargeText,
-    PageBanner,
     BuildProjects,
 } from './CategoryPages.elements'
+import {StartingSection} from '../../components'
+
 
 const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
 
@@ -17,7 +18,7 @@ const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
             <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>  
                 <Container>
 
-                    <PageBanner {...BannerInfo}></PageBanner>
+                    <StartingSection {...BannerInfo}></StartingSection>
 
                 </Container>
             </InfoSec>

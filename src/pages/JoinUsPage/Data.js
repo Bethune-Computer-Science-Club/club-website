@@ -6,9 +6,9 @@ import {MainText} from '../../components/InfoSection/InfoSection.elements'
 
 export const BannerData = {
 
-    pageTitle: "Join Us",
-    img: JoinUs,
-    description: "This page contains information about how to become a member.",
+    headingText: "Join Us",
+    image: JoinUs,
+    descriptionText: "This page contains information about how to become a member.",
 
 }
 

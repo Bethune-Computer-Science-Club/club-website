@@ -3,9 +3,9 @@ import RoboticsPic from './../../images/Robotics.png'
 
 export const BannerInfo = {
 
-    pageTitle: "Robotics",
-    img: RoboticsPic,
-    description: "Beep Boop, Beep Boop.",
+    headingText: "Robotics",
+    image: RoboticsPic,
+    descriptionText: "Beep Boop, Beep Boop.",
 
 }
 

@@ -3,9 +3,9 @@ import ApplicationsLogo from './../../images/ApplicationsLogo.png'
 
 export const BannerInfo = {
 
-    pageTitle: "Applications",
-    img: ApplicationsLogo,
-    description: "Useful programs that perform a variety of functions!",
+    headingText: "Applications",
+    image: ApplicationsLogo,
+    descriptionText: "Useful programs that perform a variety of functions!",
 
 }
 
