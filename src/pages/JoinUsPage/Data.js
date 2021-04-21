@@ -45,7 +45,7 @@ export const InfoSectionData = [
             
             <ul style={{paddingLeft:"50px"}}>
                 <li><MainText>Email us at bcicodingclub@tdsb.on.ca</MainText></li>
-                <li><MainText>Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmkGemAow6CfAI9s8zKjeCAFuxrHPVL0kpe9Hk9LPfRfraCw/viewform">Google Form.</a></MainText></li>
+                <li><MainText>Fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmkGemAow6CfAI9s8zKjeCAFuxrHPVL0kpe9Hk9LPfRfraCw/viewform" style={{color: "#fff"}}>Google Form.</a></MainText></li>
                 <li><MainText>Come to Room B216 on Thursdays after school.</MainText></li>
             </ul>
             

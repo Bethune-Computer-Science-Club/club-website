@@ -8,7 +8,6 @@ import { InfoSectionData } from './Data'
 
 import { StartingSection } from '../../components'
 import { BannerData } from './Data'
-import titleBar from '../../images/titleBar.png'
 
 const JoinUs = () => {
     

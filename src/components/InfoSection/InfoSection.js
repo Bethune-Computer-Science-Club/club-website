@@ -33,7 +33,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
       <Container>
 
         {(headline !== "") ? <Heading>{headline}</Heading> : <></>}
- 
+        
         <InfoRow imgStart={imgStart}>
           <InfoColumn data-aos='fade-left'>
             {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 

@@ -12,14 +12,14 @@ export const Column = styled.div`
     background-color: ${props => props.bgColor};
 `
 
-export const RoundLeftColumn =  styled.div`
+export const RoundLeftColumn = styled.div`
     padding: 5%;
     text-align: center;
     background-color: ${props => props.bgColor};
     border-radius: ${props => props.topLeftCorner}px 0px 0px ${props => props.botLeftCorner}px;
 `
 
-export const RoundRightColumn =  styled.div`
+export const RoundRightColumn = styled.div`
     padding: 5%;
     text-align: center;
     background-color: ${props => props.bgColor};
@@ -28,41 +28,42 @@ export const RoundRightColumn =  styled.div`
 
 export const LargeText = styled.p`
     font-size: 2.5rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
 `
 
 export const LargeNoWrapText = styled.p`
     font-size: 2.5rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
     white-space: nowrap;
 `
 
 export const CenteredLargeText = styled.p`
     font-size: 2.5rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
     text-align: center;
 `
 
 export const CenteredText = styled.p`
     font-size: 1.2rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
     text-align: center;
 `
 
 export const BoldText = styled.p`
     font-size: 1.2rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
     text-align: left;
     font-weight: bold;
 `
 
 export const Text = styled.p`
     font-size: 1.2rem;
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
     text-align: left;
 `
 
-export const Img = styled.img`
+export const Img = styled.img` 
+    max-width: 1px;
 `
 
 export const SpacedImg = styled.img`
@@ -79,7 +80,7 @@ export const BoxArea = styled.div`
 `
 
 
-export const PageBanner = ({pageTitle, img, description}) => {
+export const PageBanner = ({ pageTitle, img, description }) => {
 
     return (
 
@@ -102,7 +103,7 @@ export const PageBanner = ({pageTitle, img, description}) => {
 
 }
 
-export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, projectName, authors, description}) => {
+export const ProjectItem = ({ leftBgColor, rightBgColor, img, lowerSubtitle, projectName, authors, description }) => {
 
     const borderRounding = 100;
 
@@ -135,10 +136,10 @@ export const ProjectItem = ({leftBgColor, rightBgColor, img, lowerSubtitle, proj
 
 }
 
-export const BuildProjects = ({ProjectsInfo}) => {
+export const BuildProjects = ({ ProjectsInfo }) => {
 
     return (
-        ProjectsInfo.map(project => <ProjectItem {... project}> </ProjectItem>)
+        ProjectsInfo.map(project => <ProjectItem {...project}> </ProjectItem>)
     )
 
 }
