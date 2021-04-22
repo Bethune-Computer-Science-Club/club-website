@@ -3,7 +3,7 @@ import React from 'react'
 import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
 import {
-    CenteredLargeText,
+    CenteredStandardLargeText,
     BuildProjects,
 } from './CategoryPages.elements'
 import {StartingSection} from '../../components'
@@ -21,7 +21,7 @@ const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
                     {
                         ((Object.keys(ProjectsInfo)).length === 0) ? 
                         
-                        <CenteredLargeText> There are currently no projects. </CenteredLargeText>
+                        <CenteredStandardLargeText> There are currently no projects. </CenteredStandardLargeText>
 
                         :
 

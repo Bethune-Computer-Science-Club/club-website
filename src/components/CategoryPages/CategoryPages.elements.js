@@ -22,22 +22,28 @@ export const RoundLeftColumn = styled.div`
 export const RoundRightColumn = styled.div`
     padding: 5%;
     text-align: center;
-    background-color: ${props => props.bgColor};
+    background-color: ${({ theme }) => theme.oppositeColor};
     border-radius: 0px ${props => props.topRightCorner}px ${props => props.botRightCorner}px 0px;
 `
 
 export const LargeText = styled.p`
     font-size: 2.5rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.bkgColor};
 `
 
 export const LargeNoWrapText = styled.p`
     font-size: 2.5rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.bkgColor};
     white-space: nowrap;
 `
 
 export const CenteredLargeText = styled.p`
+    font-size: 2.5rem;
+    color: ${({ theme }) => theme.bkgColor};
+    text-align: center;
+`
+
+export const CenteredStandardLargeText = styled.p`
     font-size: 2.5rem;
     color: ${({ theme }) => theme.textColor};
     text-align: center;
@@ -45,25 +51,25 @@ export const CenteredLargeText = styled.p`
 
 export const CenteredText = styled.p`
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.bkgColor};
     text-align: center;
 `
 
 export const BoldText = styled.p`
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.bkgColor};
     text-align: left;
     font-weight: bold;
 `
 
 export const Text = styled.p`
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.bkgColor};
     text-align: left;
 `
 
 export const Img = styled.img` 
-    max-width: 1px;
+    max-width: 100%;
 `
 
 export const SpacedImg = styled.img`
