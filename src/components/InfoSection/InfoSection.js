@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
+import { CalendarComp } from '../../components'
 
 // placeholder image
 import CCCLogo from '../../images/cccLogo.png'
@@ -22,10 +23,10 @@ import 'aos/dist/aos.css/'
 // Features:
 //  - Can ignore certain parameters (i.e. ignoring image allows a placeholder image, ignoring description removes it)
 //  - Can render a React component in the description
-const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false}) => {
+const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false }) => {
   //Animate on Scroll
   useEffect(() => {
-    Aos.init({ duration: 1000, once: true});
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   return (
@@ -33,26 +34,25 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
       <Container>
 
         {(headline !== "") ? <Heading>{headline}</Heading> : <></>}
-        
         <InfoRow imgStart={imgStart}>
           <InfoColumn data-aos='fade-left'>
-            {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
+            {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{ border: 0, margin: 0 }} width="100%" height="600"></iframe> :
               <TextWrapper>
                 {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
                 {
                   // check if description will be ignored
-                  (description !== "") ? 
+                  (description !== "") ?
                     // check if description is a react component or a string
-                    (typeof(description) === "string") ?
-                      <MainText>{description}</MainText> 
-                    : <>{description}</>
-                  : <></>
+                    (typeof (description) === "string") ?
+                      <MainText>{description}</MainText>
+                      : <>{description}</>
+                    : <></>
                 }
               </TextWrapper>
             }
           </InfoColumn>
           <InfoColumn data-aos='fade-right'>
-              {showIframe ? <iframe title="Calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Y19jbGFzc3Jvb21lZmUzOWZkNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style={{border: 0}} width="100%" height="600" scrolling="no"></iframe> : 
+            {showIframe ? <CalendarComp/> :
               <Img src={img} alt={alt} />}
           </InfoColumn>
         </InfoRow>
