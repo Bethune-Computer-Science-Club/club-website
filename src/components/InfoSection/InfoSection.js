@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
-import { Calendar } from '../../components'
+import { CalendarComp } from '../../components'
 
 // placeholder image
 import CCCLogo from '../../images/cccLogo.png'
@@ -53,7 +53,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
             }
           </InfoColumn>
           <InfoColumn data-aos='fade-right'>
-            {showIframe ? <Calendar/> :
+            {showIframe ? <CalendarComp/> :
               <Img src={img} alt={alt} />}
           </InfoColumn>
         </InfoRow>
