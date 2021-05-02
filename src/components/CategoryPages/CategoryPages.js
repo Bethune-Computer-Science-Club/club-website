@@ -6,13 +6,22 @@ import {
 } from './CategoryPages.elements'
 import {StartingSection} from '../../components'
 
+import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
 import React, {useEffect, useState} from 'react'
 import Loader from '../../components/Loader/Loader'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
-function CategoryPages({initialLoading = 0, BannerInfo, ProjectsInfo}){
+
+// mode:
+//  -Controls the speed of the animation.
+// Set to '"standard"' for a 2.2s animation.
+// Set to '"fast"' for a slightly faster animation
+// Set to '"fastest"' for a faster animation with a very fast bar fill
+
+// See src/components/Loader/LoaderTimings.jsx for more details.
+function CategoryPages({initialLoading = 0, mode="fast", BannerInfo, ProjectsInfo}){
   const [timesLoaded, setLoading] = useState(initialLoading);
 
   useEffect(() => {
@@ -20,7 +29,7 @@ function CategoryPages({initialLoading = 0, BannerInfo, ProjectsInfo}){
       if (timesLoaded !== 1){
         setLoading(1);
       }
-    }, 2150)
+    }, getFinishTimeFromMode(mode))
   })
 
   return(
@@ -56,7 +65,7 @@ function CategoryPages({initialLoading = 0, BannerInfo, ProjectsInfo}){
           </>
 
         :
-          <Loader></Loader>
+          <Loader mode={mode}></Loader>
       }
       
     </>
