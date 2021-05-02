@@ -33,9 +33,9 @@ function TemplatePage({initialLoading = 0, mode="standard"}){
       {
         (timesLoaded === 1) ? 
           
-          <PageWrapper>
+          <>
             {/* Page code here */}
-          </PageWrapper>
+          </>
 
         :
           <Loader mode={mode}></Loader>
