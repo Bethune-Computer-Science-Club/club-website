@@ -83,7 +83,7 @@ function Footer () {
           <img src={bethuneLogo} alt={"BCSC Logo"}></img>
           Dr. Norman Bethune Collegiate Institute
         </LastLineLogo>
-        <DateLastUpdated>
+        <DateLastUpdated to='/admin'>
           Last Updated: March 21, 2021 - Prototype Phase - V 0.0
         </DateLastUpdated>
       </Container>

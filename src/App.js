@@ -24,6 +24,8 @@ import Games from './pages/GamesPage/Games'
 import AI from './pages/AIPage/AI'
 import Other from './pages/OtherPage/Other'
 
+import Admin from './pages/AdminPage/Admin'
+
 function App() {
   const [theme, setTheme] = useState('dark')
 
@@ -46,6 +48,8 @@ function App() {
           <Route path='/games' component={Games}/>
           <Route path='/AI' component={AI}/>
           <Route path='/other' component={Other}/>
+
+          <Route path='/admin' component={Admin}/>
 
         </Switch>
         <Footer />

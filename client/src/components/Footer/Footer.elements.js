@@ -149,12 +149,13 @@ export const LastLineLogo = styled.h1`
   line-height: 100%;
 `
 
-export const DateLastUpdated = styled.p`
+export const DateLastUpdated = styled(Link)`
   color: grey;
-  text-align: right;
+  text-decoration: none;
   font-size: 0.75rem;
-  line-height: 100%;
   margin-right: 60px;
+  float: right;
+  cursor: default;
 
   @media screen and (max-width: 1200px) {
     margin-right: 0;
