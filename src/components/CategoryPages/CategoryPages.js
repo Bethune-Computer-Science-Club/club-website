@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {Container} from '../../globalStyles'
 import {InfoSec} from '../InfoSection/InfoSection.elements'
 import {
@@ -9,33 +7,60 @@ import {
 import {StartingSection} from '../../components'
 
 
-const CategoryPages = ({BannerInfo, ProjectsInfo}) => {
+import React, {useEffect, useState} from 'react'
+import Loader from '../../components/Loader/Loader'
 
-    return (
-        <>
-            <StartingSection {...BannerInfo}></StartingSection>
-            
-            <InfoSec>  
-                <Container>
+// initialLoading:
+// Set to '1' to skip loader animation.
+function CategoryPages({initialLoading = 0, BannerInfo, ProjectsInfo}){
+  const [timesLoaded, setLoading] = useState(initialLoading);
 
-                    {
-                        ((Object.keys(ProjectsInfo)).length === 0) ? 
+  useEffect(() => {
+    setTimeout(() => {
+      if (timesLoaded !== 1){
+        setLoading(1);
+      }
+    }, 2150)
+  })
+
+  return(
+    <>
+      
+      {
+        (timesLoaded === 1) ? 
+          
+          <>
+            {/* Page code here */}
+            <>
+                <StartingSection {...BannerInfo}></StartingSection>
+                
+                <InfoSec>  
+                    <Container>
+
+                        {
+                            ((Object.keys(ProjectsInfo)).length === 0) ? 
+                            
+                            <CenteredStandardLargeText> There are currently no projects. </CenteredStandardLargeText>
+
+                            :
+
+                            <BuildProjects ProjectsInfo={ProjectsInfo}></BuildProjects>
+
+                        }
                         
-                        <CenteredStandardLargeText> There are currently no projects. </CenteredStandardLargeText>
 
-                        :
+                    </Container>
+                </InfoSec>
 
-                        <BuildProjects ProjectsInfo={ProjectsInfo}></BuildProjects>
+            </>
+          </>
 
-                    }
-                    
-
-                </Container>
-            </InfoSec>
-
-        </>
-    )
-    
+        :
+          <Loader></Loader>
+      }
+      
+    </>
+  )
 }
 
 export default CategoryPages
