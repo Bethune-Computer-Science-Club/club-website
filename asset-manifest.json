@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.f55596e7.chunk.js",
-    "main.js.map": "/club-website/static/js/main.f55596e7.chunk.js.map",
+    "main.js": "/club-website/static/js/main.c9ef145d.chunk.js",
+    "main.js.map": "/club-website/static/js/main.c9ef145d.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.ac933a7b.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.ac933a7b.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/club-website/static/css/2.7fc9bc2b.chunk.css",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.ac933a7b.js",
     "static/css/2.7fc9bc2b.chunk.css",
     "static/js/2.62de6225.chunk.js",
-    "static/js/main.f55596e7.chunk.js"
+    "static/js/main.c9ef145d.chunk.js"
   ]
 }
