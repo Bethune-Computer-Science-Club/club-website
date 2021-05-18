@@ -1,12 +1,12 @@
 import React from 'react'
 
 import {CategoryPages} from '../../components'
-import {ProjectsInfo, BannerInfo} from './Data'
+import {BannerInfo} from './Data'
 
 function Websites() {
 
     return (
-        <CategoryPages BannerInfo={BannerInfo} ProjectsInfo={ProjectsInfo}></CategoryPages>
+        <CategoryPages BannerInfo={BannerInfo} projectType = 'websites'></CategoryPages>
     )
 }
 

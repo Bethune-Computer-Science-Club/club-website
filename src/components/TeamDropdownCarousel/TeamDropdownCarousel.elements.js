@@ -98,7 +98,7 @@ export const LeftArrow = styled.div`
   color: ${({theme}) => theme.textColor};
   position: absolute;
   cursor: pointer;
-  z-index: 0;
+  z-index: 999;
   left: 0;
   top: 150px;
 `

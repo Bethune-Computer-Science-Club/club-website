@@ -1,13 +1,12 @@
 import React from 'react'
 
 import {CategoryPages} from '../../components'
-import {ProjectsInfo, BannerInfo} from './Data'
+import {BannerInfo} from './Data'
 
 function Games() {
-
-    return (
-        <CategoryPages BannerInfo={BannerInfo} ProjectsInfo={ProjectsInfo}></CategoryPages>
-    )
+  return (
+      <CategoryPages BannerInfo={BannerInfo} projectType = 'games'></CategoryPages>
+  )
 }
 
 export default Games

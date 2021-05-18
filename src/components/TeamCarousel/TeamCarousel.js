@@ -1,5 +1,6 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { Container } from '../../globalStyles'
+import Axios from 'axios'
 import {
   Heading,
   CarouselContainer,
@@ -22,7 +23,6 @@ import ReactCardFlip from 'react-card-flip'; // For the flip animation for each 
 // CardElement function gets called by the TeamCarousel function below
 const CardElement = ({ data }) => {
   const [Flipped, setFlipped] = useState(false); // Initialize the card to be unflipped initially
-  const image = require('../../pages/TeamPage/ExecImages/' + data.imageName).default // Obtain the image
   return (
     <CardWrapper onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}> {/* Set Flipped to true when mouse is hovered over the card and false when mouse is not over the card  */}
 
@@ -30,7 +30,7 @@ const CardElement = ({ data }) => {
       <ReactCardFlip isFlipped={Flipped} flipDirection="horizontal"> 
         <Card> {/* Content for the front of the card */}
           <ContentContainer>
-            <Photo src={image} alt=""></Photo>
+            <Photo src={data.picture} alt=""></Photo>
             <Name>{data.name}</Name>
             <Role>{data.role}</Role>
           </ContentContainer>
@@ -66,20 +66,63 @@ const PrevArrow = ({onClick}) => {
   )
 }
 
+//Gets the school year
+const getCurrentYear = () => {
+  const date = new Date();
+  const currentMonth = date.getMonth()+1;
+  const currentYear = date.getFullYear();
 
-const TeamCarousel = ({heading, sliderData, slidesShown}) =>  {
-  sliderData = Object.values(sliderData) //Convert the json data into a format react recognizes
+  if (currentMonth <= 9 ){ //9 = September
+    return currentYear;
+  }
+  else {
+    return currentYear+1;
+  }
+}
+
+const TeamCarousel = ({heading, slidesShown, type}) =>  {
+  //Database stuff
+  const [execs, setExecs] = useState([]); //Stores the execs for the selected year
+  const currentYear = getCurrentYear();
+
+  useEffect(() => {
+    if (type === 'current execs') {
+      //Get current year execs
+      Axios.get('http://localhost:5000/execs/').then((response) => {
+        setExecs(response.data.filter(exec => exec.endingYear === 'Present' && exec.role !== 'Teacher'));
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+    else if (type === 'teachers') {
+      //Get teachers
+      Axios.get('http://localhost:5000/execs/').then((response) => {
+        setExecs(response.data.filter(exec => exec.role === 'Teacher'));
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+    else if (type === 'website creators') {
+      //Get teachers
+      Axios.get('http://localhost:5000/execs/').then((response) => {
+        setExecs(response.data.filter(exec => exec.role === 'Website Creator'));
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+  }, [type, currentYear]);
+
+  //Stuff below used for slider
   
-  const numCards = Object.keys(sliderData).length; // Stores the number of execs/cards needed to be rendered for the current year
+  const numCards = execs.length; // Stores the number of execs/cards needed to be rendered for the current year
 
   // Settings for the carousel
   const settings = {
     dots: true,
     infinite: true,
-    // autoplay: true,
-    // speed: 1000,
-    // autoplaySpeed: 2000,
-    // cssEase: "linear",
     slidesToShow: numCards >= slidesShown ? slidesShown : numCards,
     slidesToScroll: 3,
     nextArrow: <NextArrow />,
@@ -100,7 +143,6 @@ const TeamCarousel = ({heading, sliderData, slidesShown}) =>  {
           slidesToScroll: 1
         }
       },
-
     ]
   };
 
@@ -111,9 +153,9 @@ const TeamCarousel = ({heading, sliderData, slidesShown}) =>  {
         {/* Carousel */}
         <Carousel {...settings}>
           {/* Loop through the execs in the current year and render them in the carousel  */}
-          {sliderData.map((data, index) => {
+          {execs.map((data) => {
             return(
-              <CardElement data={data} key={`card-${index}`} />
+              <CardElement data={data} key={data._id} />
             );
           })}
         </Carousel>

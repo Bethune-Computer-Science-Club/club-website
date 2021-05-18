@@ -1,8 +1,4 @@
 import teamImg from '../../images/teamImg.png'
-import { CurrentExecData } from './ExecData/CurrentExecData.json'
-import { PastExecData } from './ExecData/PastExecData.json'
-import { TeacherData } from './ExecData/TeacherData.json'
-import { WebsiteCreatorData } from './ExecData/WebsiteCreatorData.json'
 
 export const StartingSectionParameters = {
   headingText: 'Team',
@@ -12,24 +8,22 @@ export const StartingSectionParameters = {
 
 export const CurrentExecParameters = {
   heading: 'Current Executive Team',
-  sliderData: CurrentExecData,
-  slidesShown: 3
+  slidesShown: 3,
+  type: 'current execs'
 }
 
 export const PastExecParameters = {
   heading: 'Graduated Executives',
-  sliderData: PastExecData,
-  slidesShown: 3
 }
 
 export const TeachersParameters = {
   heading: 'Teacher Supervisors',
-  sliderData: TeacherData,
-  slidesShown: 3
+  slidesShown: 3,
+  type: 'teachers'
 }
 
 export const WebsiteCreatorParameters = {
   heading: 'Website Creators',
-  sliderData: WebsiteCreatorData,
-  slidesShown: 4
+  slidesShown: 4,
+  type: 'website creators'
 }

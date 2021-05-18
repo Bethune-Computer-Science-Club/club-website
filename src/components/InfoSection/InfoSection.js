@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from '../../globalStyles'
-
-// placeholder image
-import CCCLogo from '../../images/cccLogo.png'
+import Axios from 'axios'
 
 //Styled Components
 import {
@@ -22,16 +20,42 @@ import 'aos/dist/aos.css/'
 // Features:
 //  - Can ignore certain parameters (i.e. ignoring image allows a placeholder image, ignoring description removes it)
 //  - Can render a React component in the description
-const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = CCCLogo, alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false}) => {
-  //Animate on Scroll
+const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = "", alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false, isAnnouncement = false}) => {
+  //Stores all the announcements
+  const [title, setTitle] = useState();
+  const [desc, setDesc] = useState();
+  const [picture, setPicture] = useState();
+  const [date, setDate] = useState();
+
   useEffect(() => {
+    //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
+      
+    //Get data from database
+    Axios.get('http://localhost:5000/announcements/').then((response) => {
+      setTitle(response.data[response.data.length-1].title)
+      setDesc(response.data[response.data.length-1].description)
+      setPicture(response.data[response.data.length-1].picture)
+      setDate(response.data[response.data.length-1].date.substring(0, 10))
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }, []);
+
+  console.log(title);
+  console.log(desc);
+  console.log(picture);
+
+  if (isAnnouncement === true){
+    topLine = title;
+    description = desc;
+    img = picture;
+  }
 
   return (
     <InfoSec>
       <Container>
-
         {(headline !== "") ? <Heading>{headline}</Heading> : <></>}
  
         <InfoRow imgStart={imgStart}>
@@ -39,6 +63,8 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
             {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
               <TextWrapper>
                 {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
+                {isAnnouncement ? <TextHeading style={{fontSize:'12px'}}>{date}</TextHeading> : <></>}
+
                 {
                   // check if description will be ignored
                   (description !== "") ? 

@@ -31,7 +31,7 @@ const InfoSection = () => {
         <Container>
           <Heading>Categories</Heading>
           <InfoRow>
-            <LinkImg to='/robotics' style={{backgroundImage: `url(${roboticsPicture})`}}>
+            <LinkImg to='/robotics' data-aos='flip-left' style={{backgroundImage: `url(${roboticsPicture})`}}>
               <LinkText>Robotics</LinkText>
             </LinkImg>
             <LinkImg to='/apps' data-aos='flip-left' style={{backgroundImage: `url(${applicationsPicture})`}}>

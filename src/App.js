@@ -22,7 +22,10 @@ import Games from './pages/GamesPage/Games'
 import AI from './pages/AIPage/AI'
 import Other from './pages/OtherPage/Other'
 
-import Admin from './pages/AdminPage/Admin'
+import Admin from './pages/AdminPages/AdminPage/Admin'
+import AnnouncementsAmn from './pages/AdminPages/AnnouncementsAdminPage/AnnouncementsAdmin'
+import ProjectsAmn from './pages/AdminPages/ProjectsAdminPage/ProjectsAdmin'
+import ExecsAmn from './pages/AdminPages/ExecsAdminPage/ExecsAdmin'
 
 
 function App() {
@@ -48,7 +51,10 @@ function App() {
           <Route path='/AI' component={AI}/>
           <Route path='/other' component={Other}/>
 
-          <Route path='/admin' component={Admin}/>
+          <Route path='/admin' exact component={Admin}/>
+          <Route path='/admin/announcements' component={AnnouncementsAmn}/>
+          <Route path='/admin/projects' component={ProjectsAmn}/>
+          <Route path='/admin/execs' component={ExecsAmn}/>
 
         </Switch>
         <Footer />

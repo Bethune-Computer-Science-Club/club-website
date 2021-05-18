@@ -102,22 +102,21 @@ export const PageBanner = ({ pageTitle, img, description }) => {
 
 }
 
-export const ProjectItem = ({ leftBgColor, rightBgColor, img, lowerSubtitle, projectName, authors, description }) => {
-
+export const ProjectItem = ({ projectName, authors, description, img }) => {
   const borderRounding = 100;
 
   return (
     <>
       <BoxArea data-aos='fade-right'>
 
-        <RoundLeftColumn bgColor={leftBgColor} topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
+        <RoundLeftColumn bgColor='red' topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
 
           <Img src={img}></Img>
-          <LargeText> {lowerSubtitle} </LargeText>
+          {/* <LargeText> {lowerSubtitle} </LargeText> */}
 
         </RoundLeftColumn>
 
-        <RoundRightColumn bgColor={rightBgColor} topRightCorner={borderRounding} botRightCorner={borderRounding}>
+        <RoundRightColumn bgColor='green' topRightCorner={borderRounding} botRightCorner={borderRounding}>
 
           <CenteredLargeText> {projectName} </CenteredLargeText>
           <br></br>
@@ -135,10 +134,10 @@ export const ProjectItem = ({ leftBgColor, rightBgColor, img, lowerSubtitle, pro
 
 }
 
-export const BuildProjects = ({ ProjectsInfo }) => {
+export const BuildProjects = ({ Projects }) => {
 
   return (
-    ProjectsInfo.map(project => <ProjectItem {...project}> </ProjectItem>)
+    Projects.map(project => <ProjectItem {...project}> </ProjectItem>)
   )
 
 }
