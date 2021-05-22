@@ -43,7 +43,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
   }, [])
 
   useEffect(() => { //Set announcements when announcements array changes
-    console.log(announcements)
+    console.log("announcements", announcements)
     if (announcements && (announcements.length !== 0)) {
       setTitle(announcements[0].title)
       setDesc(announcements[0].description)
