@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from '../../globalStyles'
 import { ReadData } from '../../databaseFunctions/ReadData'
+import { CalendarComp } from '../../components'
 
 //Styled Components
 import {
@@ -83,7 +84,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
             }
           </InfoColumn>
           <InfoColumn data-aos='fade-right'>
-              {showIframe ? <iframe title="Calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Y19jbGFzc3Jvb21lZmUzOWZkNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style={{border: 0}} width="100%" height="600" scrolling="no"></iframe> : 
+            {showIframe ? <CalendarComp/> :
               <Img src={img} alt={alt} />}
           </InfoColumn>
         </InfoRow>
