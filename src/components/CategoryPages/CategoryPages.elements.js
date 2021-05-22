@@ -1,143 +1,62 @@
-import React from 'react'
 import styled from 'styled-components'
 
-export const InfoArea = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
-
-export const Column = styled.div`
-    padding: 5%;
-    text-align: center;
-    background-color: ${props => props.bgColor};
-`
-
-export const RoundLeftColumn = styled.div`
-    padding: 5%;
-    text-align: center;
-    background-color: ${props => props.bgColor};
-    border-radius: ${props => props.topLeftCorner}px 0px 0px ${props => props.botLeftCorner}px;
-`
-
-export const RoundRightColumn = styled.div`
-    padding: 5%;
-    text-align: center;
-    background-color: ${props => props.bgColor};
-    border-radius: 0px ${props => props.topRightCorner}px ${props => props.botRightCorner}px 0px;
-`
-
-export const LargeText = styled.p`
-    font-size: 2.5rem;
-    color: ${({ theme }) => theme.textColor};
-`
-
-export const LargeNoWrapText = styled.p`
-    font-size: 2.5rem;
-    color: ${({ theme }) => theme.textColor};
-    white-space: nowrap;
-`
-
 export const CenteredLargeText = styled.p`
-    font-size: 2.5rem;
-    color: ${({ theme }) => theme.textColor};
-    text-align: center;
+  font-size: 2.5rem;
+  color: ${({ theme }) => theme.textColor};
+  text-align: center;
 `
 
-export const CenteredText = styled.p`
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
-    text-align: center;
+export const ProjectContainer = styled.div`
+  border: none;
+  border-radius: 1em;
+  background-color: white;
+  width: 600px;
+  height: 150px;
+  margin: auto;
+  display: flex;
 `
 
-export const BoldText = styled.p`
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
-    text-align: left;
-    font-weight: bold;
+export const ProjectTitle = styled.h5`
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 2.5rem 2.5rem 0rem 2.5rem;
+  text-align: left;
 `
 
-export const Text = styled.p`
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.textColor};
-    text-align: left;
+export const ProjectAuthor = styled.h5`
+  font-size: 10px;
+  padding: 0rem 2.5rem 0rem 2.5rem;
+  color: black;
+  text-align: left;
 `
 
-export const Img = styled.img`
+export const ProjectDate = styled.h5`
+  font-size: 10px;
+  padding: 0.5rem 2.5rem 2.5rem 2.5rem;
+  color: black;
+  text-align: left;
+`
+export const ProjectImg = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
 `
 
-export const SpacedImg = styled.img`
-    margin-left: 10%;
+export const ProjectInfoSecLeft = styled.div`
+  float: left;
+  width: 50%;
 `
 
-export const HorizontalWrapper = styled.div`
-    display: flex;
+export const ProjectInfoSecRight = styled.div`
+  float: left;
+  width: 50%;
 `
 
-export const BoxArea = styled.div`
-    display: flex;
-    justify-content: center;
+export const ProjectHighlight = styled.div`
+  float: left;
+  height:100%;
+  width:2%;
+  background-color: red;
+  border-radius: 1em 0em 0em 1em;
 `
-
-
-export const PageBanner = ({ pageTitle, img, description }) => {
-
-  return (
-
-    <InfoArea>
-
-      <Column>
-        <HorizontalWrapper>
-          <LargeNoWrapText> {pageTitle} </LargeNoWrapText>
-          <SpacedImg src={img}></SpacedImg>
-        </HorizontalWrapper>
-      </Column>
-
-      <Column>
-        <LargeText> {description} </LargeText>
-      </Column>
-
-    </InfoArea>
-
-  )
-
-}
-
-export const ProjectItem = ({ title, authors, description, picture }) => {
-  const borderRounding = 100;
-
-  return (
-    <>
-      <BoxArea data-aos='fade-right'>
-
-        <RoundLeftColumn bgColor='red' topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
-
-          <Img src={picture}></Img>
-          {/* <LargeText> {lowerSubtitle} </LargeText> */}
-
-        </RoundLeftColumn>
-
-        <RoundRightColumn bgColor='green' topRightCorner={borderRounding} botRightCorner={borderRounding}>
-
-          <CenteredLargeText> {title} </CenteredLargeText>
-          <br></br>
-          <BoldText> Authors: </BoldText>
-          <Text> {authors} </Text>
-          <br></br>
-          <Text> {description} </Text>
-
-        </RoundRightColumn>
-
-      </BoxArea>
-      <br></br>
-    </>
-  )
-
-}
-
-export const BuildProjects = ({ Projects }) => {
-
-  return (
-    Projects.map(project => <ProjectItem {...project}> </ProjectItem>)
-  )
-
-}

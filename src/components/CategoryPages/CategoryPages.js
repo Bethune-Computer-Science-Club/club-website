@@ -3,10 +3,10 @@ import { Container } from '../../globalStyles'
 import { InfoSec } from '../InfoSection/InfoSection.elements'
 import { StartingSection } from '../../components'
 import { ReadSpecificData } from '../../databaseFunctions/ReadSpecificData'
+import BuildProjects from './BuildProjects'
 
 import {
   CenteredLargeText,
-  BuildProjects,
 } from './CategoryPages.elements'
 
 //Animate on Scroll
@@ -15,15 +15,13 @@ import 'aos/dist/aos.css/'
 
 const CategoryPages = ({ BannerInfo, projectType }) => {
   const [projects, setProjects] = useState(); //stores the projects for the defined category
-  useEffect(() => { //Get the announcements in the database on first render
+  useEffect(() => {
     //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
   
     //Get data from database
     ReadSpecificData('projects', 'createdAt', 'desc', setProjects, 'projectType', '==', projectType);
   }, [projectType])
-
-    console.log(projects);
 
   return (
     <>
@@ -33,10 +31,9 @@ const CategoryPages = ({ BannerInfo, projectType }) => {
         <Container>
             {projects && projects.length === 0 ? <CenteredLargeText> There are currently no projects. </CenteredLargeText> : <></>}
 
-            {projects !== undefined ? <BuildProjects Projects={projects} ></BuildProjects> : <></>}
+            {projects !== undefined ? <BuildProjects projects={projects}/> : <> </> }
         </Container>
       </InfoSec>
-
     </>
   )
 
