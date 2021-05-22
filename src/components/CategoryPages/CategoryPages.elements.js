@@ -14,6 +14,7 @@ export const ProjectContainer = styled.div`
   height: 150px;
   margin: auto;
   display: flex;
+  cursor: pointer;
 `
 
 export const ProjectTitle = styled.h5`
@@ -43,20 +44,30 @@ export const ProjectImg = styled.img`
   border-radius: 1em;
 `
 
-export const ProjectInfoSecLeft = styled.div`
+export const ProjectInfoSec = styled.div`
   float: left;
   width: 50%;
 `
 
-export const ProjectInfoSecRight = styled.div`
+export const ProjectImgSec = styled.div`
   float: left;
   width: 50%;
+  transform: ${({toggle}) => toggle ? 'translate(-4%,0%)' : 'translate(0%,0%)'};
+  z-index:1;
 `
 
 export const ProjectHighlight = styled.div`
   float: left;
   height:100%;
-  width:2%;
+  width:2.5%;
   background-color: red;
-  border-radius: 1em 0em 0em 1em;
+  border-radius: 2em 0em 0em 2em;
+  z-index:2;
+`
+
+export const ProjectDescription = styled.p`
+  font-size: 12px;
+  padding: 1.5rem;
+  color: black;
+  text-align: left;
 `
