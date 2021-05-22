@@ -38,20 +38,20 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
     ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
   }, [])
 
-  useEffect(() => { //Set announcements when announcements array changes
-    if (announcements) {
-      setTitle(announcements[0].title)
-      setDesc(announcements[0].description)
-      setPicture(announcements[0].picture)
+  // useEffect(() => { //Set announcements when announcements array changes
+  //   if (announcements) {
+  //     setTitle(announcements[0].title)
+  //     setDesc(announcements[0].description)
+  //     setPicture(announcements[0].picture)
   
-      let date;
-      let dateWithCommas = 'Loading...';
-      date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
-      dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
+  //     let date;
+  //     let dateWithCommas = 'Loading...';
+  //     date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
+  //     dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
   
-      setDate(dateWithCommas)
-    }
-  }, [announcements])
+  //     setDate(dateWithCommas)
+  //   }
+  // }, [announcements])
 
   if (isAnnouncement === true){
     topLine = title;
