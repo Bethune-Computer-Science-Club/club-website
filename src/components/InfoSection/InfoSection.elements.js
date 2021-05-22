@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const InfoSec = styled.div`
   padding: 30px 0;
@@ -39,6 +39,7 @@ export const TextWrapper = styled.div`
     padding-bottom: 10px;
   }
 `
+
 export const TextHeading = styled.div`
   color: ${({theme}) => theme.topLineColor};
   font-size: 20px;
@@ -73,3 +74,18 @@ export const Img = styled.img`
   max-height: 350px;
   width: 400px;
 `
+
+// const PopHeadingText = keyframes`
+//   0% {
+//     font-size: 30px;
+//     color: #2ec02e;
+//   }
+//   50%{
+//     font-size: 40px;
+//     color: white;
+//   }
+//   100% {
+//     font-size: 30px;
+//     color: #2ec02e;
+//   }
+// `
