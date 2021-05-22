@@ -44,19 +44,31 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
 
   useEffect(() => { //Set announcements when announcements array changes
     console.log("announcements", announcements)
-    if (announcements && (announcements.length !== 0)) {
-      setTitle(announcements[0].title)
-      setDesc(announcements[0].description)
-      setPicture(announcements[0].picture)
-  
-      let date;
-      let dateWithCommas = 'Loading...';
-      date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
-      dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
-  
-      setDate(dateWithCommas)
+    try{
+      if (announcements) {
+        setTitle(announcements[0].title)
+        setDesc(announcements[0].description)
+        setPicture(announcements[0].picture)
+    
+        let date;
+        let dateWithCommas = 'Loading...';
+        date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
+        dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
+    
+        setDate(dateWithCommas)
+      }
     }
+    catch{
+
+      console.log("Caught database error!")
+      setTitle("Database ERR")
+      setDesc("The database might be down. One way of fixing this is if you are using HTTPS Everywhere is to go into the settings and disable 'Encrypt All Sites Eligible'.")
+      setPicture()
+    }
+    
   }, [announcements])
+
+  
 
   if (isAnnouncement === true){
     topLine = title;
