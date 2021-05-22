@@ -1,14 +1,16 @@
 import { React, useState } from 'react'
+
 import {
   ProjectContainer,
   ProjectTitle,
   ProjectAuthor,
   ProjectDate,
   ProjectImg,
-  ProjectInfoSec,
   ProjectImgSec,
   ProjectHighlight,
   ProjectDescription,
+  ProjectInfoSecLeft,
+  ProjectInfoSecRight,
 } from './CategoryPages.elements'
 
 const ProjectItem = ({ project }) => {
@@ -23,9 +25,9 @@ const ProjectItem = ({ project }) => {
   date = createdAt.toDate().toDateString().substring(4, 15);
   dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
 
-  const headerInfo = () => {
+  const leftSec = () => {
     return (
-      <ProjectInfoSec>
+      <ProjectInfoSecLeft>
         <ProjectTitle>
           {title}
         </ProjectTitle>
@@ -35,48 +37,39 @@ const ProjectItem = ({ project }) => {
         <ProjectDate>
           {dateWithCommas}
         </ProjectDate>
-      </ProjectInfoSec>
+      </ProjectInfoSecLeft>
     )
   }
 
   const descriptionInfo = () => {
     return (
-      <ProjectInfoSec>
-        <ProjectDescription>
-          {description}
-        </ProjectDescription>
-      </ProjectInfoSec>
+      <ProjectDescription>
+        {description}
+      </ProjectDescription>
     )
   }
 
   const image = () => {
     return (
-      <ProjectImgSec toggle={toggle}>
-        <ProjectImg src={picture} />
-      </ ProjectImgSec>
+      <ProjectImg src={picture} toggle={toggle}/>
     )
   }
 
-  const toggleInfo = () => {
-    // if toggle is true, have image on the left else on the right
-
-    if (toggle) {
-      return descriptionInfo()
-    }else {
-      return headerInfo()
-    }
+  const rightSec = () => {
+    return (
+      <ProjectInfoSecRight>
+        {descriptionInfo()}
+        {image()}
+      </ProjectInfoSecRight>
+    )
   }
 
   return (
     <>
       <ProjectContainer onClick={handleToggle}>
         <ProjectHighlight />
-        {toggle ?
-          image() : toggleInfo()
-        }
-        {toggle ?
-          toggleInfo() : image()
-        }
+        {leftSec()}
+        {rightSec()}
 
       </ProjectContainer>
     </>

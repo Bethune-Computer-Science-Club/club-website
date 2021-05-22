@@ -14,6 +14,7 @@ export const ProjectContainer = styled.div`
   height: 150px;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
 `
 
@@ -42,32 +43,38 @@ export const ProjectImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 1em;
+  transform: ${({toggle}) => toggle ? 'translate(-104%,0%)' : 'translate(0%,0%)'};
+  transition: transform 1s;
+  position:absolute;
+  top:0;
+  left:0;
 `
 
-export const ProjectInfoSec = styled.div`
-  float: left;
+export const ProjectInfoSecLeft = styled.div`
   width: 50%;
+`
+export const ProjectInfoSecRight = styled.div`
+  width: 50%;
+  position:relative;
 `
 
 export const ProjectImgSec = styled.div`
-  float: left;
   width: 50%;
-  transform: ${({toggle}) => toggle ? 'translate(-4%,0%)' : 'translate(0%,0%)'};
-  z-index:1;
+  transform: ${({toggle}) => toggle ? 'translate(-104%,0%)' : 'translate(0%,0%)'};
+  transition: transform 1s;
 `
 
 export const ProjectHighlight = styled.div`
-  float: left;
   height:100%;
   width:2.5%;
   background-color: red;
   border-radius: 2em 0em 0em 2em;
-  z-index:2;
+  z-index:3;
 `
 
 export const ProjectDescription = styled.p`
   font-size: 12px;
   padding: 1.5rem;
   color: black;
-  text-align: left;
+  transition: transform 0.5s;
 `
