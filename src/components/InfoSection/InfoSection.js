@@ -35,7 +35,11 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
     Aos.init({ duration: 1000, once: true});
   
     //Get data from database
-    ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
+    async function fetchData() {
+      await ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
+    }
+    fetchData()
+
   }, [])
 
   useEffect(() => { //Set announcements when announcements array changes

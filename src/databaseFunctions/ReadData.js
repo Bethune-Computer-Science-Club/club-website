@@ -1,7 +1,7 @@
 import { projectFirestore } from '../firebase/config';
 
-export const ReadData = async (collectionName, orderBy, ascOrDesc, setData) => {
-  const unsub = await projectFirestore.collection(collectionName)
+export const ReadData = (collectionName, orderBy, ascOrDesc, setData) => {
+  const unsub = projectFirestore.collection(collectionName)
   .orderBy(orderBy, ascOrDesc)
   .onSnapshot((snap) => {
     let documents = [];
