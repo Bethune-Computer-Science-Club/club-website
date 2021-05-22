@@ -1,8 +1,38 @@
 import styled, {keyframes} from 'styled-components'
 
-import {
-  AnimatedText
-} from '../../components/InfoSection/InfoSectionElems'
+export const Text = styled.p`
+  color: ${props => props.color || "white"};
+  font-size: 1.5rem;
+
+  /* @media screen and (max-width: 960px){
+    margin-bottom: 20px;
+  } */
+`
+
+const PopText = keyframes`
+  0% {
+    font-size: 1.5rem;
+  }
+  50%{
+    font-size: 1.75rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+`
+
+export const AnimatedText = styled(Text)`
+  :hover{
+    color: #2ec02e;
+    transition: color .5s;
+    /* transition: font-size .5s;
+    font-size: 2rem; */
+
+    animation-name: ${PopText};
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+  }
+`
 
 // Speed up (ease-in)
 const FillTopDonut = keyframes`

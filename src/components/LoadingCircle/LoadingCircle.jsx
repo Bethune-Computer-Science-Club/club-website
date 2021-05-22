@@ -6,7 +6,7 @@ import {
   ModdedAnimatedText,
   Grid,
   GridOverlapper
-} from "./SkillChartElems"
+} from "./LoadingCircle.elements"
 //import { useSpring } from 'react-spring'
 
 import React, {useEffect, useState} from 'react'
