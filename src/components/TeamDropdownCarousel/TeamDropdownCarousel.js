@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { Container } from '../../globalStyles'
-import Axios from 'axios'
+import { ReadSpecificData } from '../../databaseFunctions/ReadSpecificData'
 
 import {
   Heading,
@@ -81,33 +81,34 @@ const TeamDropdownCarousel = ({heading}) =>  {
   const [selectedOption, setSelectedOption] = useState({value: options[0].value, label: options[0].label})
   const [execs, setExecs] = useState([]); //Stores the execs for the selected year
 
-  useEffect(() => {
-    let minYear = 9999;
-
+  useEffect(() => { //Get the announcements in the database on first render
     //Get current year execs
-    Axios.get('http://localhost:5000/execs/').then((response) => {
-      //Set the execs useState array
-      setExecs(response.data.filter(exec => exec.startingYear <= selectedOption.value && exec.endingYear >= selectedOption.value && exec.role !== 'Teacher' && exec.role !== 'Website Creator' && exec.endingYear !== 'Present'));
-      
-      //Set the options array
-      for (let object of response.data) {
-        console.log(object.startingYear)
+    ReadSpecificData('execs', 'endingYear', 'desc', setExecs, 'endingYear', '!=', 'Present');
+  }, [])
 
-        if (parseInt(object.startingYear) < minYear) {
-          minYear = parseInt(object.startingYear);
-        }
-      }
 
-      for (let i = currentYear-2; i >= minYear; i--) { //subtract 2 because currentyear -1 is already in the carousel
-        setOptions(options => [...options, {value: i, label: i}]);
-      }
+  useEffect(() => {
+    console.log('runnin')
+    let minYear = 9999;
+    //Set the execs useState array
+    setExecs(execs.filter(exec => exec.startingYear <= selectedOption.value && exec.endingYear >= selectedOption.value && exec.role !== 'Teacher' && exec.role !== 'Website Creator' && exec.endingYear !== 'Present'));
     
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    //Set the options array
+    for (let object of execs) {
+      console.log(object.startingYear)
 
-  }, [selectedOption.value, currentYear]);
+      if (object.startingYear < minYear) {
+        minYear = object.startingYear;
+      }
+    }
+    
+    console.log(minYear)
+
+    for (let i = currentYear-2; i >= minYear; i--) { //subtract 2 because currentyear -1 is already in the carousel
+      setOptions(options => [...options, {value: i, label: i}]);
+    }
+
+  }, []);
 
 
   // Carousel Data
@@ -162,7 +163,7 @@ const TeamDropdownCarousel = ({heading}) =>  {
           {/* Loop through the execs in the current year and render them in the carousel  */}
           {execs.map((data) => {
             return(
-              <CardElement data={data} key={data._id} />
+              <CardElement data={data} key={data.id} />
             );
           })}
         </Carousel>

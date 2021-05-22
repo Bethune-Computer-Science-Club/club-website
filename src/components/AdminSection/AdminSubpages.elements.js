@@ -1,3 +1,5 @@
+//THE COMBINED STYLED COMPONENTS FILE FOR AnnouncementsAdmin.js, ExecsAdmin.js, and ProjectsAdmin.js
+
 import styled from 'styled-components'
 
 export const AdminSec = styled.div`
@@ -137,4 +139,44 @@ export const EditDelete = styled.p`
   display: inline;
   cursor: pointer;
   color: #FB8F3D;
+`
+
+export const FileInput = styled.input`
+  display: none;
+`
+
+export const FileUploadButton = styled.label`
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 20px;
+
+  &:hover {
+    background: #d6d4d4;
+  }
+`
+
+export const FileUploadLabel = styled.p`
+  margin: 20px 0;
+`
+
+//For projects admin page
+export const CategoryButton = styled.button`
+  width: 200px;
+  height: 100px;
+  border: solid 3px #d68f24;
+  border-radius: 20px;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+`
+
+export const InfoRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 `

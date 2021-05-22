@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { Container } from '../../globalStyles'
-import Axios from 'axios'
+import { ReadSpecificData } from '../../databaseFunctions/ReadSpecificData'
 import {
   Heading,
   CarouselContainer,
@@ -84,39 +84,35 @@ const TeamCarousel = ({heading, slidesShown, type}) =>  {
   //Database stuff
   const [execs, setExecs] = useState([]); //Stores the execs for the selected year
   const currentYear = getCurrentYear();
+  console.log('RERENDER')
 
   useEffect(() => {
+    console.log('first', execs)
+
     if (type === 'current execs') {
       //Get current year execs
-      Axios.get('http://localhost:5000/execs/').then((response) => {
-        setExecs(response.data.filter(exec => exec.endingYear === 'Present' && exec.role !== 'Teacher'));
-      })
-      .catch(err => {
-        console.log(err);
-      })
+      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'endingYear', '==', 'Present');
+      if (execs !== []) {
+        setExecs(execs.filter(exec => exec.role !== 'Teacher'));
+      }
+      console.log('second', execs)
     }
     else if (type === 'teachers') {
       //Get teachers
-      Axios.get('http://localhost:5000/execs/').then((response) => {
-        setExecs(response.data.filter(exec => exec.role === 'Teacher'));
-      })
-      .catch(err => {
-        console.log(err);
-      })
+      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'role', '==', 'Teacher');
+      console.log('third', execs)
     }
     else if (type === 'website creators') {
       //Get teachers
-      Axios.get('http://localhost:5000/execs/').then((response) => {
-        setExecs(response.data.filter(exec => exec.role === 'Website Creator'));
-      })
-      .catch(err => {
-        console.log(err);
-      })
+      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'role', '==', 'Website Creator');
+      console.log('fourth', execs)
     }
   }, [type, currentYear]);
 
+
+  console.log('final execs', execs)
+
   //Stuff below used for slider
-  
   const numCards = execs.length; // Stores the number of execs/cards needed to be rendered for the current year
 
   // Settings for the carousel
@@ -155,7 +151,7 @@ const TeamCarousel = ({heading, slidesShown, type}) =>  {
           {/* Loop through the execs in the current year and render them in the carousel  */}
           {execs.map((data) => {
             return(
-              <CardElement data={data} key={data._id} />
+              <CardElement data={data} key={data.id} />
             );
           })}
         </Carousel>

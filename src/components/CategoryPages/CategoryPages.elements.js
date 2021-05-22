@@ -102,7 +102,7 @@ export const PageBanner = ({ pageTitle, img, description }) => {
 
 }
 
-export const ProjectItem = ({ projectName, authors, description, img }) => {
+export const ProjectItem = ({ title, authors, description, picture }) => {
   const borderRounding = 100;
 
   return (
@@ -111,14 +111,14 @@ export const ProjectItem = ({ projectName, authors, description, img }) => {
 
         <RoundLeftColumn bgColor='red' topLeftCorner={borderRounding} botLeftCorner={borderRounding}>
 
-          <Img src={img}></Img>
+          <Img src={picture}></Img>
           {/* <LargeText> {lowerSubtitle} </LargeText> */}
 
         </RoundLeftColumn>
 
         <RoundRightColumn bgColor='green' topRightCorner={borderRounding} botRightCorner={borderRounding}>
 
-          <CenteredLargeText> {projectName} </CenteredLargeText>
+          <CenteredLargeText> {title} </CenteredLargeText>
           <br></br>
           <BoldText> Authors: </BoldText>
           <Text> {authors} </Text>

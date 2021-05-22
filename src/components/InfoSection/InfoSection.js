@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from '../../globalStyles'
-import Axios from 'axios'
+import { ReadData } from '../../databaseFunctions/ReadData'
 
 //Styled Components
 import {
@@ -27,25 +27,30 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
   const [picture, setPicture] = useState();
   const [date, setDate] = useState();
 
-  useEffect(() => {
+  const [announcements, setAnnouncements] = useState();
+
+  useEffect(() => { //Get the announcements in the database on first render
     //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
-      
+  
     //Get data from database
-    Axios.get('http://localhost:5000/announcements/').then((response) => {
-      setTitle(response.data[response.data.length-1].title)
-      setDesc(response.data[response.data.length-1].description)
-      setPicture(response.data[response.data.length-1].picture)
-      setDate(response.data[response.data.length-1].date.substring(0, 10))
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }, []);
+    ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
+  }, [])
 
-  console.log(title);
-  console.log(desc);
-  console.log(picture);
+  useEffect(() => { //Set announcements when announcements array changes
+    if (announcements) {
+      setTitle(announcements[0].title)
+      setDesc(announcements[0].description)
+      setPicture(announcements[0].picture)
+  
+      let date;
+      let dateWithCommas = 'Loading...';
+      date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
+      dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
+  
+      setDate(dateWithCommas)
+    }
+  }, [announcements])
 
   if (isAnnouncement === true){
     topLine = title;

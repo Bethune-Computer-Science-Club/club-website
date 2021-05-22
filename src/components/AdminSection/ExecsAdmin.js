@@ -1,6 +1,10 @@
-import React, {useEffect, useState, useRef} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from '../../globalStyles'
-import Axios from 'axios'
+import { CreateData } from '../../databaseFunctions/CreateData'
+import { ReadData } from '../../databaseFunctions/ReadData'
+import { UpdateData } from '../../databaseFunctions/UpdateData'
+import { DeleteData } from '../../databaseFunctions/DeleteData'
+import { ProgressBar } from '../../databaseFunctions/ProgressBar'
 
 //Styled Components
 import {
@@ -16,101 +20,103 @@ import {
   Table,
   Tr,
   Td,
-  EditDelete
-} from './ExecsAdmin.elements'
+  EditDelete,
+  FileInput,
+  FileUploadButton,
+  FileUploadLabel
+} from './AdminSubpages.elements'
 
 
 export const ExecsAdmin = () => {
-  const textField1 = useRef();
-  const textField2 = useRef();
-  const textField3 = useRef();
-  const textField4 = useRef();
-  const textField5 = useRef();
-  const textField6 = useRef();
-
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
   const [description, setDescription] = useState('');
-  const [picture, setPicture] = useState('');
   const [startingYear, setStartingYear] = useState('');
   const [endingYear, setEndingYear] = useState('');
+  const [picture, setPicture] = useState(null);
+  const [pictureError, setPictureError] = useState(null); //Stores the error to be displayed if a picture upload goes wrong
+  const [uploadProgress, setUploadProgress] = useState(0); //Stores the upload progress of the picture to firebase storage
+  const types = ['image/png', 'image/jpeg']; //Stores the types of allowed images file types
 
   //Stores all the execs
   const [execs, setExecs] = useState([]);
 
-  //Stores whether or not an announcement is currently being edited. editing will be set to '' if we are not editing and set to the announcement object that we are editing if we are editing
+  //Stores whether or not an exec is currently being edited. editing will be set to '' if we are not editing and set to the announcement object that we are editing if we are editing
   const [editing, setEditing] = useState('');
   
+  useEffect(() => { //Get the announcements in the database on first render
+    ReadData('execs', 'startingYear', 'desc', setExecs);
+  }, [])
 
-  //Get data from database when the page is first loaded
-  useEffect(() => {
-    Axios.get('http://localhost:5000/execs/').then((response) => {
-      setExecs(response.data)
-    })
-  }, []);
-
-  //Saves the data into the database
-  const submitData = () => {
-    Axios.post('http://localhost:5000/execs/add', {
-      name: name,
-      role: role,
-      description: description,
-      picture: picture,
-      startingYear: startingYear,
-      endingYear: endingYear
-    }).then(() => {
-      alert('New Exec Added!');
-    })
-    clearFields();
-  };
-
-  //Deletes the 'selected' announcement
-  const deleteExec = (id) => {
-    Axios.delete('http://localhost:5000/execs/' + id)
-      .then(response => { console.log(response.data)});
-      setExecs(execs.filter(el => el._id !== id))
-  }
-
-  //Saves the edited announcement
-  const saveEdits = () => {
-    Axios.post('http://localhost:5000/execs/update/' + editing._id, {
-      name: textField3.current.value,
-      role: textField4.current.value,
-      description: textField5.current.value,
-      picture: textField6.current.value,
-      startingYear: textField1.current.value,
-      endingYear: textField2.current.value,
-    }).then(response => { 
-      alert('Exec Saved!')
-      console.log(response.data) 
-    });
-    clearFields();
-  }
 
   //Checks that all fields are filled out and then returns the appropriate function
-  const handleSaveClick = (editing) => {
-    if (textField1.current.value === '' || textField2.current.value === '' || textField3.current.value === '' || textField4.current.value === '' || textField5.current.value === '' || textField6.current.value === ''){
+  const HandleSaveClick = () => {
+    if (name === '' || role === '' || description === '' || startingYear === '' || endingYear === '' || picture === null){
       alert('Please ensure that all fields are filled out!');
     }
     else{
       if (editing){
-        saveEdits();
+        const error = UpdateData({name: name, description: description, role: role, startingYear: startingYear, endingYear: endingYear}, editing.id, picture, setUploadProgress, 'execs');
+        if (error !== null) {
+          alert(error);
+        } else {
+          alert('Edit Successful!')
+        }
       }
       else {
-        submitData();
+        const error = CreateData({name: name, description: description, role: role, startingYear: startingYear, endingYear: endingYear}, picture, false, setUploadProgress, 'execs');
+        if (error !== null) {
+          alert(error);
+        } else {
+          alert('Upload Successful!')
+        }
       }
-      setEditing('');
+      clearFields();
+    }
+  }
+
+  const pictureChangeHandler = (e) => {
+    let selected = e.target.files[0];
+    if (selected && types.includes(selected.type)) {
+      setPicture(selected);
+      setPictureError('');
+    } else {
+      setPictureError('Please select an image file (png or jpeg)');
     }
   }
 
   //Clears the text input fields
   const clearFields = () => {
-    textField1.current.value = '';
-    textField2.current.value = '';
-    textField3.current.value = '';
-    textField4.current.value = '';
-    textField5.current.value = '';
-    textField6.current.value = '';
+    setEditing('');
+    setName('');
+    setRole('');
+    setDescription('');
+    setStartingYear('');
+    setEndingYear('');
+    setPicture(null);
+    setUploadProgress(0);
+  }
+
+  const editingTrue = (val) => {
+    setEditing(val);
+    setName(val.name);
+    setRole(val.role);
+    setDescription(val.description);
+    setStartingYear(val.startingYear);
+    setEndingYear(val.endingYear);
+    setPicture(val.picture);
+  }
+
+  const getPictureName = () => {
+    if (picture === null) { //If there is no picture selected
+      return 'No File Selected';
+    }
+    else if (picture.name !== undefined){ //If the picture is a file
+      return picture.name;
+    }
+    else if (picture.startsWith("https")){ //If the picture is already in the database and is a link
+      return picture;
+    }
   }
 
 
@@ -120,37 +126,35 @@ export const ExecsAdmin = () => {
           <Heading>Add a New Exec</Heading>
 
           {/* 'Form' component */}
+          <InputLabel>Name</InputLabel>
+          <TextSentence type='text' name='name' onChange={(e) => {setName(e.target.value)}} value={name}/>       
+
           <InputLabel>Starting Year</InputLabel>
-          <TextSentence ref={textField1} type='text' name='starting year' onChange={(e) => {setStartingYear(e.target.value)}} 
-          defaultValue = {editing !== '' ? editing.startingYear : ''}/>          
+          <TextSentence type='text' name='starting year' onChange={(e) => {setStartingYear(e.target.value)}} value={startingYear}/>       
 
           <InputLabel>Ending Year</InputLabel>
-          <TextSentence ref={textField2} type='text' name='ending year' onChange={(e) => {setEndingYear(e.target.value)}} 
-          defaultValue = {editing !== '' ? editing.endingYear : ''}/> 
-
-          <InputLabel>Name</InputLabel>
-          <TextSentence ref={textField3} type='text' name='name' onChange={(e) => {setName(e.target.value)}} 
-          defaultValue = {editing !== '' ? editing.name : ''}/>
+          <TextSentence type='text' name='ending year' onChange={(e) => {setEndingYear(e.target.value)}} value={endingYear}/>    
 
           <InputLabel>Role</InputLabel>
-          <TextSentence ref={textField4} type='text' name='role' onChange={(e) => {setRole(e.target.value)}} 
-          defaultValue = {editing !== '' ? editing.role : ''}/>
+          <TextSentence type='text' name='role' onChange={(e) => {setRole(e.target.value)}} value={role}/>       
 
           <InputLabel>Description</InputLabel>
-          <TextParagraph ref={textField5} type='text' name='description' style={{height: '200px'}} onChange={(e) => {setDescription(e.target.value)}} 
-          defaultValue = {editing !== '' ? editing.description : ''}/>
+          <TextParagraph type='text' name='description' style={{height: '200px' }} onChange={(e) => {setDescription(e.target.value)}} value={description}/>       
 
-          <InputLabel>Image Link</InputLabel>
-          <TextSentence ref={textField6} type='text' name='picture' onChange={(e) => {setPicture(e.target.value)}}
-          defaultValue = {editing !== '' ? editing.picture : ''}/>
+          <InputLabel>Image</InputLabel>
+          {/* Upload Image Button. The button needs to be so complex because the value of the file input cannot be set programatically*/}
+          <FileInput type='file' id='img' onChange={pictureChangeHandler}></FileInput> {/* This is the actual button tha gets clicked */}
+          <FileUploadButton for='img'>Upload Image</FileUploadButton> {/* This is the sudo button layered ontop of the actual button */}
+          <FileUploadLabel>{getPictureName()}</FileUploadLabel> {/* This is the label to display which file is currently selected */}
+          <h2>{pictureError}</h2>
 
 
           <ButtonWrapper>
-            { editing !== '' ? <CancelButton onClick={() => {setEditing(''); clearFields();}}>Cancel</CancelButton> : null }
-
-            <SaveButton onClick={() => {handleSaveClick(editing)}}>Save</SaveButton>
-
+            { editing !== '' ? <CancelButton onClick={() => {clearFields();}}>Cancel</CancelButton> : null }
+            <SaveButton onClick={() => {HandleSaveClick()}}>Save</SaveButton>
           </ButtonWrapper>
+
+          { uploadProgress !== 0 && uploadProgress !== 100 ? <ProgressBar progress={uploadProgress} ></ProgressBar> : <></>}
 
 
           <Heading>Existing Execs</Heading>
@@ -165,14 +169,14 @@ export const ExecsAdmin = () => {
               <Th>Actions</Th>
             </Tr>
 
-            {execs.map((val) => {
-              return <Tr key={val._id}> 
+            {execs && execs.map((val) => {
+              return <Tr key={val.id}> 
                 <Td>{val.startingYear + '-' + val.endingYear}</Td>
                 <Td>{val.name}</Td>
                 <Td>{val.role}</Td>
                 <Td>{val.description}</Td>
                 <Td>{val.picture}</Td>
-                <Td><EditDelete onClick={() => { setEditing(val) }}>edit</EditDelete> | <EditDelete onClick={() => { deleteExec(val._id) }}>delete</EditDelete></Td>
+                <Td><EditDelete onClick={() => {editingTrue(val)}}>edit</EditDelete> | <EditDelete onClick={() => { DeleteData(val.id, 'execs') }}>delete</EditDelete></Td>
               </Tr>
             })}
           </Table>
