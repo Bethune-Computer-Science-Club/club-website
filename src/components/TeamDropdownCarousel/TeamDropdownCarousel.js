@@ -17,6 +17,7 @@ import {
   DescriptionWrapper,
   RightArrow,
   LeftArrow,
+  EmptyDisplayText
 } from './TeamDropdownCarousel.elements'
 
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai' // For the left and right arrows on the carousel
@@ -70,7 +71,6 @@ const PrevArrow = ({onClick}) => {
 }
 
 
-
 const TeamDropdownCarousel = ({heading}) =>  {
   //Get the current year to render the dropdown menu up to the current year -1
   const date = new Date();
@@ -79,40 +79,61 @@ const TeamDropdownCarousel = ({heading}) =>  {
   //Stores the options for the dropdown menu
   const [options, setOptions] = useState([{value: currentYear-1, label: currentYear-1}]);
   const [selectedOption, setSelectedOption] = useState({value: options[0].value, label: options[0].label})
-  const [execs, setExecs] = useState([]); //Stores the execs for the selected year
+  const [execs, setExecs] = useState([]); //Stores all the previous
+  const [selectedExecs, setSelectedExecs] = useState([]); //Stores the previous execs for the selected year
 
   useEffect(() => { //Get the announcements in the database on first render
-    //Get current year execs
-    ReadSpecificData('execs', 'endingYear', 'desc', setExecs, 'endingYear', '!=', 'Present');
-  }, [])
+    async function fetchData() {
+      let tempExecs = await ReadSpecificData('execs', 'endingYear', 'desc', 'endingYear', '!=', 'Present');
+      setExecs(tempExecs.filter(exec => exec.category === 'Exec'))
+
+      let minYear = 9999;
+      //Set the options array
+      for (let object of tempExecs) {
+        console.log(object.startingYear)
+  
+        if (object.startingYear < minYear) {
+          minYear = object.startingYear;
+        }
+      }
+      setOptions([{value: currentYear-1, label: currentYear-1}]); //Clear options except for first year
+      for (let i = currentYear-2; i >= minYear; i--) { //subtract 2 because currentYear -1 is already in the carousel
+        setOptions(options => [...options, {value: i, label: i}]);
+      }
+    }
+    fetchData()
+  }, [currentYear])
 
 
   useEffect(() => {
-    console.log('runnin')
-    let minYear = 9999;
-    //Set the execs useState array
-    setExecs(execs.filter(exec => exec.startingYear <= selectedOption.value && exec.endingYear >= selectedOption.value && exec.role !== 'Teacher' && exec.role !== 'Website Creator' && exec.endingYear !== 'Present'));
-    
-    //Set the options array
-    for (let object of execs) {
-      console.log(object.startingYear)
+    //Set the selectedExecs useState array
+    setSelectedExecs(execs.filter(exec => exec.startingYear <= selectedOption.value && exec.endingYear >= selectedOption.value));
+  }, [selectedOption, execs]);
 
-      if (object.startingYear < minYear) {
-        minYear = object.startingYear;
-      }
+  const displayCarousel = (selectedExecs) => {    
+    //Text for if there are no execs for the selected year
+    if (selectedExecs.length === 0) {
+      return (
+        <EmptyDisplayText>
+          No execs for the selected year
+        </EmptyDisplayText>
+      )
+    } else {
+      return (
+        <Carousel {...settings}>
+          {selectedExecs.map((data) => {
+            return(
+              <CardElement data={data} key={data.id} />
+            );
+          })}
+        </Carousel>
+      )
     }
-    
-    console.log(minYear)
-
-    for (let i = currentYear-2; i >= minYear; i--) { //subtract 2 because currentyear -1 is already in the carousel
-      setOptions(options => [...options, {value: i, label: i}]);
-    }
-
-  }, []);
+  }
 
 
   // Carousel Data
-  const numCards = execs.length; // Stores the number of execs/cards needed to be rendered for the selected year
+  const numCards = selectedExecs.length; // Stores the number of execs/cards needed to be rendered for the selected year
 
   // Settings for the carousel
   const settings = {
@@ -159,14 +180,7 @@ const TeamDropdownCarousel = ({heading}) =>  {
 
 
         {/* Carousel */}
-        <Carousel {...settings}>
-          {/* Loop through the execs in the current year and render them in the carousel  */}
-          {execs.map((data) => {
-            return(
-              <CardElement data={data} key={data.id} />
-            );
-          })}
-        </Carousel>
+        {displayCarousel(selectedExecs)}
       </Container>
     </CarouselContainer>
   );
