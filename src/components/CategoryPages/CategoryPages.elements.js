@@ -17,6 +17,13 @@ export const ProjectContainer = styled.div`
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 960px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `
 
 export const ProjectTitle = styled.h5`
