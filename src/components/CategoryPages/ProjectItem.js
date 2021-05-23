@@ -1,4 +1,7 @@
-import { React, useState } from 'react'
+import { React, useState,useEffect } from 'react'
+//Animate on Scroll
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
 
 import {
   ProjectContainer,
@@ -6,19 +9,25 @@ import {
   ProjectAuthor,
   ProjectDate,
   ProjectImg,
-  ProjectImgSec,
   ProjectHighlight,
   ProjectDescription,
   ProjectInfoSecLeft,
   ProjectInfoSecRight,
 } from './CategoryPages.elements'
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project,counter }) => {
   const { authors, createdAt, description, picture, title } = project;
 
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => setToggle(!toggle);
+
+  const animateEffect = counter % 2 === 0 ? 'fade-right' : 'fade-left';
+
+  useEffect(() => {
+    //Animate on Scroll
+    Aos.init({ duration: 1500, once: true});
+  },)
 
   // format data
   let date, dateWithCommas;
@@ -66,7 +75,7 @@ const ProjectItem = ({ project }) => {
 
   return (
     <>
-      <ProjectContainer onClick={handleToggle}>
+      <ProjectContainer onClick={handleToggle} data-aos={animateEffect}>
         <ProjectHighlight toggle={toggle}/>
         {leftSec()}
         {rightSec()}

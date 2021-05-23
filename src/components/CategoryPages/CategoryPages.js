@@ -31,7 +31,7 @@ const CategoryPages = ({ BannerInfo, projectType }) => {
         <Container>
             {projects && projects.length === 0 ? <CenteredLargeText> There are currently no projects. </CenteredLargeText> : <></>}
 
-            {projects !== undefined ? <BuildProjects projects={projects}/> : <> </> }
+            {projects !== undefined ? <BuildProjects projects={projects} /> : <> </> }
         </Container>
       </InfoSec>
     </>
