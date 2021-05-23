@@ -6,7 +6,7 @@ import { DarkTheme } from '../../themes';
 export const Nav = styled.nav`
   background-color: ${({theme}) => theme.bkgColor};
   background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgba(0, 0, 0, 0%)')};
-  color: ${({theme}) => theme.textColor};
+  color: #fff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ export const NavbarContainer = styled(Container)`
 `
 
 export const NavLogo = styled(Link)` 
-  color: ${({theme}) => theme.textColor};
+  color: #fff;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -53,7 +53,7 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
-    color: ${({theme}) => theme.textColor};
+    color: #fff;
     display: block;
     position: absolute;
     top: 0;
@@ -102,7 +102,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(Link)`
-  color: ${({theme}) => theme.textColor};
+  color: #fff;
   transition: color 0.5s;
   display: flex;
   align-items: center;
