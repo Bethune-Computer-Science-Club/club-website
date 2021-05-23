@@ -44,14 +44,11 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
   useEffect(() => { //Get the announcements in the database on first render
     //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
-  
-    //Get data from database
-    async function fetchData() {
-      await ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
-    }
-    fetchData()
 
+    //Get data from database
+    ReadData('announcements', 'createdAt', 'desc').then((document) => setAnnouncements(document));
   }, [])
+
 
   // sets showingAnnouncements to its proper values; then returns it
   function getAnnouncements(){

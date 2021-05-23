@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
-import {animated, useTransition} from 'react-spring'
+// import {animated, useTransition} from 'react-spring'
 
 import styled from 'styled-components'
 
@@ -57,7 +57,7 @@ export const Background = styled(InfoSec)`
 // Just a restyling of InfoSection. More restrictive in its use. Changes in InfoSection will also be reflected here.
 export const AnnouncementSection =  ({title = "No title.", description = "No description.", picture = CCCLogo, date = "No date."}) => {
 
-  const [transitionAnimation, setAnimation] = useState(true);
+  // const [transitionAnimation, setAnimation] = useState(true);
   // console.log("AnnouncementSection", title, description, picture, date)
   // console.log("AnnouncementSection", picture)
 
@@ -67,17 +67,16 @@ export const AnnouncementSection =  ({title = "No title.", description = "No des
   }, []);
 
   // Setup react-spring (it doesnt work; but it might work later on if the was the data is handled changes)
-  const leaveAndExit = useTransition(transitionAnimation, {
-    from: {x: "-50vw"},
-    enter: {x: "0vw"},
-    leave: {x: "-50vw"},
-    config: { duration: 1000}
-  })
+  // const leaveAndExit = useTransition(transitionAnimation, {
+  //   from: {x: "-50vw"},
+  //   enter: {x: "0vw"},
+  //   leave: {x: "-50vw"},
+  //   config: { duration: 1000}
+  // })
 
   return(<>
-    {
-      (true) ?
-        // use AOS
+ 
+         {/* use AOS */}
         <Container data-aos="fade-left">
 
           <HorizontalFlexbox>
@@ -101,41 +100,41 @@ export const AnnouncementSection =  ({title = "No title.", description = "No des
           </HorizontalFlexbox>
 
         </Container>
-
-      :
-        //use react-spring (doesnt work properly, exit animation doesnt work)
-        leaveAndExit((style, useAnimation) =>
         
-          (useAnimation) ? 
-            <animated.div style={style}>
-              <Container data-aos="fade-left">
-
-                <HorizontalFlexbox>
-
-                  <Item>
-                    <Image src={picture}></Image>
-                  </Item>
-
-                  <Item>
-                    <Text style={{fontSize: "25px"}}>
-                      {title}
-                    </Text>
-                    <Text>
-                      {date}
-                    </Text>
-                    <Text>
-                      {description}
-                    </Text>
-                  </Item>
-
-                </HorizontalFlexbox>
-
-              </Container>
-            </animated.div>
-          :
-            <></>
-        )}
     
   </>)
 
 }
+
+//use react-spring (doesnt work properly, exit animation doesnt work)
+        // leaveAndExit((style, useAnimation) =>
+        
+        //   (useAnimation) ? 
+        //     <animated.div style={style}>
+        //       <Container data-aos="fade-left">
+
+        //         <HorizontalFlexbox>
+
+        //           <Item>
+        //             <Image src={picture}></Image>
+        //           </Item>
+
+        //           <Item>
+        //             <Text style={{fontSize: "25px"}}>
+        //               {title}
+        //             </Text>
+        //             <Text>
+        //               {date}
+        //             </Text>
+        //             <Text>
+        //               {description}
+        //             </Text>
+        //           </Item>
+
+        //         </HorizontalFlexbox>
+
+        //       </Container>
+        //     </animated.div>
+        //   :
+        //     <></>
+        // )}
