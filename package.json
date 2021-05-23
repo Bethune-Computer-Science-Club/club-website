@@ -10,7 +10,6 @@
     "@testing-library/user-event": "^12.8.1",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
-    "file-loader": "^6.2.0",
     "firebase": "^8.6.1",
     "react": "^17.0.1",
     "react-card-flip": "^1.1.0",
@@ -21,10 +20,9 @@
     "react-router-dom": "^5.2.0",
     "react-select": "^4.3.0",
     "react-slick": "^0.28.1",
+    "react-spring": "^9.1.2",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.2.1",
-    "url-loader": "^4.1.1",
-    "web-vitals": "^1.1.0"
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "predeploy": "npm run build",
