@@ -50,7 +50,7 @@ const Loader = ({mode="standard"}) => {
 
       {transition((style, item) =>
       
-        item ? 
+        // item ? 
 
           <animated.div style={style}>  
             <LoadingScreenBase>
@@ -70,8 +70,8 @@ const Loader = ({mode="standard"}) => {
             </LoadingScreenBase>
           </animated.div>
 
-      : 
-        <></>
+      // : 
+      //   <></>
 
       )}
 

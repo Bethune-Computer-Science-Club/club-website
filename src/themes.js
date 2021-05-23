@@ -1,4 +1,5 @@
 export const LightTheme = {
+  theme: "light",
   bkgColor: '#fff',
   textColor: '#03001c',
   topLineColor: '#4B59F7',
@@ -6,6 +7,7 @@ export const LightTheme = {
 }
 
 export const DarkTheme = {
+  theme: "dark",
   bkgColor: '#03001c',
   textColor: '#fff',
   topLineColor: '#a9b3c1',
