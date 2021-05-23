@@ -37,11 +37,10 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
     Aos.init({ duration: 1000, once: true});
   
     //Get data from database
-    ReadData('announcements', 'createdAt', 'desc', setAnnouncements).then((document) => setAnnouncements(document));
+    ReadData('announcements', 'createdAt', 'desc').then((document) => setAnnouncements(document));
   }, [])
 
   useEffect(() => { //Set announcements when announcements array changes
-    console.log(announcements)
     if (announcements && (announcements.length !== 0)) {
       setTitle(announcements[0].title)
       setDesc(announcements[0].description)

@@ -24,11 +24,7 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
     Aos.init({ duration: 1000, once: true});
   
     //Get data from database
-    async function fetchData() {
-      await ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
-    }
-    fetchData()
-
+    ReadData('announcements', 'createdAt', 'desc').then((document) => setAnnouncements(document));
   }, [])
 
   // sets showingAnnouncements to its proper values; then returns it
