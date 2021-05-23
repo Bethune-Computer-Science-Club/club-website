@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 export const InfoSec = styled.div`
   padding: 30px 0;

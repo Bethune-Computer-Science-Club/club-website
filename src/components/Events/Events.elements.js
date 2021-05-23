@@ -11,28 +11,34 @@ export const InfoSec = styled.div`
 export const InfoRow = styled.div`
   display: flex;
   margin: 0 -15px -15px -15px;
+  flex-wrap: wrap;
+  align-items: center;
+
   flex-direction: ${({ imgStart }) => (imgStart ? 'row-reverse' : 'row')};
 `
 
 export const InfoColumn = styled.div`
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding-right: 15px;
-  padding-left: 15px;
-  width: 50%;
+  padding-left: 3px;
+  flex: 1;
+  max-width: 50%;
+  flex-basis: 50%;
+  align-items: center;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
+    padding: 0px;
     justify-content: center;
   }
 `
 
 export const TextWrapper = styled.div`
-  max-width: 600px;
-  padding-top: 0;
-  font-size: 1.2rem;
-  @media screen and (max-width: 760px) {
+  max-width: 540px;
+  margin: 5em;
+  @media screen and (max-width: 960px) {
     padding-bottom: 10px;
   }
 `
@@ -42,7 +48,8 @@ export const Heading = styled.h1`
   font-size: 30px;
   line-height: 1.1;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
+    margin-top: 3.5em;
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
