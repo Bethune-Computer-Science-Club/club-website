@@ -20,7 +20,7 @@ const CategoryPages = ({ BannerInfo, projectType }) => {
     Aos.init({ duration: 1000, once: true});
   
     //Get data from database
-    ReadSpecificData('projects', 'createdAt', 'desc', setProjects, 'projectType', '==', projectType);
+    ReadSpecificData('projects', 'createdAt', 'desc', 'projectType', '==', projectType).then((document) => setProjects(document));
   }, [projectType])
 
   return (

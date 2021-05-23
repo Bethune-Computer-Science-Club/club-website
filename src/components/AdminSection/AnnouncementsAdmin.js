@@ -45,7 +45,7 @@ export const AnnouncementsAdmin = () => {
   const [editing, setEditing] = useState('');
 
   useEffect(() => { //Get the announcements in the database on first render
-    ReadData('announcements', 'createdAt', 'desc', setAnnouncements);
+    ReadData('announcements', 'createdAt', 'desc').then((document) => setAnnouncements(document));
   }, [])
 
 

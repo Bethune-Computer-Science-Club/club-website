@@ -66,51 +66,30 @@ const PrevArrow = ({onClick}) => {
   )
 }
 
-//Gets the school year
-const getCurrentYear = () => {
-  const date = new Date();
-  const currentMonth = date.getMonth()+1;
-  const currentYear = date.getFullYear();
-
-  if (currentMonth <= 9 ){ //9 = September
-    return currentYear;
-  }
-  else {
-    return currentYear+1;
-  }
-}
 
 const TeamCarousel = ({heading, slidesShown, type}) =>  {
   //Database stuff
   const [execs, setExecs] = useState([]); //Stores the execs for the selected year
-  const currentYear = getCurrentYear();
-  console.log('RERENDER')
 
   useEffect(() => {
-    console.log('first', execs)
-
+    let tempExecs;
     if (type === 'current execs') {
       //Get current year execs
-      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'endingYear', '==', 'Present');
-      if (execs !== []) {
-        setExecs(execs.filter(exec => exec.role !== 'Teacher'));
+      async function fetchData() {
+        tempExecs = await ReadSpecificData('execs', 'startingYear', 'desc', 'endingYear', '==', 'Present');
+        setExecs(tempExecs.filter(exec => exec.category === 'Exec'))
       }
-      console.log('second', execs)
+      fetchData()
     }
     else if (type === 'teachers') {
       //Get teachers
-      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'role', '==', 'Teacher');
-      console.log('third', execs)
+      ReadSpecificData('execs', 'startingYear', 'desc', 'category', '==', 'Teacher').then((document) => setExecs(document));
     }
     else if (type === 'website creators') {
       //Get teachers
-      ReadSpecificData('execs', 'startingYear', 'desc', setExecs, 'role', '==', 'Website Creator');
-      console.log('fourth', execs)
+      ReadSpecificData('execs', 'startingYear', 'desc', 'category', '==', 'Website Creator').then((document) => setExecs(document));
     }
-  }, [type, currentYear]);
-
-
-  console.log('final execs', execs)
+  }, [type]);
 
   //Stuff below used for slider
   const numCards = execs.length; // Stores the number of execs/cards needed to be rendered for the current year

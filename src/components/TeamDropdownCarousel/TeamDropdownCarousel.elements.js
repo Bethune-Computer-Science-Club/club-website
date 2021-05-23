@@ -103,6 +103,12 @@ export const LeftArrow = styled.div`
   top: 150px;
 `
 
+export const EmptyDisplayText = styled.h1`
+  font-size: 30px;
+  color: ${({theme}) => theme.textColor};
+  text-align: center;
+`
+
 //Used to style the dots
 export const Carousel = styled(Slider)`
   > .slick-dots li button {

@@ -1,6 +1,6 @@
 import { projectFirestore } from '../firebase/config';
 
-export const ReadSpecificData = async (collectionName, orderBy, ascOrDesc, setData, field, operator, value) => {
+export const ReadSpecificData = async (collectionName, orderBy, ascOrDesc, field, operator, value) => {
   const snapshot = await projectFirestore.collection(collectionName)
     .orderBy(orderBy, ascOrDesc)
     .where(field, operator, value)
@@ -10,7 +10,8 @@ export const ReadSpecificData = async (collectionName, orderBy, ascOrDesc, setDa
     snapshot.forEach(doc => {
       documents.push({...doc.data(), id: doc.id})
     });
-  setData(documents);
+
+  return documents;
 }
 
 export default ReadSpecificData

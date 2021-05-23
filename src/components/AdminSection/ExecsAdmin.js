@@ -9,8 +9,10 @@ import { ProgressBar } from '../../databaseFunctions/ProgressBar'
 //Styled Components
 import {
   AdminSec,
+  InfoRow,
   Heading,
   InputLabel,
+  CategoryButton,
   TextParagraph,
   TextSentence,
   ButtonWrapper,
@@ -29,6 +31,7 @@ import {
 
 export const ExecsAdmin = () => {
   const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
   const [role, setRole] = useState('');
   const [description, setDescription] = useState('');
   const [startingYear, setStartingYear] = useState('');
@@ -56,7 +59,7 @@ export const ExecsAdmin = () => {
     }
     else{
       if (editing){
-        const error = UpdateData({name: name, description: description, role: role, startingYear: startingYear, endingYear: endingYear}, editing.id, picture, setUploadProgress, 'execs');
+        const error = UpdateData({name: name, description: description, category: category, role: role, startingYear: startingYear, endingYear: endingYear}, editing.id, picture, setUploadProgress, 'execs');
         if (error !== null) {
           alert(error);
         } else {
@@ -64,7 +67,7 @@ export const ExecsAdmin = () => {
         }
       }
       else {
-        const error = CreateData({name: name, description: description, role: role, startingYear: startingYear, endingYear: endingYear}, picture, false, setUploadProgress, 'execs');
+        const error = CreateData({name: name, description: description, category: category, role: role, startingYear: startingYear, endingYear: endingYear}, picture, false, setUploadProgress, 'execs');
         if (error !== null) {
           alert(error);
         } else {
@@ -89,6 +92,7 @@ export const ExecsAdmin = () => {
   const clearFields = () => {
     setEditing('');
     setName('');
+    setCategory('');
     setRole('');
     setDescription('');
     setStartingYear('');
@@ -100,6 +104,7 @@ export const ExecsAdmin = () => {
   const editingTrue = (val) => {
     setEditing(val);
     setName(val.name);
+    setCategory(val.category);
     setRole(val.role);
     setDescription(val.description);
     setStartingYear(val.startingYear);
@@ -135,6 +140,14 @@ export const ExecsAdmin = () => {
           <InputLabel>Ending Year</InputLabel>
           <TextSentence type='text' name='ending year' onChange={(e) => {setEndingYear(e.target.value)}} value={endingYear}/>    
 
+          <InputLabel>Category</InputLabel>
+          <InfoRow>
+            <CategoryButton style={{backgroundColor: category === 'Exec' ? '#d62489': '#832391'}} onClick={() => {setCategory('Exec')}}>Exec</CategoryButton>
+            <CategoryButton style={{backgroundColor: category === 'Teacher' ? '#d62489': '#832391'}} onClick={() => {setCategory('Teacher')}}>Teacher</CategoryButton>
+            <CategoryButton style={{backgroundColor: category === 'Website Creator' ? '#d62489': '#832391'}} onClick={() => {setCategory('Website Creator')}}>Website Creator</CategoryButton>
+          </InfoRow>
+
+
           <InputLabel>Role</InputLabel>
           <TextSentence type='text' name='role' onChange={(e) => {setRole(e.target.value)}} value={role}/>       
 
@@ -163,6 +176,7 @@ export const ExecsAdmin = () => {
             <Tr>
               <Th>Year</Th>
               <Th>Name</Th>
+              <Th>Category</Th>
               <Th>Role</Th>
               <Th>Description</Th>
               <Th>Picture</Th>
@@ -173,6 +187,7 @@ export const ExecsAdmin = () => {
               return <Tr key={val.id}> 
                 <Td>{val.startingYear + '-' + val.endingYear}</Td>
                 <Td>{val.name}</Td>
+                <Td>{val.category}</Td>
                 <Td>{val.role}</Td>
                 <Td>{val.description}</Td>
                 <Td>{val.picture}</Td>
