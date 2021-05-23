@@ -32,7 +32,6 @@ const CalendarComp = () => {
     `
   }
 
-  console.log(theme.textColor)
   return (
     <div> 
       <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} showFooter={false}/>
