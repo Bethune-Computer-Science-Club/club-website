@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
 
+import CCCLogo from '../../images/cccLogo.png'
+
 //Styled Components
 import {
   SectionContainer,
@@ -15,7 +17,7 @@ import {
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const StartingSection = ({headingText, image, descriptionText}) => {
+const StartingSection = ({headingText = "No heading text", image = CCCLogo, descriptionText = "No decription"}) => {
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000 });

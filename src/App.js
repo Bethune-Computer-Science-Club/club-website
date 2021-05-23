@@ -21,6 +21,7 @@ import Websites from './pages/WebsitesPage/Websites'
 import Games from './pages/GamesPage/Games'
 import AI from './pages/AIPage/AI'
 import Other from './pages/OtherPage/Other'
+import AnnouncementsPage from './pages/AnnouncementsPage/Announcements'
 
 import Admin from './pages/AdminPages/AdminPage/Admin'
 import AnnouncementsAmn from './pages/AdminPages/AnnouncementsAdminPage/AnnouncementsAdmin'
@@ -43,6 +44,7 @@ function App() {
           <Route path='/projects' component={Projects} />
           <Route path='/team' component={Team} />
           <Route path='/join_us' component={JoinUs}/>
+          <Route path='/announcements'component={AnnouncementsPage} />
 
           <Route path='/robotics' component={Robotics}/>
           <Route path='/apps' component={Apps}/>
