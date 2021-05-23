@@ -67,7 +67,7 @@ const ProjectItem = ({ project }) => {
   return (
     <>
       <ProjectContainer onClick={handleToggle}>
-        <ProjectHighlight />
+        <ProjectHighlight toggle={toggle}/>
         {leftSec()}
         {rightSec()}
 
