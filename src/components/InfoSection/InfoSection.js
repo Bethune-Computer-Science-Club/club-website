@@ -3,6 +3,8 @@ import { Container } from '../../globalStyles'
 import { ReadData } from '../../databaseFunctions/ReadData'
 import { CalendarComp } from '../../components'
 
+// import Annoucements from '../Announcements/Announcements'
+
 //Styled Components
 import {
   InfoSec,
@@ -70,8 +72,6 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
             {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
               <TextWrapper>
                 {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
-                {isAnnouncement ? <TextHeading style={{fontSize:'12px'}}>{date}</TextHeading> : <></>}
-
                 {
                   // check if description will be ignored
                   (description !== "") ? 
