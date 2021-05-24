@@ -3,6 +3,7 @@
 
 import React, {useState, useEffect, useRef} from 'react'
 // import {useTransition, animated} from 'react-spring'
+import { IoMegaphoneOutline } from 'react-icons/io5'
 
 import Arrows from '../Arrows/Arrows'
 import LoadingCircle from '../LoadingCircle/LoadingCircle'
@@ -139,8 +140,10 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
     //   }
     // }
 
-    while (maxShowAnnoucements < modifiedAnnouncements.length){
-      modifiedAnnouncements.pop()
+    if (modifiedAnnouncements.length > maxShowAnnoucements && !ignoreMaxLimits){
+      while (maxShowAnnoucements < modifiedAnnouncements.length){
+        modifiedAnnouncements.pop()
+      }
     }
 
     return modifiedAnnouncements;
@@ -175,7 +178,10 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
                   {
                     (announcements.length > maxShowAnnoucements && redirectToAnnouncementsPage) ?
                       <PageLink to='./announcements'>
-                        <BigText> See all Announcements </BigText>
+                        <div style={{display: "flex", flexDirection:"column", alignItems:"center", justifyContent: "center"}}>
+                          <BigText> See all Announcements </BigText>
+                          <IoMegaphoneOutline size={70}></IoMegaphoneOutline>
+                        </div>
                       </PageLink>
                     :
                       <></>

@@ -30,7 +30,12 @@ const StartingSection = ({headingText = "No heading text", image = CCCLogo, desc
             <InfoColumn data-aos='fade-right'>
               <Heading>
                 <HeadingText>{headingText}</HeadingText>
-                <Img src={image}></Img>
+                {
+                  typeof(image) === 'object' ?
+                    <>{image}</>
+                  :
+                    <Img src={image}></Img>
+                }
               </Heading>
             </InfoColumn>
             <InfoColumn data-aos='fade-left'>
