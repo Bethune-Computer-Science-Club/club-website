@@ -3,6 +3,7 @@ import Slider from "react-slick"
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
+  margin-top: 1em;
   font-size: 30px;
   line-height: 1.1;
   color: ${({theme}) => theme.textColor};
