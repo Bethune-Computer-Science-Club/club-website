@@ -91,7 +91,7 @@ export const GridOverlapper = styled.div`
   grid-area: overlap;
 ` 
 
-const PopText = keyframes`
+const PopText2 = keyframes`
   0% {
     font-size: 2.5rem;
   }
@@ -121,7 +121,7 @@ export const ModdedAnimatedText = styled(AnimatedText)`
     color: #2ec02e;
     transition: color .5s;
     
-    animation-name: ${PopText};
+    animation-name: ${PopText2};
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
   }

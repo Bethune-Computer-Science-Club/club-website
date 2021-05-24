@@ -20,7 +20,7 @@ import CheckmarkImage from '../../images/checkmark.png'
 // Then, half of the circle is cropped/clipped to hide the other side, 
 // and the green side rotates to replace the red side.
 
-const LoadingCircle = ({skillName = "", useCheckmark = true}) => {
+const LoadingCircle = ({text = "", useCheckmark = true}) => {
 
   const [showCheckmarks, toggleCheckmarks] = useState(false);
 
@@ -62,8 +62,8 @@ const LoadingCircle = ({skillName = "", useCheckmark = true}) => {
               <></>
           }
           {        
-            (skillName !== "")?
-              <ModdedAnimatedText> {skillName} </ModdedAnimatedText>
+            (text !== "")?
+              <ModdedAnimatedText> {text} </ModdedAnimatedText>
             : 
               <></>
           }

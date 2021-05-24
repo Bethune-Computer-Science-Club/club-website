@@ -2,7 +2,9 @@ import {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 // import {animated, useTransition} from 'react-spring'
 
-import styled from 'styled-components'
+import Arrows from '../Arrows/Arrows'
+
+import styled, {css, keyframes} from 'styled-components'
 
 import { Container } from '../../globalStyles'
 
@@ -24,13 +26,66 @@ import {
 export const PageLink = styled(Link)`
 `
 
-export const DynamicHeightUpdater = ({height}) => {
-  console.log("height", height)
-
-  return(<>
+// fromHeight, toHeight
+const calcStartMargin = css`
   
-  </>)
-}
+`
+
+const calcEndMargin = css`
+  
+`
+
+
+export const ShiftHeight = keyframes`
+  0%{
+    margin-top: 1000px;
+  }
+  100%{
+    margin-top: 0px;
+  }
+`
+
+export const AnimationTarget = styled.div`
+  animation-name: ${ShiftHeight};
+  /* animation-duration: 2.7s; */
+  animation-duration: 0s;
+  animation-timing-function: ease-in-out;
+`
+
+// export const DynamicArrowsHeightUpdater = ({height, showContent}) => {
+
+//   let showAnimation = false;
+//   let beforeHeight = height;
+  
+//   useEffect(() => {
+
+//     setTimeout(() =>{
+//       beforeHeight = height;
+//     }, 2000)
+
+//   }, [height])
+
+//   return(<>
+//     <AnimationTarget>
+//       <Arrows showContent={showContent}></Arrows>
+//     </AnimationTarget>
+//   </>)
+// }
+
+export const MobileMargins = styled.div`
+  @media screen and (max-width: 960px){
+    padding: 20px;
+  }
+`
+
+export const MobileFlexbox = styled(InfoColumn)`
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 960px){
+    flex-direction: column;
+  }
+`
 
 // These items will inherit their properties from their respective parents. Add a new property to overide inherited properties.
 export const BigText = styled(Heading)`
@@ -43,6 +98,12 @@ export const Text = styled(MainText)`
 
 export const HorizontalFlexbox = styled(InfoRow)`
   margin-bottom: 30px;
+`
+
+export const AdaptingFlexbox = styled(HorizontalFlexbox)`
+  @media screen and (max-width: 960px){
+    flex-direction: row;
+  }
 `
 
 export const Item = styled(InfoColumn)`
@@ -86,15 +147,26 @@ export const AnnouncementSection =  ({title = "No title.", description = "No des
             </Item>
 
             <Item>
-              <Text style={{fontSize: "25px"}}>
-                {title}
-              </Text>
-              <Text>
-                {date}
-              </Text>
-              <Text>
-                {description}
-              </Text>
+              <InfoRow style={{paddingBottom: "15px"}}>
+
+                <Item>
+                  <Text style={{fontSize: "25px"}}>
+                    {title}
+                  </Text>
+                </Item>
+
+                <Item>
+                  <Text>
+                    {date}
+                  </Text>
+                </Item>
+              
+              </InfoRow>
+
+                <Text>
+                  {description}
+                </Text>
+
             </Item>
 
           </HorizontalFlexbox>
