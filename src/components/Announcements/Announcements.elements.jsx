@@ -1,10 +1,10 @@
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import { Link } from 'react-router-dom';
 // import {animated, useTransition} from 'react-spring'
 
-import Arrows from '../Arrows/Arrows'
+//import Arrows from '../Arrows/Arrows'
 
-import styled, {css, keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 import { Container } from '../../globalStyles'
 
@@ -26,31 +26,22 @@ import {
 export const PageLink = styled(Link)`
 `
 
-// fromHeight, toHeight
-const calcStartMargin = css`
-  
-`
 
-const calcEndMargin = css`
-  
-`
+// export const ShiftHeight = keyframes`
+//   0%{
+//     margin-top: 1000px;
+//   }
+//   100%{
+//     margin-top: 0px;
+//   }
+// `
 
-
-export const ShiftHeight = keyframes`
-  0%{
-    margin-top: 1000px;
-  }
-  100%{
-    margin-top: 0px;
-  }
-`
-
-export const AnimationTarget = styled.div`
-  animation-name: ${ShiftHeight};
-  /* animation-duration: 2.7s; */
-  animation-duration: 0s;
-  animation-timing-function: ease-in-out;
-`
+// export const AnimationTarget = styled.div`
+//   animation-name: ${ShiftHeight};
+//   /* animation-duration: 2.7s; */
+//   animation-duration: 0s;
+//   animation-timing-function: ease-in-out;
+// `
 
 // export const DynamicArrowsHeightUpdater = ({height, showContent}) => {
 

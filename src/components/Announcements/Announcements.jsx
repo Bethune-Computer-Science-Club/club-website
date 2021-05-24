@@ -1,18 +1,17 @@
 // This item is connected to InfoSection, Arrows, and LoadingCircle.
 // Any changes made there will also be reflected in this component.
 
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 // import {useTransition, animated} from 'react-spring'
 import { IoMegaphoneOutline } from 'react-icons/io5'
 
-import Arrows from '../Arrows/Arrows'
+// import Arrows from '../Arrows/Arrows'
 import LoadingCircle from '../LoadingCircle/LoadingCircle'
 
 import {
   AnnouncementSection,
   Background,
   BigText,
-  Text,
   PageLink
 } from './Announcements.elements'
 
@@ -30,27 +29,34 @@ import { Container } from '../../globalStyles'
 // false: will not show arrows, ignores maxShowAnnouncements, shows all announcements, use AOS only
 const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements = 3, ignoreMaxLimits = false}) => {
 
-  const [height, setHeight] = useState(0)
+  // const [height, setHeight] = useState(0)
   const [isLoaded, toggleLoad] = useState(false)
-  const announcementsBody = useRef()
+  // const announcementsBody = useRef()
 
   setTimeout(() =>{
     toggleLoad(true)
   }, 2500)
 
-  useEffect(() => {
-    if (isLoaded){
-      setHeight(announcementsBody.current.clientHeight)
-      console.log("height", height)
-    }
-  })
+  // useEffect(() => {
+  //   if (isLoaded){
+  //     setHeight(announcementsBody.current.clientHeight)
+  //     console.log("height", height)
+  //   }
+  // })
 
   // false: show most recent announcement.
   // true: show up to {maxShowAnnoucements}. Show redirect if len(announcements) > maxShowAnnoucements
   const [showUpToMaxAnnouncements, toggleShowAnnouncements] = useState(true);
   const [announcements, setAnnouncements] = useState([]);
 
+  
+  useEffect(() => { 
+    // Do nothing; prevent a warning
+    toggleShowAnnouncements(showUpToMaxAnnouncements);
+  }, [showUpToMaxAnnouncements])
+
   useEffect(() => { //Get the announcements in the database on first render
+
     //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
 
@@ -154,8 +160,8 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
     <Background>
       {
         (isLoaded) ?
-
-          <div ref={announcementsBody}>
+          // <div ref={announcementsBody}>
+          <div>
             <Container style={{marginBottom: "50px"}}>
               <BigText>Announcements</BigText>
             </Container>

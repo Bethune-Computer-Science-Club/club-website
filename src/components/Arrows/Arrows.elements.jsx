@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 import GreenDownArrows from '../../images/arrows.png'
 import GreenUpArrows from '../../images/invertedArrows.png'
