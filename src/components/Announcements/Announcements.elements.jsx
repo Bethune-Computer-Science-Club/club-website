@@ -44,10 +44,16 @@ export const MobileFlexbox = styled(InfoColumn)`
 // These items will inherit their properties from their respective parents. Add a new property to overide inherited properties.
 export const BigText = styled(Heading)`
   margin-bottom: 0;
+  @media screen and (max-width: 960px){
+    margin-top: ${({redirectToAnnouncementsPage}) => redirectToAnnouncementsPage ? '6em' : '0em'};
+  }
+  @media screen and (max-width: 560px){
+    margin-top: ${({redirectToAnnouncementsPage}) => redirectToAnnouncementsPage ? '7em' : '0em'};
+  }
 `
 
 export const Text = styled(MainText)`
-  margin-bottom: 0;
+  margin: auto 0px;
 `
 
 export const HorizontalFlexbox = styled(InfoRow)`
