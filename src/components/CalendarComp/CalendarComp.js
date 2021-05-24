@@ -6,10 +6,6 @@ import { useTheme } from 'styled-components';
 const API_KEY = "AIzaSyCjJfLcun5QNfceN5-WU79LmbRWuKe3Veg";
 let calendars = [
   {calendarId: "c_classroomefe39fd5@group.calendar.google.com"},
-  {
-    calendarId: "c_classroomefe39fd5@group.calendar.google.com",
-    color: "#B241D1", //optional, specify color of calendar 2 events
-  }
 ];
 
 const CalendarComp = () => {
@@ -33,9 +29,9 @@ const CalendarComp = () => {
   }
 
   return (
-    <div> 
+    <> 
       <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} showFooter={false}/>
-    </div>
+    </>
   )
 }
 
