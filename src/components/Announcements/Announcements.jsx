@@ -36,16 +36,7 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
   setTimeout(() =>{
     toggleLoad(true)
   }, 2500)
-
-  // useEffect(() => {
-  //   if (isLoaded){
-  //     setHeight(announcementsBody.current.clientHeight)
-  //     console.log("height", height)
-  //   }
-  // })
-
-  // false: show most recent announcement.
-  // true: show up to {maxShowAnnoucements}. Show redirect if len(announcements) > maxShowAnnoucements
+  
   const [showUpToMaxAnnouncements, toggleShowAnnouncements] = useState(true);
   const [announcements, setAnnouncements] = useState([]);
 
@@ -68,7 +59,6 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
   // sets showingAnnouncements to its proper values; then returns it
   function getAnnouncements(){
 
-    console.log("announcements", announcements)
     let modifiedAnnouncements = [];
 
     try{
@@ -110,7 +100,6 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
 
       }
       else if (announcements.length === 0){
-        console.log("WARN: No Announcements?!?!")
         modifiedAnnouncements = [
           {
             title: "WARN: No Announcements?!?!",
@@ -120,8 +109,6 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
       }
     }
     catch{
-  
-      console.log("Caught database error! This is normal if the announcements are loading. Ignore if this error only appears once.")
       modifiedAnnouncements = [
         {
           title: "ERR: Database ERR",
@@ -129,22 +116,9 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
         }
       ]
     }
-
-    // setShowingAnnouncements(modifiedAnnouncements);
-    // console.log("showingAnnouncements: ", showingAnnouncements)
-    // return(showingAnnouncements);
-    // console.log("modifiedAnnouncements", modifiedAnnouncements)
-
     if (!showUpToMaxAnnouncements){
       modifiedAnnouncements=[modifiedAnnouncements[0]]
     }
-
-    // shrink modifiedAnnouncements if maxShowAnnoucements < len(modifiedAnnouncements)
-    // if (modifiedAnnouncements.length > maxShowAnnoucements && !showUpToMaxAnnouncements && !ignoreMaxLimits){
-    //   for (let poppedTimes = 0; poppedTimes < modifiedAnnouncements.length - maxShowAnnoucements; poppedTimes ++){
-    //     modifiedAnnouncements.pop();
-    //   }
-    // }
 
     if (modifiedAnnouncements.length > maxShowAnnoucements && !ignoreMaxLimits){
       while (maxShowAnnoucements < modifiedAnnouncements.length){
@@ -178,10 +152,6 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
               (announcements.length > 1 && !ignoreMaxLimits) ? 
 
                 <div style={{display:"flex", justifyContent: "space-evenly", marginTop: "50px"}}>
-                  {/* <div data-aos="fade-in" style={{cursor: "pointer"}} onClick={() => toggleShowAnnouncements(!showUpToMaxAnnouncements)}>
-                    <DynamicArrowsHeightUpdater showContent={showUpToMaxAnnouncements} height={height}></DynamicArrowsHeightUpdater>
-                  </div> */}
-                  {
                     (announcements.length > maxShowAnnoucements && redirectToAnnouncementsPage) ?
                       <PageLink to='./announcements'>
                         <div style={{display: "flex", flexDirection:"column", alignItems:"center", justifyContent: "center"}}>
