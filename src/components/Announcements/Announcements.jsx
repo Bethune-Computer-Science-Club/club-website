@@ -27,7 +27,7 @@ import { Container } from '../../globalStyles'
 // ignoreMaxLimits : boolean; 
 // true: Will show arrows, follow maxShowAnnouncements, use react-spring for exit/unmount animation. 
 // false: will not show arrows, ignores maxShowAnnouncements, shows all announcements, use AOS only
-const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements = 2, ignoreMaxLimits = false}) => {
+const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements = 3, ignoreMaxLimits = false}) => {
 
   const [height, setHeight] = useState(0)
   const [isLoaded, toggleLoad] = useState(false)
@@ -133,10 +133,14 @@ const Announcements = ({redirectToAnnouncementsPage = true, maxShowAnnoucements 
     }
 
     // shrink modifiedAnnouncements if maxShowAnnoucements < len(modifiedAnnouncements)
-    if (modifiedAnnouncements.length > maxShowAnnoucements && !showUpToMaxAnnouncements && !ignoreMaxLimits){
-      for (let poppedTimes = 0; poppedTimes < modifiedAnnouncements.length - maxShowAnnoucements; poppedTimes ++){
-        modifiedAnnouncements.pop();
-      }
+    // if (modifiedAnnouncements.length > maxShowAnnoucements && !showUpToMaxAnnouncements && !ignoreMaxLimits){
+    //   for (let poppedTimes = 0; poppedTimes < modifiedAnnouncements.length - maxShowAnnoucements; poppedTimes ++){
+    //     modifiedAnnouncements.pop();
+    //   }
+    // }
+
+    while (maxShowAnnoucements < modifiedAnnouncements.length){
+      modifiedAnnouncements.pop()
     }
 
     return modifiedAnnouncements;

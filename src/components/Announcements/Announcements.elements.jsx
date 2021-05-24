@@ -101,12 +101,20 @@ export const HorizontalFlexbox = styled(InfoRow)`
 `
 
 export const AdaptingFlexbox = styled(HorizontalFlexbox)`
+  flex-direction: row;
+  padding-bottom: 15px;
+  /* @media screen and (max-width: 960px){
+    flex-direction: column;
+  } */
   @media screen and (max-width: 960px){
-    flex-direction: row;
+    padding-bottom: 0;
   }
 `
 
-export const Item = styled(InfoColumn)`
+export const Item = styled.div`
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 `
 
 export const Image = styled(Img)`
@@ -147,7 +155,7 @@ export const AnnouncementSection =  ({title = "No title.", description = "No des
             </Item>
 
             <Item>
-              <InfoRow style={{paddingBottom: "15px"}}>
+              <AdaptingFlexbox>
 
                 <Item>
                   <Text style={{fontSize: "25px"}}>
@@ -161,7 +169,7 @@ export const AnnouncementSection =  ({title = "No title.", description = "No des
                   </Text>
                 </Item>
               
-              </InfoRow>
+              </AdaptingFlexbox>
 
                 <Text>
                   {description}
