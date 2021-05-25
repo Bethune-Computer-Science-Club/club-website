@@ -1,7 +1,7 @@
 import React from 'react'
 
-import {Container} from '../../globalStyles'
-import {InfoSec} from '../../components/InfoSection/InfoSection.elements'
+import { Container } from '../../globalStyles'
+import { InfoSec } from '../../components/InfoSection/InfoSection.elements'
 
 import { InfoSection } from '../../components'
 import { InfoSectionData } from './Data'
@@ -11,7 +11,7 @@ import { BannerData } from './Data'
 import titleBar from '../../images/titleBar.png'
 
 const JoinUs = () => {
-    
+
     return (
         <>
 
@@ -32,7 +32,7 @@ const JoinUs = () => {
 
                 </Container>
             </InfoSec>
-            
+
         </>
     )
 }
