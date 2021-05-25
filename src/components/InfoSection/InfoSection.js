@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Container } from '../../globalStyles'
-import { ReadData } from '../../databaseFunctions/ReadData'
 import { CalendarComp } from '../../components'
-
-// import Annoucements from '../Announcements/Announcements'
 
 //Styled Components
 import {
@@ -24,42 +21,11 @@ import 'aos/dist/aos.css/'
 //  - Can ignore certain parameters (i.e. ignoring image allows a placeholder image, ignoring description removes it)
 //  - Can render a React component in the description
 const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = "", alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false, isAnnouncement = false}) => {
-  //Stores all the announcements
-  const [title, setTitle] = useState();
-  const [desc, setDesc] = useState();
-  const [picture, setPicture] = useState();
-  const [date, setDate] = useState();
 
-  const [announcements, setAnnouncements] = useState();
-
-  useEffect(() => { //Get the announcements in the database on first render
+  useEffect(() => { 
     //Animate on Scroll
     Aos.init({ duration: 1000, once: true});
-  
-    //Get data from database
-    ReadData('announcements', 'createdAt', 'desc').then((document) => setAnnouncements(document));
   }, [])
-
-  useEffect(() => { //Set announcements when announcements array changes
-    if (announcements && (announcements.length !== 0)) {
-      setTitle(announcements[0].title)
-      setDesc(announcements[0].description)
-      setPicture(announcements[0].picture)
-  
-      let date;
-      let dateWithCommas = 'Loading...';
-      date = announcements[0].createdAt.toDate().toDateString().substring(4, 15);
-      dateWithCommas = date.substring(0, 6) + ',' + date.substring(6, 11);
-  
-      setDate(dateWithCommas)
-    }
-  }, [announcements])
-
-  if (isAnnouncement === true){
-    topLine = title;
-    description = desc;
-    img = picture;
-  }
 
   return (
     <InfoSec>

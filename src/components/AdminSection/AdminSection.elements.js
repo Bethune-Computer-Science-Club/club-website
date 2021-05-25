@@ -2,40 +2,60 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 export const AdminSec = styled.div`
-  padding: 30px 0 0;
+  padding: 30px 0 30px;
   color: ${({theme}) => theme.textColor};
   background-color: ${({theme}) => theme.bkgColor};
   transition: color 0.5s, background-color 0.5s;
+  align-items: center;
+  display: flex;
+  height: 500px;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+    height: 100%;
+  }
+
 `
 
-export const NavItem = styled.div`
-  width: 200px;
-  height: 100px;
-  border: 5px solid #4b59f7;
-  border-radius: 10px;
-  &:hover {
-    border: 7px solid #4b59f7;
+export const NavItemContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
-export const NavLinks = styled(Link)`
-  color: ${({theme}) => theme.textColor};
-  transition: color 0.5s;
+export const NavItem = styled(Link)`
+  width: 250px;
+  height: 220px;
   text-decoration: none;
-  padding: 7px 20px;
-  position: absolute;
-
-  
-@media screen and (max-width: 960px) {
-  text-align: center;
-  padding: 2rem;
-  width: 100%;
-  display: table;
-  height: 100%;
-  
+  cursor: pointer;
+  margin: 20px;
+  background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(45,75,253,1) 100%);
+  opacity: 0.9;
+  border-radius: 10px;
+  transition: opacity 0.3s;
   &:hover {
-    color: #4b59f7;
-    transition: color 0.5s;
-    }
+    opacity: 1;
   }
+`
+
+export const NavText = styled.p`
+  color: ${({theme}) => theme.textColor};
+  font-size: 30px;
+  transition: color 0.5s;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin: 10px 0 0 0;
+`
+
+export const Icon = styled.div`
+  color: #fff;
+  font-size: 100px;
+  width: 250px;
+  text-align: center;
 `

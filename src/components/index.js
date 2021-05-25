@@ -14,3 +14,5 @@ export { default as AnnouncementsAdmin } from './AdminSection/AnnouncementsAdmin
 export { default as ProjectsAdmin } from './AdminSection/ProjectsAdmin'
 export { default as ExecsAdmin } from './AdminSection/ExecsAdmin'
 export { default as CalendarComp } from './CalendarComp/CalendarComp'
+export { default as Login } from './Login/Login'
+export { default as SignUp } from './SignUp/SignUp'

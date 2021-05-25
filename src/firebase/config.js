@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
+require('firebase/auth');
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -17,5 +18,7 @@ firebase.initializeApp(firebaseConfig);
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+const auth = firebase.auth();
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION); //User will have to login again after they close the tab or window
 
-export { projectStorage, projectFirestore, timestamp };
+export { projectStorage, projectFirestore, auth, timestamp };
