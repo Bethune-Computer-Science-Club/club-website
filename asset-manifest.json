@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.30000548.chunk.js",
-    "main.js.map": "/club-website/static/js/main.30000548.chunk.js.map",
+    "main.js": "/club-website/static/js/main.f568ae54.chunk.js",
+    "main.js.map": "/club-website/static/js/main.f568ae54.chunk.js.map",
     "runtime-main.js": "/club-website/static/js/runtime-main.b3e9f47d.js",
     "runtime-main.js.map": "/club-website/static/js/runtime-main.b3e9f47d.js.map",
     "static/css/2.e05a2afa.chunk.css": "/club-website/static/css/2.e05a2afa.chunk.css",
-    "static/js/2.e204abf7.chunk.js": "/club-website/static/js/2.e204abf7.chunk.js",
-    "static/js/2.e204abf7.chunk.js.map": "/club-website/static/js/2.e204abf7.chunk.js.map",
+    "static/js/2.146ddeba.chunk.js": "/club-website/static/js/2.146ddeba.chunk.js",
+    "static/js/2.146ddeba.chunk.js.map": "/club-website/static/js/2.146ddeba.chunk.js.map",
     "index.html": "/club-website/index.html",
     "static/css/2.e05a2afa.chunk.css.map": "/club-website/static/css/2.e05a2afa.chunk.css.map",
-    "static/js/2.e204abf7.chunk.js.LICENSE.txt": "/club-website/static/js/2.e204abf7.chunk.js.LICENSE.txt",
+    "static/js/2.146ddeba.chunk.js.LICENSE.txt": "/club-website/static/js/2.146ddeba.chunk.js.LICENSE.txt",
     "static/media/AIPagePic.ed8108c3.jpg": "/club-website/static/media/AIPagePic.ed8108c3.jpg",
     "static/media/ApplicationsLogo.a9f1d969.png": "/club-website/static/media/ApplicationsLogo.a9f1d969.png",
     "static/media/BCSCLogo.99d38df0.png": "/club-website/static/media/BCSCLogo.99d38df0.png",
@@ -17,6 +17,7 @@
     "static/media/JoinUs.cb5c164f.png": "/club-website/static/media/JoinUs.cb5c164f.png",
     "static/media/WebsitesPagePic.d6fe0a14.jpg": "/club-website/static/media/WebsitesPagePic.d6fe0a14.jpg",
     "static/media/ai.59a1e382.jpg": "/club-website/static/media/ai.59a1e382.jpg",
+    "static/media/announcements.d3483278.png": "/club-website/static/media/announcements.d3483278.png",
     "static/media/applications.56946e41.png": "/club-website/static/media/applications.56946e41.png",
     "static/media/codeJamImg1.5f19741f.jpg": "/club-website/static/media/codeJamImg1.5f19741f.jpg",
     "static/media/cppLogo.c0a0d2fd.png": "/club-website/static/media/cppLogo.c0a0d2fd.png",
@@ -24,6 +25,7 @@
     "static/media/gaming.4af1c7d9.jpg": "/club-website/static/media/gaming.4af1c7d9.jpg",
     "static/media/hackTheNorthImg.69a03c43.jpg": "/club-website/static/media/hackTheNorthImg.69a03c43.jpg",
     "static/media/javaLogo.bcb16fe7.png": "/club-website/static/media/javaLogo.bcb16fe7.png",
+    "static/media/meeting.ac342552.jpg": "/club-website/static/media/meeting.ac342552.jpg",
     "static/media/miscellaneous.8ff2fbcb.jpg": "/club-website/static/media/miscellaneous.8ff2fbcb.jpg",
     "static/media/projects.1ef25eae.png": "/club-website/static/media/projects.1ef25eae.png",
     "static/media/robotics.427faa96.jpg": "/club-website/static/media/robotics.427faa96.jpg",
@@ -36,7 +38,7 @@
   "entrypoints": [
     "static/js/runtime-main.b3e9f47d.js",
     "static/css/2.e05a2afa.chunk.css",
-    "static/js/2.e204abf7.chunk.js",
-    "static/js/main.30000548.chunk.js"
+    "static/js/2.146ddeba.chunk.js",
+    "static/js/main.f568ae54.chunk.js"
   ]
 }
