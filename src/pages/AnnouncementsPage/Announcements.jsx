@@ -2,18 +2,18 @@ import React from 'react'
 import Announcements from '../../components/Announcements/Announcements'
 
 import { StartingSection } from '../../components'
-import { IoMegaphoneOutline } from 'react-icons/io5'
+import AnnouncementsImg from './../../images/announcements.png'
 
 const AnnouncementsPage = () => {
   return (
     <>
       <StartingSection
         headingText={"Announcements"}
-        image={<IoMegaphoneOutline size={70}></IoMegaphoneOutline>}
-        descriptionText={"All the announcements from Bethune CS Club."}
+        image={AnnouncementsImg}
+        descriptionText={"All the announcements from Bethune CS Club"}
       ></StartingSection>
 
-      <Announcements redirectToAnnouncementsPage={false} ignoreMaxLimits={true}></Announcements>
+      <Announcements displayOnlyFirstAnnouncement={false}></Announcements>
     </>
   )
 }

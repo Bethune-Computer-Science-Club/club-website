@@ -20,7 +20,7 @@ import 'aos/dist/aos.css/'
 // Features:
 //  - Can ignore certain parameters (i.e. ignoring image allows a placeholder image, ignoring description removes it)
 //  - Can render a React component in the description
-const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = "", alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false, isAnnouncement = false}) => {
+const InfoSection = ({ imgStart = true, description = "", headline = "", topLine = "", img = "", alt = "No alt specified. Might be placeholder.", showIframe = false, showSchedule = false, fontSize = 15}) => {
 
   useEffect(() => { 
     //Animate on Scroll
@@ -42,7 +42,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
                   (description !== "") ? 
                     // check if description is a react component or a string
                     (typeof(description) === "string") ?
-                      <MainText>{description}</MainText> 
+                      <MainText fontSize={fontSize}>{description}</MainText> 
                     : <>{description}</>
                   : <></>
                 }

@@ -9,6 +9,10 @@ export const SectionContainer = styled.div`
   transition: all 0.5s;
   width: 100%;
   height: 300px;
+  
+  @media screen and (max-width: 960px) {
+    height: auto;
+  }
 `
 
 export const InfoRow = styled.div`

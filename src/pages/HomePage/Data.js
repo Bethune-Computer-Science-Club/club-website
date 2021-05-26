@@ -1,16 +1,6 @@
 //Images
 import schoolPicture from '../../images/schoolPicture.jpg'
 
-//Announcements
-export const homeObjOne = {
-  imgStart: true, //true if images is in the first column. False if image is in the second column
-  headline: 'Announcements',
-  alt: 'Image',
-  showIframe: false,
-  showSchedule: false,
-  isAnnouncement: true
-}
-
 //Schedule
 export const homeObjTwo = {
   imgStart: true, 

@@ -1,40 +1,22 @@
 import React from 'react'
 
-import { Container } from '../../globalStyles'
-import { InfoSec } from '../../components/InfoSection/InfoSection.elements'
-
 import { InfoSection } from '../../components'
-import { InfoSectionData } from './Data'
+import { JoinUsObjectOne } from './Data'
+import { JoinUsObjectTwo } from './Data'
+import { JoinUsObjectThree } from './Data'
 
 import { StartingSection } from '../../components'
-import { BannerData } from './Data'
-import titleBar from '../../images/titleBar.png'
+import { StartingSectionParameters } from './Data'
 
 const JoinUs = () => {
-
-    return (
-        <>
-
-            <InfoSec style={{ backgroundImage: `url(${titleBar})` }}>
-                <Container>
-
-                    <StartingSection {...BannerData}></StartingSection>
-
-                </Container>
-            </InfoSec>
-
-            <InfoSec>
-                <Container>
-
-                    {
-                        InfoSectionData.map(OneSection => <InfoSection {...OneSection}></InfoSection>)
-                    }
-
-                </Container>
-            </InfoSec>
-
-        </>
-    )
+  return (
+    <>
+      <StartingSection {...StartingSectionParameters}></StartingSection>
+      <InfoSection {...JoinUsObjectOne} />
+      <InfoSection {...JoinUsObjectTwo} />
+      <InfoSection {...JoinUsObjectThree} />
+    </>
+  )
 }
 
 export default JoinUs

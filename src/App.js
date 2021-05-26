@@ -22,7 +22,7 @@ import Websites from './pages/WebsitesPage/Websites'
 import Games from './pages/GamesPage/Games'
 import AI from './pages/AIPage/AI'
 import Other from './pages/OtherPage/Other'
-import AnnouncementsPage from './pages/AnnouncementsPage/Announcements'
+import Announcements from './pages/AnnouncementsPage/Announcements'
 
 // import SignUp from './pages/SignupPage/SignUp' ONLY USED FOR DEVELOPMENT PURPOSES. DO NOT RELEASE A SIGNUP PAGE TO THE PRODUCTION VERSION OF THE SITE BECAUSE WE DON'T WANT PEOPLE TO CREATE MULTIPLE ACCOUNTS TO ACCESS THE ADMIN PAGES
 import Login from './pages/LoginPage/Login'
@@ -50,7 +50,7 @@ function App() {
           <Route path='/projects' component={Projects} />
           <Route path='/team' component={Team} />
           <Route path='/join_us' component={JoinUs}/>
-          <Route path='/announcements'component={AnnouncementsPage} />
+          <Route path='/announcements'component={Announcements} />
 
           <Route path='/robotics' component={Robotics}/>
           <Route path='/apps' component={Apps}/>

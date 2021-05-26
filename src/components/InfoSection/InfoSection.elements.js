@@ -66,7 +66,7 @@ export const Heading = styled.h1`
 export const MainText = styled.p`
   max-width: 500px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: ${({ fontSize }) => (fontSize)}px;
   line-height: 34px;
 `
 
@@ -75,18 +75,3 @@ export const Img = styled.img`
   max-height: 350px;
   width: 400px;
 `
-
-// const PopHeadingText = keyframes`
-//   0% {
-//     font-size: 30px;
-//     color: #2ec02e;
-//   }
-//   50%{
-//     font-size: 40px;
-//     color: white;
-//   }
-//   100% {
-//     font-size: 30px;
-//     color: #2ec02e;
-//   }
-// `

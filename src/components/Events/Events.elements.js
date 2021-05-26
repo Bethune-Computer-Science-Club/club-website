@@ -37,9 +37,10 @@ export const InfoColumn = styled.div`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
-  margin: 5em;
+  margin: 10px;
+  font-size: 17px;
   @media screen and (max-width: 960px) {
-    padding-bottom: 10px;
+    margin: 20px;
   }
 `
 
@@ -49,7 +50,6 @@ export const Heading = styled.h1`
   line-height: 1.1;
 
   @media screen and (max-width: 960px) {
-    margin-top: 3.5em;
     max-width: 100%;
     flex-basis: 100%;
     display: flex;
@@ -59,6 +59,7 @@ export const Heading = styled.h1`
 
 export const ImgWrapper = styled.div`
   height: 50%;
+  margin: 10px;
 `
 
 export const Img = styled.img`
@@ -66,6 +67,10 @@ export const Img = styled.img`
   margin: auto;
   max-width: 300px;
   max-height: 180px;
+
+  @media screen and (max-width: 960px) {
+    max-width: 250px;
+  }
 `
 
 export const MoreInfoLink = styled.a`
