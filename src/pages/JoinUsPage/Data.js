@@ -20,7 +20,7 @@ export const JoinUsObjectOne  = {
 
 export const JoinUsObjectTwo  = {
   imgStart: false,
-  description: "We have meetings on Thursdays at 1:00 PM and 3:30 PM. Meetings last for about an hour, and they usually consist of a lesson and important announcements related to the club.",
+  description: "We have meetings on Tuesdays afterschool. Meetings last for about an hour, and they usually consist of a lesson and important announcements related to the club.",
   headline: "Meetings",
   img: Meeting,
   alt: "Meetings",
@@ -28,7 +28,7 @@ export const JoinUsObjectTwo  = {
 }
 
 export const JoinUsObjectThree = {
-  description: "Do you like what you see? Would you like to be a part of our club? Great! Drop by room B216 on a Thursday during our meetings and we'll be happy to have you! No sign up required, and you can choose to leave at anytime if you decide the club is not for you. We look forward to seeing you!",
+  description: "Do you like what you see? Would you like to be a part of our club? Great! Drop by room B216 on a Tuesday during our meetings and we'll be happy to have you! No sign up required, and you can choose to leave at anytime if you decide the club is not for you. We look forward to seeing you!",
   headline: "Become a Member",
   img: BecomeAMember,
   alt: "Become a Member",

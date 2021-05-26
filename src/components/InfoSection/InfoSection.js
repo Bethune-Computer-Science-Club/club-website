@@ -34,7 +34,7 @@ const InfoSection = ({ imgStart = true, description = "", headline = "", topLine
  
         <InfoRow imgStart={imgStart}>
           <InfoColumn data-aos='fade-left'>
-            {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vQv81P3gR8B6YcrvXmoIafzlx4fEeNjgkAEBFcw_sP3gkNRBlvU7LAIgcTTLIujToPpYcu1eIlmZP-Q/pub?embedded=true" style={{border: 0, margin: 0}} width="100%" height="600"></iframe> : 
+            {showSchedule ? <iframe title="Schedule" src="https://docs.google.com/document/d/e/2PACX-1vTaAbLqM06FE37eYEr_U1yOigj6H1zozZIX8wuk7K9SS9krvNrVjuq6BrA0Ffh-D-oPM3nPsRWwLGpW/pub?embedded=true" style={{border: 0, margin: '5px 0 0 0'}} width="100%" height="742"></iframe> : 
               <TextWrapper>
                 {topLine !== "" ? <TextHeading>{topLine}</TextHeading> : <></>}
                 {

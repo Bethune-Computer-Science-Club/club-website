@@ -19,7 +19,7 @@ import miscellaneousPicture from '../../images/miscellaneous.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const InfoSection = () => {
+const Categories = () => {
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -57,5 +57,5 @@ const InfoSection = () => {
   );
 };
 
-export default InfoSection
+export default Categories
 

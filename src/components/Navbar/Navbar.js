@@ -50,7 +50,7 @@ export const Navbar = ({ theme, setTheme }) => {
   return (
     <Nav navbarSolid={navbar}>
       <NavbarContainer>
-        <NavLogo to='/'>
+        <NavLogo to='/club-website'>
           <Img src={BCSCLogo} ></Img>
           Bethune Computer Science Club
         </NavLogo>

@@ -6,7 +6,7 @@ import { DarkTheme } from '../../themes';
 export const Nav = styled.nav`
   background-color: ${({theme}) => theme.bkgColor};
   background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgba(0, 0, 0, 0%)')};
-  color: #fff;
+  color: ${({theme}) => theme.textColor};
   height: 80px;
   display: flex;
   justify-content: center;

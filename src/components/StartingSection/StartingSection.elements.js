@@ -5,6 +5,7 @@ import titleBar from '../../images/titleBar.png'
 export const SectionContainer = styled.div`
   background-image: url(${titleBar});
   color: #fff;
+  // color: ${({theme}) => theme.textColor}; Change back when light mode is done
   padding: 120px 0 10px 0; //take into account space at the top for the navbar
   transition: all 0.5s;
   width: 100%;

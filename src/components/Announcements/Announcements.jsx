@@ -27,7 +27,6 @@ const Announcements = ({ displayOnlyFirstAnnouncement = true }) => {
 
   const renderAnnouncements = () => {
     if (announcements !== null) {
-      console.log("here", announcements)
       if (displayOnlyFirstAnnouncement === true) {
         return <Announcement title={announcements[0].title} date={formatDate(announcements[0].createdAt)} description={announcements[0].description} picture={announcements[0].picture} renderHeadingAndLink={true}></Announcement>;
       }

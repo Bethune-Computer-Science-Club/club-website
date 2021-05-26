@@ -89,9 +89,7 @@ const TeamDropdownCarousel = ({heading}) =>  {
 
       let minYear = 9999;
       //Set the options array
-      for (let object of tempExecs) {
-        console.log(object.startingYear)
-  
+      for (let object of tempExecs) {  
         if (object.startingYear < minYear) {
           minYear = object.startingYear;
         }

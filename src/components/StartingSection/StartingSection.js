@@ -21,7 +21,9 @@ const StartingSection = ({headingText = "No heading text", image = CCCLogo, desc
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000 });
+
   }, []);
+
   return (
     <>
       <SectionContainer>

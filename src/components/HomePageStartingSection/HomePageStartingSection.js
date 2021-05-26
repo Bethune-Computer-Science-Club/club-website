@@ -34,7 +34,7 @@ const HomePageStartingSection = () => {
           <InfoColumn data-aos='fade-right'>
             <TextWrapper>
               <Heading >Welcome!</Heading>
-              <Subheading>Meetings every Thursday @1 PM & 3:30 PM</Subheading>
+              <Subheading>Meetings every Thursday @3:30 PM</Subheading>
             </TextWrapper>
           </InfoColumn>
           <InfoColumn data-aos='fade-left'>
