@@ -144,13 +144,6 @@ const TeamDropdownCarousel = ({heading}) =>  {
     // Breakpoints for the carousel cards. Used when the window width resizes
     responsive: [
       {
-        breakpoint: 1150,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
         breakpoint: 800,
         settings: {
           slidesToShow: 1,

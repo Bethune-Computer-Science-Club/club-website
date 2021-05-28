@@ -163,6 +163,10 @@ export const FileUploadLabel = styled.p`
   margin: 20px 0;
 `
 
+export const InputSubheading = styled.h4`
+  margin: -5px 0 10px 0;
+`
+
 //For projects admin page
 export const CategoryButton = styled.button`
   width: 200px;

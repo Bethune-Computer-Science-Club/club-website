@@ -8,7 +8,7 @@ import {
   SectionContainer,
   InfoRow,
   InfoColumn,
-  Heading,
+  HeadingContainer,
   HeadingText,
   Img,
   PageDescription
@@ -30,7 +30,7 @@ const StartingSection = ({headingText = "No heading text", image = CCCLogo, desc
         <Container>
           <InfoRow>
             <InfoColumn data-aos='fade-right'>
-              <Heading>
+              <HeadingContainer>
                 <HeadingText>{headingText}</HeadingText>
                 {
                   typeof(image) === 'object' ?
@@ -38,7 +38,7 @@ const StartingSection = ({headingText = "No heading text", image = CCCLogo, desc
                   :
                     <Img src={image}></Img>
                 }
-              </Heading>
+              </HeadingContainer>
             </InfoColumn>
             <InfoColumn data-aos='fade-left'>
               <PageDescription>

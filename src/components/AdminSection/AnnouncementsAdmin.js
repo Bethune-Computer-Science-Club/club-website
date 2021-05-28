@@ -24,7 +24,8 @@ import {
   EditDelete,
   FileInput,
   FileUploadButton,
-  FileUploadLabel
+  FileUploadLabel,
+  InputSubheading
 } from './AdminSubpages.elements'
 
 
@@ -121,12 +122,15 @@ export const AnnouncementsAdmin = () => {
 
         {/* 'Form' component */}
         <InputLabel>Title</InputLabel>
+        <InputSubheading>Input the title of the announcement</InputSubheading>
         <TextSentence type='text' name='title' onChange={(e) => {setTitle(e.target.value)}} value={title}/>
 
         <InputLabel>Description</InputLabel>
+        <InputSubheading>Input the description of the announcement</InputSubheading>
         <TextParagraph type='text' name='description' style={{height: '200px' }} onChange={(e) => {setDescription(e.target.value)}} value={description} />
 
         <InputLabel>Image</InputLabel>
+        <InputSubheading>Upload an image that pairs well with the announcement (E.g. if the announcement is about an upcoming meeting, the image can be poster about that meeting or what topics are gonna be covered in that meeting)</InputSubheading>
         {/* Upload Image Button. The button needs to be so complex because the value of the file input cannot be set programatically*/}
         <FileInput type='file' id='img' onChange={pictureChangeHandler}></FileInput> {/* This is the actual button tha gets clicked */}
         <FileUploadButton for='img'>Upload Image</FileUploadButton> {/* This is the sudo button layered ontop of the actual button */}

@@ -25,7 +25,8 @@ import {
   EditDelete,
   FileInput,
   FileUploadButton,
-  FileUploadLabel
+  FileUploadLabel,
+  InputSubheading
 } from './AdminSubpages.elements'
 
 
@@ -46,7 +47,7 @@ export const ProjectsAdmin = () => {
   const [editing, setEditing] = useState('');
 
   useEffect(() => { //Get the announcements in the database on first render
-    ReadData('projects', 'createdAt', 'desc', setProjects);
+    ReadData('projects', 'createdAt', 'desc', setProjects).then((document) => setProjects(document));
   }, [])
 
   //Checks that all fields are filled out and then returns the appropriate function
@@ -125,6 +126,7 @@ export const ProjectsAdmin = () => {
 
           {/* 'Form' component */}
           <InputLabel>Select a Catgory</InputLabel>
+          <InputSubheading>Select a category that best matches the project</InputSubheading>
           <InfoRow>
             <CategoryButton style={{backgroundColor: projectType === 'robotics' ? '#d62489': '#832391'}} onClick={() => {setProjectType('robotics')}}>Robotics</CategoryButton>
             <CategoryButton style={{backgroundColor: projectType === 'apps' ? '#d62489': '#832391'}} onClick={() => {setProjectType('apps')}}>Apps</CategoryButton>
@@ -135,15 +137,19 @@ export const ProjectsAdmin = () => {
           </InfoRow>
 
           <InputLabel>Name</InputLabel>
+          <InputSubheading>Input the name of the project</InputSubheading>
           <TextSentence type='text' name='name' onChange={(e) => {setTitle(e.target.value)}} value={title}/>
 
-          <InputLabel>Authors</InputLabel>
+          <InputLabel>Developers</InputLabel>
+          <InputSubheading>Input the developers of the project. Use commas to seperate each person. Eg. Dev1, Dev2, Dev3 </InputSubheading>
           <TextSentence type='text' name='authors'  onChange={(e) => {setAuthors(e.target.value)}} value={authors}/>
 
           <InputLabel>Description</InputLabel>
+          <InputSubheading>Input a description for the project</InputSubheading>
           <TextParagraph type='text' name='description' style={{height: '200px'}} onChange={(e) => {setDescription(e.target.value)}} value={description}/>
 
           <InputLabel>Image</InputLabel>
+          <InputSubheading>Upload an image for the project</InputSubheading>
           {/* Upload Image Button. The button needs to be so complex because the value of the file input cannot be set programatically*/}
           <FileInput type='file' id='img' onChange={pictureChangeHandler}></FileInput> {/* This is the actual button tha gets clicked */}
           <FileUploadButton for='img'>Upload Image</FileUploadButton> {/* This is the sudo button layered ontop of the actual button */}
@@ -164,7 +170,7 @@ export const ProjectsAdmin = () => {
             <Tr>
               <Th>Project Type</Th>
               <Th>Name</Th>
-              <Th>Authors</Th>
+              <Th>Developers</Th>
               <Th>Description</Th>
               <Th>Picture</Th>
               <Th>Date Created</Th>

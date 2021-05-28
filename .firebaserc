@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "club-website-a61d0"
+    "default": "club-website-a61d0",
+    "club-website": "club-website-a61d0"
   }
 }

@@ -21,7 +21,7 @@ const EventsSection = ({imgStart, header, img1, img2, textDescription, moreInfoL
     Aos.init({ offset: 50, duration: 1000, once: true});
   }, []);
 
-  const newStr = textDescription.split('\n').map(str => <p>{str}<br></br><br></br></p>); //Adds new lines to the string where there is a '\n' in the Data.js file
+  const newStr = textDescription.split('\n').map(str => <p key={str}>{str}<br></br><br></br></p>); //Adds new lines to the string where there is a '\n' in the Data.js file
 
   return (
     <>

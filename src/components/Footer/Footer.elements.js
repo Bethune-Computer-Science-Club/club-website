@@ -153,7 +153,7 @@ export const DateLastUpdated = styled(Link)`
   color: grey;
   text-decoration: none;
   font-size: 0.75rem;
-  margin-right: 60px;
+  margin-right: 10px;
   float: right;
   cursor: default;
 

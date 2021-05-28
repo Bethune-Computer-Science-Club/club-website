@@ -59,3 +59,4 @@ export const Icon = styled.div`
   width: 250px;
   text-align: center;
 `
+

@@ -13,7 +13,7 @@ export const homeObjTwo = {
 export const homeObjThree = {
   imgStart: false, 
   buttonLabel: 'Get Started', 
-  description: 'Lorem ipsum dolor sit amet, ludus suscipiantur signiferumque sit in, an amet definitiones per. Ad bonorum praesent quo, in cum postea disputando. Vix ea solet animal vidisse, cu utroque splendide has. Eam an nominati voluptatibus, sed in magna exerci aperiam, ex has erant elaboraret. At wisi ferri his. Nam bonorum feugait an, vix at nostrum definitiones, sit utamur suscipit necessitatibus in. Sed duis malis alienum in. Etiam reprimique et vim, alterum fabulas placerat ea nec, luptatum forensibus voluptatibus ad vix. Et altera civibus reformidans sea, nam cu clita phaedrum rationibus, facer hendrerit vix ei. Has ad noster scaevola ponderum. Placeholder text.', 
+  description: 'The Bethune Computer Science Club consists of a group of dedicated individuals who are passionate about computer science. Our executive team has extensive and diverse knowledge about computer science related material. We offer a unique opportunity for members to enrich their knowledge of computer science by exploring a variety of topics, from basic programming skills to more advanced subjects such as algorithms and web development. We also dedicate a good portion of our time to helping members prepare for the Canadian Computing Competition by going over tips, past contests and algorithms required to do well on the contest.  ', 
   headline: 'About Us', 
   topLine: '',
   img: schoolPicture,

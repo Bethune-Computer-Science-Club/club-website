@@ -50,7 +50,7 @@ export const Navbar = ({ theme, setTheme }) => {
   return (
     <Nav navbarSolid={navbar}>
       <NavbarContainer>
-        <NavLogo to='/club-website'>
+        <NavLogo to='/'>
           <Img src={BCSCLogo} ></Img>
           Bethune Computer Science Club
         </NavLogo>
@@ -59,7 +59,7 @@ export const Navbar = ({ theme, setTheme }) => {
         </MobileIcon>
         <NavMenu onClick={handleClick} click={click}>
           <NavItem>
-            <NavLinks to='/club-website'>Home</NavLinks>
+            <NavLinks to='/'>Home</NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks to='/events'>Events</NavLinks>

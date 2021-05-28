@@ -46,7 +46,7 @@ export const TextWrapper = styled.div`
   }
 `
 
-export const Heading = styled.h1`
+export const HeadingContainer = styled.div`
   font-size: 3.5rem;
   align-items: center;
   display: flex;

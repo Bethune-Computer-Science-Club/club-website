@@ -45,7 +45,7 @@ function App() {
         <Navbar theme={theme} setTheme={setTheme}/>
         <AuthProvider>
         <Switch>
-          <Route path='/club-website' exact component={Home} />
+          <Route path='/' exact component={Home} />
           <Route path='/events' component={Events} />
           <Route path='/projects' component={Projects} />
           <Route path='/team' component={Team} />

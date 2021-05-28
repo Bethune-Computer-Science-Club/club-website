@@ -25,7 +25,8 @@ import {
   EditDelete,
   FileInput,
   FileUploadButton,
-  FileUploadLabel
+  FileUploadLabel,
+  InputSubheading
 } from './AdminSubpages.elements'
 
 
@@ -48,7 +49,7 @@ export const ExecsAdmin = () => {
   const [editing, setEditing] = useState('');
   
   useEffect(() => { //Get the announcements in the database on first render
-    ReadData('execs', 'startingYear', 'desc', setExecs);
+    ReadData('execs', 'startingYear', 'desc', setExecs).then((document) => setExecs(document));
   }, [])
 
 
@@ -132,29 +133,35 @@ export const ExecsAdmin = () => {
 
           {/* 'Form' component */}
           <InputLabel>Name</InputLabel>
+          <InputSubheading>Input the name of the executive</InputSubheading>
           <TextSentence type='text' name='name' onChange={(e) => {setName(e.target.value)}} value={name}/>       
 
           <InputLabel>Starting Year</InputLabel>
+          <InputSubheading>Input the year which the executive first served on the executive team. (Note, the year should be the year for which the school year starts, not the school year E.g. 2020 instead of 2020-2021)</InputSubheading>
           <TextSentence type='text' name='starting year' onChange={(e) => {setStartingYear(e.target.value)}} value={startingYear}/>       
 
           <InputLabel>Ending Year</InputLabel>
+          <InputSubheading>Input the last year which the executive served on the executive team (Note, the year should be the year for which the school year starts, not the school year. E.g. 2020 instead of 2020-2021) Enter "Present" if the executive is still currently serving on the team</InputSubheading>
           <TextSentence type='text' name='ending year' onChange={(e) => {setEndingYear(e.target.value)}} value={endingYear}/>    
 
           <InputLabel>Category</InputLabel>
+          <InputSubheading>Select the category of the executive. This will be use to seperate to categorize the executive into executive, teacher, or website creator</InputSubheading>
           <InfoRow>
             <CategoryButton style={{backgroundColor: category === 'Exec' ? '#d62489': '#832391'}} onClick={() => {setCategory('Exec')}}>Exec</CategoryButton>
             <CategoryButton style={{backgroundColor: category === 'Teacher' ? '#d62489': '#832391'}} onClick={() => {setCategory('Teacher')}}>Teacher</CategoryButton>
             <CategoryButton style={{backgroundColor: category === 'Website Creator' ? '#d62489': '#832391'}} onClick={() => {setCategory('Website Creator')}}>Website Creator</CategoryButton>
           </InfoRow>
 
-
           <InputLabel>Role</InputLabel>
+          <InputSubheading>Select the role of the executive (E.g. President, Team Captain, etc.)</InputSubheading>
           <TextSentence type='text' name='role' onChange={(e) => {setRole(e.target.value)}} value={role}/>       
 
           <InputLabel>Description</InputLabel>
+          <InputSubheading>Enter how the executive contributed to the club</InputSubheading>
           <TextParagraph type='text' name='description' style={{height: '200px' }} onChange={(e) => {setDescription(e.target.value)}} value={description}/>       
 
           <InputLabel>Image</InputLabel>
+          <InputSubheading>Upload an image which the executive wishes to display on the site. (This does not have to be a picture of their face</InputSubheading>
           {/* Upload Image Button. The button needs to be so complex because the value of the file input cannot be set programatically*/}
           <FileInput type='file' id='img' onChange={pictureChangeHandler}></FileInput> {/* This is the actual button tha gets clicked */}
           <FileUploadButton for='img'>Upload Image</FileUploadButton> {/* This is the sudo button layered ontop of the actual button */}

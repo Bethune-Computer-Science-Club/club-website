@@ -28,7 +28,7 @@ export const JoinUsObjectTwo  = {
 }
 
 export const JoinUsObjectThree = {
-  description: "Do you like what you see? Would you like to be a part of our club? Great! Drop by room B216 on a Tuesday during our meetings and we'll be happy to have you! No sign up required, and you can choose to leave at anytime if you decide the club is not for you. We look forward to seeing you!",
+  description: "Do you like what you see? Would you like to be a part of our club? Great! Drop by room B216 on a Tuesday during our meetings and we'll be happy to have you! No experience or sign up required, and people of all skill levels are welcome. We look forward to seeing you!",
   headline: "Become a Member",
   img: BecomeAMember,
   alt: "Become a Member",
