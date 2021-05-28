@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { DarkTheme } from '../../themes';
 
 export const Nav = styled.nav`
-  background-color: ${({theme}) => theme.bkgColor};
+  background-color: #03001c;
+  /* background-color: ${({theme}) => theme.bkgColor}; restore when navbar is fixec */
   background-color: ${({navbarSolid}) => (navbarSolid ? null : 'rgba(0, 0, 0, 0%)')};
   color: ${({theme}) => theme.textColor};
   height: 80px;

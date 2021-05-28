@@ -46,7 +46,7 @@ export const Card = styled.div`
   height: 300px;
   width: 300px;
   border-radius: 40px;
-  color: ${({theme}) => theme.bkgColor};
+  color: ${({theme}) => theme.textColor};
   transition: color 0.5s;
 `
 

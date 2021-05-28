@@ -27,6 +27,7 @@ export const CardWrapper = styled.div`
   width: 300px;
   margin: 18px auto; //Space on the top and bottom is needed for the card animation to not be cut off
   border-radius: 40px;
+  
 `
 
 export const Card = styled.div`
@@ -34,7 +35,7 @@ export const Card = styled.div`
   height: 300px;
   width: 300px;
   border-radius: 40px;
-  color: ${({theme}) => theme.bkgColor};
+  color: ${({theme}) => theme.textColor};
   transition: color 0.5s;
 `
 
