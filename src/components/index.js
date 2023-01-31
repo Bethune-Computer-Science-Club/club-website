@@ -1,0 +1,8 @@
+export { default as Navbar } from './Navbar/Navbar'
+export { default as Footer } from './Footer/Footer'
+export { default as HomeStart } from './HomeStart/HomeStart'
+export { default as InfoSection } from './InfoSection/InfoSection'
+export { default as DoubleSlides } from './DoubleSlides/DoubleSlides'
+export { default as ArchivesStart } from './ArchivesStart/ArchivesStart'
+export { default as AboutStart } from './AboutStart/AboutStart'
+export { default as Categories } from './Categories/Categories'
