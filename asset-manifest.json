@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.aa97f634.js",
+    "main.js": "/club-website/static/js/main.fd39b2ea.js",
     "static/media/schoolPicture.jpg": "/club-website/static/media/schoolPicture.d766119b42b42241ba6a.jpg",
     "static/media/titleBar.png": "/club-website/static/media/titleBar.0923ce7a63fcf757d43d.png",
+    "static/media/hacks.jpg": "/club-website/static/media/hacks.43ab1b42f26dca4b2e4f.jpg",
+    "static/media/cemc.png": "/club-website/static/media/cemc.371fefc4790568525d3a.png",
     "static/media/BCSCLogo.png": "/club-website/static/media/BCSCLogo.99d38df0de11ddf74d32.png",
+    "static/media/code.jpg": "/club-website/static/media/code.72fbe17513261f374012.jpg",
     "static/media/javaLogo.png": "/club-website/static/media/javaLogo.bcb16fe728136e150e35.png",
+    "static/media/picoctf.png": "/club-website/static/media/picoctf.9eef58210f6dd02766fb.png",
     "static/media/cppLogo.png": "/club-website/static/media/cppLogo.c0a0d2fd9fd3519dbdce.png",
+    "static/media/yearbook.png": "/club-website/static/media/yearbook.a993dc5f9c83689f81e6.png",
     "index.html": "/club-website/index.html",
-    "main.aa97f634.js.map": "/club-website/static/js/main.aa97f634.js.map"
+    "main.fd39b2ea.js.map": "/club-website/static/js/main.fd39b2ea.js.map"
   },
   "entrypoints": [
-    "static/js/main.aa97f634.js"
+    "static/js/main.fd39b2ea.js"
   ]
 }
