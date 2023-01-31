@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.aed37f05.js",
-    "static/media/schoolPicture.jpg": "/static/media/schoolPicture.d766119b42b42241ba6a.jpg",
-    "static/media/titleBar.png": "/static/media/titleBar.0923ce7a63fcf757d43d.png",
-    "static/media/BCSCLogo.png": "/static/media/BCSCLogo.99d38df0de11ddf74d32.png",
-    "static/media/javaLogo.png": "/static/media/javaLogo.bcb16fe728136e150e35.png",
-    "static/media/cppLogo.png": "/static/media/cppLogo.c0a0d2fd9fd3519dbdce.png",
-    "index.html": "/index.html",
-    "main.aed37f05.js.map": "/static/js/main.aed37f05.js.map"
+    "main.js": "/club-website/static/js/main.f42d8c72.js",
+    "static/media/schoolPicture.jpg": "/club-website/static/media/schoolPicture.d766119b42b42241ba6a.jpg",
+    "static/media/titleBar.png": "/club-website/static/media/titleBar.0923ce7a63fcf757d43d.png",
+    "static/media/BCSCLogo.png": "/club-website/static/media/BCSCLogo.99d38df0de11ddf74d32.png",
+    "static/media/javaLogo.png": "/club-website/static/media/javaLogo.bcb16fe728136e150e35.png",
+    "static/media/cppLogo.png": "/club-website/static/media/cppLogo.c0a0d2fd9fd3519dbdce.png",
+    "index.html": "/club-website/index.html",
+    "main.f42d8c72.js.map": "/club-website/static/js/main.f42d8c72.js.map"
   },
   "entrypoints": [
-    "static/js/main.aed37f05.js"
+    "static/js/main.f42d8c72.js"
   ]
 }
