@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.151a8822.js",
+    "main.js": "/static/js/main.aed37f05.js",
     "static/media/schoolPicture.jpg": "/static/media/schoolPicture.d766119b42b42241ba6a.jpg",
     "static/media/titleBar.png": "/static/media/titleBar.0923ce7a63fcf757d43d.png",
     "static/media/BCSCLogo.png": "/static/media/BCSCLogo.99d38df0de11ddf74d32.png",
     "static/media/javaLogo.png": "/static/media/javaLogo.bcb16fe728136e150e35.png",
     "static/media/cppLogo.png": "/static/media/cppLogo.c0a0d2fd9fd3519dbdce.png",
     "index.html": "/index.html",
-    "main.151a8822.js.map": "/static/js/main.151a8822.js.map"
+    "main.aed37f05.js.map": "/static/js/main.aed37f05.js.map"
   },
   "entrypoints": [
-    "static/js/main.151a8822.js"
+    "static/js/main.aed37f05.js"
   ]
 }
