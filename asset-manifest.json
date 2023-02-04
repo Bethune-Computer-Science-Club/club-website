@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/club-website/static/js/main.c918d97e.js",
+    "main.js": "/club-website/static/js/main.746678f1.js",
     "static/media/schoolPicture.jpg": "/club-website/static/media/schoolPicture.d766119b42b42241ba6a.jpg",
     "static/media/titleBar.png": "/club-website/static/media/titleBar.0923ce7a63fcf757d43d.png",
     "static/media/hacks.jpg": "/club-website/static/media/hacks.43ab1b42f26dca4b2e4f.jpg",
@@ -12,9 +12,9 @@
     "static/media/cppLogo.png": "/club-website/static/media/cppLogo.c0a0d2fd9fd3519dbdce.png",
     "static/media/yearbook.png": "/club-website/static/media/yearbook.a993dc5f9c83689f81e6.png",
     "index.html": "/club-website/index.html",
-    "main.c918d97e.js.map": "/club-website/static/js/main.c918d97e.js.map"
+    "main.746678f1.js.map": "/club-website/static/js/main.746678f1.js.map"
   },
   "entrypoints": [
-    "static/js/main.c918d97e.js"
+    "static/js/main.746678f1.js"
   ]
 }
